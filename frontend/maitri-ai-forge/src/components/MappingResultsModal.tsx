@@ -51,7 +51,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
   const [selectedKeys, setSelectedKeys] = useState<Record<string, string | null>>({});
   const [isApproved, setIsApproved] = useState(false);
   const [hasEdited, setHasEdited] = useState(false);
-  const [isPreviewMode, setIsPreviewMode] = useState(false);
+  const [isPreviewMode, setIsPreviewMode] = useState(true);
   const [searchTerms, setSearchTerms] = useState<Record<string, string>>({});
   const [currentThreshold, setCurrentThreshold] = useState(scoreThreshold);
   const [lowThreshold, setLowThreshold] = useState(0.4);
@@ -279,6 +279,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
                 <div className="flex flex-col">
                   <span className="font-semibold text-sm truncate">{keyInfo.source_key}</span>
                   <span className="text-xs text-muted-foreground truncate">{keyInfo.source_message}</span>
+                  <span className="text-xs text-muted-foreground truncate">{keyInfo.source_value}</span>
                 </div>
                 <Info className={cn("w-4 h-4 flex-shrink-0", getScoreColor(keyInfo.final_score))} />
               </div>
@@ -366,7 +367,23 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
       </td>
     );
   };
+  // Helper to bold only the key (middle part)
+  const formatKey = (fullKey: string) => {
+    const parts = fullKey.split("::");
+    if (parts.length < 2) return fullKey;
 
+    return (
+      <>
+        {parts[0]}:: <strong>{parts[1]}</strong> ::{parts[2] ? ` ${parts[2]}` : ""}
+      </>
+    );
+  };
+  useEffect(() => {
+    if (isOpen) {
+    setIsPreviewMode(true);
+    setIsApproved(false);
+    }
+    }, [isOpen]);
   // Preview Mode Component
   if (isPreviewMode) {
     const previewData: Array<{ targetKey: string; sourceKey: string; info: KeyInfo | null }> = [];
@@ -377,9 +394,9 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
         const selectedKeyInfo = selectedKeyNum ? keys[selectedKeyNum as keyof typeof keys] : null;
         
         previewData.push({
-          targetKey: `${targetMessage}::${targetKey}`,
+          targetKey: `${targetMessage}::${targetKey}::${keys.target_value || ''}`,
           sourceKey: selectedKeyInfo 
-            ? `${selectedKeyInfo.source_message}::${selectedKeyInfo.source_key}`
+            ? `${selectedKeyInfo.source_message}::${selectedKeyInfo.source_key}::${selectedKeyInfo.source_value || ''}`
             : 'None',
           info: selectedKeyInfo || null
         });
@@ -387,7 +404,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
     });
 
     return (
-      <Dialog open={isOpen} onOpenChange={()=>setIsPreviewMode(false)}>
+      <Dialog open={isOpen} onOpenChange={onClose}>
         <DialogContent className="max-w-5xl max-h-[90vh] flex flex-col">
           <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-accent text-center bg-clip-text text-transparent">
             Mapping Preview
@@ -411,8 +428,8 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
                     "border-t-2 border-border transition-all hover:bg-muted/50",
                     index % 2 === 0 ? "bg-card" : "bg-muted/20"
                   )}>
-                    <td className="px-6 py-4 font-semibold border-r-2 border-border">
-                      {mapping.targetKey}
+                    <td className="px-6 py-4 border-r-2 border-border">
+                      {formatKey(mapping.targetKey)}
                     </td>
                     <td className="px-6 py-4">
                       {mapping.info ? (
@@ -420,8 +437,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
                           <Tooltip>
                             <TooltipTrigger asChild>
                               <div className="flex items-center gap-2 cursor-help">
-                                <CheckCircle className={cn("w-4 h-4", getScoreColor(mapping.info.final_score))} />
-                                <span className="font-semibold">{mapping.sourceKey}</span>
+                                <span>{formatKey(mapping.sourceKey)}</span>
                                 <Info className="w-4 h-4 text-muted-foreground" />
                               </div>
                             </TooltipTrigger>
@@ -457,7 +473,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
               className="shadow-lg"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
-              Back to Edit
+              Click to Edit
             </Button>
             <Button
               size="lg"
@@ -686,7 +702,15 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
                           index % 2 === 0 ? "bg-card hover:bg-muted/30" : "bg-muted/20 hover:bg-muted/40"
                         )}>
                           <td className="px-6 py-4 font-bold border-r-1 text-center border-border bg-white text-black">
-                            {targetKey}
+                            <div className="flex flex-col">
+                              {/* Target Key */}
+                              <span className="font-bold text-black">{targetKey}</span>
+
+                              {/* Target Value Below */}
+                              <span className="text-xs text-gray-600 mt-1 font-normal">
+                                {keys?.target_value || "--"}
+                              </span>
+                            </div>
                           </td>
                           {renderKeyCell(targetMessage, targetKey, 'key1', keys.key1)}
                           {renderKeyCell(targetMessage, targetKey, 'key2', keys.key2)}

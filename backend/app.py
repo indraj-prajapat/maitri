@@ -108,8 +108,7 @@ def map_files():
         pairs = list(product(source_data.items(), target_data.items()))
 
         # Use ThreadPoolExecutor instead of ProcessPoolExecutor
-        # It's simpler and works better with Flask
-        max_workers = min(8, len(pairs))  # Use up to 8 threads
+        max_workers = min(8, len(pairs))
 
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             futures = []
@@ -132,26 +131,46 @@ def map_files():
                         aggregated_by_target[tgt_file][tgt_key] = []
                     aggregated_by_target[tgt_file][tgt_key].extend(mappings)
             
-            # Final structuring
+            # Final structuring with values
             for tgt_file in target_data.keys():
                 tgt_meta = metadata[tgt_file]
                 tgt_msg_name = tgt_meta["message_name"]
+                tgt_json = target_data[tgt_file]
+                
                 final_result[tgt_msg_name] = {}
                 
                 for tgt_key, mappings in aggregated_by_target.get(tgt_file, {}).items():
                     sorted_mappings = sorted(mappings, key=lambda x: x["final_score"], reverse=True)
-                    entry = {}
+                    
+                    # Get target key value from target JSON
+                    target_value = tgt_json.get(tgt_key, "")
+                    
+                    entry = {
+                        "target_key": tgt_key,
+                        "target_value": target_value,
+                       
+                    }
+                    
                     for idx, m in enumerate(sorted_mappings, start=1):
+                        # Get source value from source JSON
+                        src_file_name = m["source_file"]
+                        src_key = m["source_key"]
+                        src_json = source_data.get(src_file_name, {})
+                        source_value = src_json.get(src_key, "")
+                        
                         entry[f"key{idx}"] = {
                             "final_score": m["final_score"],
                             "source_message": m["source_message"],
                             "source_key": m["source_key"],
+                            "source_value": source_value,  # Added source value
                             "source_file": m["source_file"],
                             "source_country": m["source_country"],
                             "source_domain": m["source_domain"],
                             "source_system": m["source_system"]
                         }
+                    
                     final_result[tgt_msg_name][tgt_key] = entry
+        
         print(f"✅ total time in api: {time.time() - start_total_t:.2f} sec")
         return jsonify(final_result), 200
 
@@ -159,145 +178,191 @@ def map_files():
         return jsonify({"error": str(e)}), 500
 
 
-
-
-from pathlib import Path
+import os
+import uuid
+from datetime import datetime
 from typing import List, Dict, Any
-import logging
 
-# Setup logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from flask import Flask, request, jsonify
+from sqlalchemy import (
+    create_engine, Column, String, DateTime, Integer, ForeignKey
+)
+from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.orm import declarative_base, relationship, sessionmaker
 
-# Configuration
-DATA_DIR = Path(__file__).parent / 'data'
-MAPPINGS_FILE = DATA_DIR / 'mappings.json'
+# ------------------------------------------------------------------
+# 1. DB connection
+# ------------------------------------------------------------------
+# DATABASE_URL = os.getenv(
+#     "DATABASE_URL",
+#     "postgresql+psycopg2://user:password@localhost:5432/mappingsdb"
+# )
+DATABASE_URL = "sqlite:///data/mappings.db"
 
-def init_data_dir():
-    """Initialize data directory and mappings file if they don't exist"""
-    try:
-        DATA_DIR.mkdir(parents=True, exist_ok=True)
-        if not MAPPINGS_FILE.exists():
-            with open(MAPPINGS_FILE, 'w') as f:
-                json.dump([], f)
-            logger.info(f"Created mappings file at {MAPPINGS_FILE}")
-        else:
-            logger.info(f"Mappings file exists at {MAPPINGS_FILE}")
-    except Exception as e:
-        logger.error(f"Error initializing data directory: {e}")
-        raise
+engine = create_engine(DATABASE_URL, pool_pre_ping=True, future=True)
+SessionLocal = sessionmaker(bind=engine, expire_on_commit=False)
+Base = declarative_base()
 
-# Initialize data directory when module loads
-init_data_dir()
+# ------------------------------------------------------------------
+# 2. SQLAlchemy models  (fixed name clash)
+# ------------------------------------------------------------------
+class Metadata(Base):
+    __tablename__ = "metadata"
 
-def read_mappings() -> List[Dict[Any, Any]]:
-    """Read mappings from JSON file"""
-    try:
-        with open(MAPPINGS_FILE, 'r') as f:
-            return json.load(f)
-    except json.JSONDecodeError:
-        logger.error("Invalid JSON in mappings file")
-        return []
-    except Exception as e:
-        logger.error(f"Error reading mappings: {e}")
-        return []
+    id = Column(String, primary_key=True)  # keep original string id
+    source_country = Column(String(50), nullable=False)
+    source_domain  = Column(String(50), nullable=False)
+    source_system  = Column(String(100), nullable=False)
+    target_country = Column(String(50), nullable=False)
+    target_domain  = Column(String(50), nullable=False)
+    target_system  = Column(String(100), nullable=False)
+    mapping_count  = Column(Integer, nullable=False)
+    created_at     = Column(DateTime, default=datetime.utcnow, nullable=False)
+    updated_at     = Column(DateTime, default=datetime.utcnow,
+                            onupdate=datetime.utcnow, nullable=False)
 
-def write_mappings(mappings: List[Dict[Any, Any]]) -> bool:
-    """Write mappings to JSON file"""
-    try:
-        with open(MAPPINGS_FILE, 'w') as f:
-            json.dump(mappings, f, indent=2)
-        return True
-    except Exception as e:
-        logger.error(f"Error writing mappings: {e}")
-        return False
+    mappings = relationship("Mapping", back_populates="meta",
+                            cascade="all, delete-orphan")
 
-@app.route('/api/mappings', methods=['GET'])
+
+class Mapping(Base):
+    __tablename__ = "mapping"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    metadata_id = Column(String, ForeignKey("metadata.id", ondelete="CASCADE"),
+                         nullable=False)
+    source_key = Column(String, nullable=False)
+    target_key = Column(String, nullable=False)
+
+    meta = relationship("Metadata", back_populates="mappings")
+
+
+# ------------------------------------------------------------------
+# 3. Ensure tables exist
+# ------------------------------------------------------------------
+def init_db():
+    Base.metadata.create_all(bind=engine)
+
+
+def row_to_json(meta: Metadata) -> Dict[str, Any]:
+    return {
+        "id":            meta.id,
+        "timestamp":     int(meta.created_at.timestamp() * 1000),
+        "sourceCountry": meta.source_country,
+        "sourceDomain":  meta.source_domain,
+        "sourceSystem":  meta.source_system,
+        "targetCountry": meta.target_country,
+        "targetDomain":  meta.target_domain,
+        "targetSystem":  meta.target_system,
+        "mappingCount":  meta.mapping_count,
+        "approvedMappings": [
+            {"sourceKey": m.source_key, "targetKey": m.target_key}
+            for m in meta.mappings
+        ]
+    }
+
+init_db()
+
+
+# ----------  GET /api/mappings  ----------
+@app.route("/api/mappings", methods=["GET"])
 def get_mappings():
-    """Get all mappings"""
-    try:
-        mappings = read_mappings()
-        return jsonify(mappings), 200
-    except Exception as e:
-        logger.error(f"Error fetching mappings: {e}")
-        return jsonify({'error': 'Failed to fetch mappings'}), 500
+    with SessionLocal() as db:
+        rows = db.query(Metadata).order_by(Metadata.created_at.desc()).all()
+        return jsonify([row_to_json(r) for r in rows]), 200
 
-@app.route('/api/mappings', methods=['POST'])
+
+# ----------  POST /api/mappings  ----------
+@app.route("/api/mappings", methods=["POST"])
 def create_mapping():
-    """Create a new mapping"""
-    try:
-        new_mapping = request.get_json()
-        
-        if not new_mapping:
-            return jsonify({'error': 'No data provided'}), 400
-        
-        mappings = read_mappings()
-        mappings.insert(0, new_mapping)
-        
-        if write_mappings(mappings):
-            return jsonify(new_mapping), 201
-        else:
-            return jsonify({'error': 'Failed to save mapping'}), 500
-            
-    except Exception as e:
-        logger.error(f"Error creating mapping: {e}")
-        return jsonify({'error': 'Failed to save mapping'}), 500
+    payload = request.get_json(silent=True)
+    if not payload:
+        return jsonify({"error": "No data provided"}), 400
 
-@app.route('/api/mappings/<string:mapping_id>', methods=['PUT'])
+    # basic validation
+    required = {"sourceCountry", "sourceDomain", "sourceSystem",
+                "targetCountry", "targetDomain", "targetSystem",
+                "mappingCount", "approvedMappings"}
+    if not required.issubset(payload):
+        return jsonify({"error": f"Missing one of {required}"}), 400
+
+    with SessionLocal.begin() as db:
+        # 1. metadata row
+        meta = Metadata(
+            id=payload.get("id") or str(int(datetime.utcnow().timestamp() * 1000)),
+            source_country=payload["sourceCountry"],
+            source_domain=payload["sourceDomain"],
+            source_system=payload["sourceSystem"],
+            target_country=payload["targetCountry"],
+            target_domain=payload["targetDomain"],
+            target_system=payload["targetSystem"],
+            mapping_count=payload["mappingCount"],
+            created_at=datetime.utcnow(),
+        )
+        db.add(meta)
+
+        # 2. mapping rows
+        for pair in payload["approvedMappings"]:
+            db.add(Mapping(
+                metadata_id=meta.id,
+                source_key=pair["sourceKey"],
+                target_key=pair["targetKey"],
+            ))
+
+        return jsonify(row_to_json(meta)), 201
+
+
+# ----------  PUT /api/mappings/<id>  ----------
+@app.route("/api/mappings/<mapping_id>", methods=["PUT"])
 def update_mapping(mapping_id):
-    """Update an existing mapping"""
-    try:
-        updated_mapping = request.get_json()
-        
-        if not updated_mapping:
-            return jsonify({'error': 'No data provided'}), 400
-        
-        mappings = read_mappings()
-        updated = False
-        
-        for i, mapping in enumerate(mappings):
-            if mapping.get('id') == mapping_id:
-                mappings[i] = updated_mapping
-                updated = True
-                break
-        
-        if not updated:
-            return jsonify({'error': 'Mapping not found'}), 404
-        
-        if write_mappings(mappings):
-            return jsonify(updated_mapping), 200
-        else:
-            return jsonify({'error': 'Failed to update mapping'}), 500
-            
-    except Exception as e:
-        logger.error(f"Error updating mapping: {e}")
-        return jsonify({'error': 'Failed to update mapping'}), 500
+    payload = request.get_json(silent=True)
+    if not payload:
+        return jsonify({"error": "No data provided"}), 400
 
-@app.route('/api/mappings/<string:mapping_id>', methods=['DELETE'])
+    with SessionLocal.begin() as db:
+        meta = db.get(Metadata, mapping_id)
+        if not meta:
+            return jsonify({"error": "Mapping not found"}), 404
+
+        # update scalar fields
+        for col in ("sourceCountry", "sourceDomain", "sourceSystem",
+                    "targetCountry", "targetDomain", "targetSystem",
+                    "mappingCount"):
+            if col in payload:
+                setattr(meta, col.lower().replace("country", "_country")
+                        .replace("domain", "_domain")
+                        .replace("system", "_system")
+                        .replace("mappingcount", "mapping_count"), payload[col])
+
+        # replace approvedMappings completely
+        meta.mappings = [
+            Mapping(source_key=p["sourceKey"], target_key=p["targetKey"])
+            for p in payload.get("approvedMappings", [])
+        ]
+        meta.mapping_count = len(meta.mappings)
+
+        return jsonify(row_to_json(meta)), 200
+
+
+# ----------  DELETE /api/mappings/<id>  ----------
+@app.route("/api/mappings/<mapping_id>", methods=["DELETE"])
 def delete_mapping(mapping_id):
-    """Delete a mapping"""
-    try:
-        mappings = read_mappings()
-        original_length = len(mappings)
-        
-        mappings = [m for m in mappings if m.get('id') != mapping_id]
-        
-        if len(mappings) == original_length:
-            return jsonify({'error': 'Mapping not found'}), 404
-        
-        if write_mappings(mappings):
-            return jsonify({'success': True}), 200
-        else:
-            return jsonify({'error': 'Failed to delete mapping'}), 500
-            
-    except Exception as e:
-        logger.error(f"Error deleting mapping: {e}")
-        return jsonify({'error': 'Failed to delete mapping'}), 500
+    with SessionLocal.begin() as db:
+        meta = db.get(Metadata, mapping_id)
+        if not meta:
+            return jsonify({"error": "Mapping not found"}), 404
+        db.delete(meta)
+        return jsonify({"success": True}), 200
 
-@app.route('/health', methods=['GET'])
+
+# ----------  health ----------
+@app.route("/health", methods=["GET"])
 def health_check():
-    """Health check endpoint"""
-    return jsonify({'status': 'healthy'}), 200
+    return jsonify({"status": "healthy"}), 200
 
-if __name__ == '__main__':
+
+# ------------------------------------------------------------------
+# 7. Run
+# ------------------------------------------------------------------
+if __name__ == "__main__":
     app.run(debug=True)
