@@ -160,7 +160,8 @@ def map_files():
                         src_key = m["source_key"]
                         src_json = source_data.get(src_file_name, {})
                         source_value = src_json.get(src_key, "")
-                        
+                        if pd.isna(source_value) or (isinstance(source_value, float) and math.isnan(source_value)):
+                            source_value = ""
                         entry[f"key{idx}"] = {
                             "final_score": m["final_score"],
                             "source_message": m["source_message"],
