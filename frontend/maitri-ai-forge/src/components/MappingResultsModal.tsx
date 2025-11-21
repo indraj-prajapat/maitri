@@ -656,7 +656,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
           </div>
         </div>
 
-        <ScrollArea className="flex-1 mt-1 pr-4 overflow-scroll">
+        <ScrollArea className="flex-1 mt-1 pr-4">
           <div className="space-y-8">
             {Object.entries(results).map(([targetMessage, mappings]) => (
               <div key={targetMessage} className="space-y-4">
