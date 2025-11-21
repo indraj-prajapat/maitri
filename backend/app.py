@@ -10,7 +10,7 @@ from itertools import product
 import multiprocessing
 app = Flask(__name__)
 
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:8080"}})
+CORS(app, resources={r"/api/*": {"origins":[ "http://localhost:8080","http://localhost:8081"]}})
 # -------------------------------------------------------------
 # Utility: Convert CSV to JSON
 # -------------------------------------------------------------
@@ -67,7 +67,8 @@ def process_source_target_pair(src_file, src_json, tgt_file, tgt_json, metadata)
     return tgt_file, enriched_results
 import time
 
-
+import json
+import math
 @app.route('/api/map_files', methods=['POST'])
 def map_files():
     try:
@@ -144,7 +145,9 @@ def map_files():
                     
                     # Get target key value from target JSON
                     target_value = tgt_json.get(tgt_key, "")
-                    
+                    # Clean NaN values
+                    if pd.isna(target_value) or (isinstance(target_value, float) and math.isnan(target_value)):
+                        target_value = ""
                     entry = {
                         "target_key": tgt_key,
                         "target_value": target_value,
@@ -171,6 +174,8 @@ def map_files():
                     
                     final_result[tgt_msg_name][tgt_key] = entry
         
+        with open("final_result.json", "w", encoding="utf-8") as f:
+            json.dump(final_result, f, indent=4, ensure_ascii=False)
         print(f"✅ total time in api: {time.time() - start_total_t:.2f} sec")
         return jsonify(final_result), 200
 
