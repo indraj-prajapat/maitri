@@ -158,7 +158,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
   };
 
   const handleDownloadCSV = () => {
-    const csvRows: string[] = ['Target Key,Source Key'];
+    const csvRows: string[] = ['Target massage, Target Key,Source massage, Source Key'];
     
     Object.entries(results).forEach(([targetMessage, mappings]) => {
       Object.entries(mappings).forEach(([targetKey, keys]) => {
@@ -374,8 +374,12 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
 
     return (
       <>
-        {parts[0]}:: <strong>{parts[1]}</strong> ::{parts[2] ? ` ${parts[2]}` : ""}
+      <div className='flex flex-col text-center'>
+        <div className='text-gray-400 align-center text-xs'>{parts[0]} :</div> 
+        <strong className='text-blue-950  align-end'>{parts[1]}</strong>
+      </div>
       </>
+
     );
   };
   useEffect(() => {
@@ -405,30 +409,38 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
 
     return (
       <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="max-w-5xl max-h-[90vh] flex flex-col">
+        <DialogContent className="max-w-5xl w-full max-h-[100vh] h-screen flex flex-col overflow-scroll">
           <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-accent text-center bg-clip-text text-transparent">
             Mapping Preview
           </DialogTitle>
 
-          <ScrollArea className="flex-1 mt-4 pr-4 overflow-scroll">
-            <table className="w-full border-collapse border-2 border-border rounded-lg overflow-hidden shadow-lg">
-              <thead>
-                <tr className="bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20">
-                  <th className="px-6 py-4 text-left font-bold border-r-2 border-border w-1/2 text-primary">
-                    Destination Key
-                  </th>
-                  <th className="px-6 py-4 text-left font-bold w-1/2 text-accent">
-                    Selected Origin Key
-                  </th>
-                </tr>
-              </thead>
+          <div className="flex flex-col h-full ">   {/* parent must already be h-full or fixed height */}
+
+          {/* ---- header (always visible) ---- */}
+          <div className="shrink-0 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20">
+            <div className="grid grid-cols-2">
+              <div className="px-6 py-4 font-bold border-r-2 border-border text-primary flex justify-center">
+                Destination Key
+              </div>
+              <div className="px-6 py-4 font-bold text-accent flex justify-center">
+                Mapped Origin Key
+              </div>
+            </div>
+          </div>
+
+          {/* ---- scrollable body (takes rest of height) ---- */}
+          <ScrollArea className="flex-1">
+            <table className="w-full border-separate border-spacing-0">
               <tbody>
                 {previewData.map((mapping, index) => (
-                  <tr key={index} className={cn(
-                    "border-t-2 border-border transition-all hover:bg-muted/50",
-                    index % 2 === 0 ? "bg-card" : "bg-muted/20"
-                  )}>
-                    <td className="px-6 py-4 border-r-2 border-border">
+                  <tr
+                    key={index}
+                    className={cn(
+                      "grid grid-cols-2 border-t-2 border-border transition-all hover:bg-muted/50",
+                      index % 2 === 0 ? "bg-card" : "bg-card"
+                    )}
+                  >
+                    <td className="px-6 py-4 border-r-2 border-border text-gray-300">
                       {formatKey(mapping.targetKey)}
                     </td>
                     <td className="px-6 py-4">
@@ -436,9 +448,8 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
                         <TooltipProvider>
                           <Tooltip>
                             <TooltipTrigger asChild>
-                              <div className="flex items-center gap-2 cursor-help">
+                              <div className="flex items-center gap-2 cursor-help justify-center">
                                 <span>{formatKey(mapping.sourceKey)}</span>
-                                <Info className="w-4 h-4 text-muted-foreground" />
                               </div>
                             </TooltipTrigger>
                             <TooltipContent side="top" className="max-w-xs bg-card border-2 border-primary/20">
@@ -456,7 +467,9 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
                           </Tooltip>
                         </TooltipProvider>
                       ) : (
+                        <div className='flex justify-center '>
                         <span className="text-muted-foreground italic">None mapped</span>
+                        </div>
                       )}
                     </td>
                   </tr>
@@ -464,7 +477,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
               </tbody>
             </table>
           </ScrollArea>
-
+        </div>
           <div className="flex justify-center gap-4 pt-4 border-t">
             <Button
               size="lg"
@@ -672,7 +685,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
           </div>
         </div>
 
-        <ScrollArea className="flex-1 mt-1 pr-4 overflow-scroll">
+        <ScrollArea className="flex-1 mt-1 pr-4 overflow-y-auto overflow-x-scroll">
           <div className="space-y-8">
             {Object.entries(results).map(([targetMessage, mappings]) => (
               <div key={targetMessage} className="space-y-4">
@@ -680,33 +693,41 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
                   <h3 className="text-xl font-semibold text-primary">{targetMessage}</h3>
                 </div>
 
-                <div className="overflow-scroll rounded-lg border-2 border-border shadow-lg">
-                  <table className="w-[100%] border-collapse">
-                    <thead>
-                      <tr className="bg-gradient-to-r from-primary/20 to-accent/20">
-                        <th className="px-3 py-4 text-left font-bold border-r-2 border-border bg-gradient-to-r from-primary/10 to-primary/5">
+                <div className="rounded-lg border-2 border-border shadow-lg">
+                  <table className="w-full border-collapse">
+                    <thead className="block bg-gradient-to-r from-primary/20 to-accent/20">
+                      <tr className="grid grid-cols-5 w-full">
+                        {/* 1st column */}
+                        <th className="px-3 py-4 text-left font-bold border-r-2 border-border">
                           Destination Key
                         </th>
-                        <th className="px-6 py-4 text-center font-bold border-r-2 border-border bg-gradient-to-r from-accent/10 to-accent/5" colSpan={3}>
+
+                        {/* caption that covers the next three columns */}
+                        <th
+                          className="px-6 py-4 font-bold border-r-2 border-border text-center"
+                          style={{ gridColumn: 'span 3 / span 3' }}   /* <- 3 tracks */
+                        >
                           Best three Mappings (tap to select)
                         </th>
-                        <th className="px-6 py-4 text-center font-bold bg-gradient-to-r from-primary/5 to-accent/5">
+
+                        {/* 5th column */}
+                        <th className="px-6 py-4 font-bold text-center">
                           All Keys
                         </th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="block max-h-80 overflow-y-auto">
                       {Object.entries(mappings).map(([targetKey, keys], index) => (
-                        <tr key={targetKey} className={cn(
-                          "border-t-2 border-border transition-all",
-                          index % 2 === 0 ? "bg-card hover:bg-muted/30" : "bg-muted/20 hover:bg-muted/40"
-                        )}>
-                          <td className="px-6 py-4 font-bold border-r-1 text-center border-border bg-white text-black">
+                        <tr
+                          key={targetKey}
+                          className={cn(
+                            "grid grid-cols-5 border-t-2 border-border transition-all",
+                            index % 2 === 0 ? "bg-card hover:bg-muted/30" : "bg-muted/20 hover:bg-muted/40"
+                          )}
+                        >
+                          <td className="px-6 py-4 font-bold border-r-2 border-border bg-white text-black">
                             <div className="flex flex-col">
-                              {/* Target Key */}
                               <span className="font-bold text-black">{targetKey}</span>
-
-                              {/* Target Value Below */}
                               <span className="text-xs text-gray-600 mt-1 font-normal">
                                 {keys?.target_value || "--"}
                               </span>
