@@ -47,7 +47,7 @@ interface MappingResultsModalProps {
   scoreThreshold?: number;
 }
 
-export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, scoreThreshold = 0.4 }: MappingResultsModalProps) => {
+export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, scoreThreshold = 0.5 }: MappingResultsModalProps) => {
   const [selectedKeys, setSelectedKeys] = useState<Record<string, string | null>>({});
   const [isApproved, setIsApproved] = useState(false);
   const [hasEdited, setHasEdited] = useState(false);
@@ -134,47 +134,61 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
 
   const handleApprove = () => {
     const approvedMappings: Array<{ targetKey: string; sourceKey: string }> = [];
-    
+
     Object.entries(results).forEach(([targetMessage, mappings]) => {
       Object.entries(mappings).forEach(([targetKey, keys]) => {
         const key = `${targetMessage}::${targetKey}`;
         const selectedKeyNum = selectedKeys[key];
-        
-        if (selectedKeyNum) {
+        const targetFullKey = `${targetMessage}::${targetKey}`;
+
+        if (selectedKeyNum !== undefined && selectedKeyNum !== null) {
           const selectedKeyInfo = keys[selectedKeyNum as keyof typeof keys];
-          
+
           if (selectedKeyInfo) {
             approvedMappings.push({
-              targetKey: `${targetMessage}::${targetKey}`,
+              targetKey: targetFullKey,
               sourceKey: `${selectedKeyInfo.source_message}::${selectedKeyInfo.source_key}`
             });
+          } else {
+            approvedMappings.push({
+              targetKey: targetFullKey,
+              sourceKey: "NONE"
+            });
           }
+
+        } else {
+          // No key selected → add NONE as mapping
+          approvedMappings.push({
+            targetKey: targetFullKey,
+            sourceKey: "NONE"
+          });
         }
       });
     });
-    setIsPreviewMode(false)
+
+    setIsPreviewMode(false);
     setIsApproved(true);
     onApprove?.(approvedMappings);
   };
 
+
   const handleDownloadCSV = () => {
-    const csvRows: string[] = ['Target massage, Target Key,Source massage, Source Key'];
-    
+    const csvRows: string[] = ['Target message,Target Key,Source message,Source Key'];
+
     Object.entries(results).forEach(([targetMessage, mappings]) => {
       Object.entries(mappings).forEach(([targetKey, keys]) => {
         const key = `${targetMessage}::${targetKey}`;
         const selectedKeyNum = selectedKeys[key];
-        
-        if (selectedKeyNum) {
-          const selectedKeyInfo = keys[selectedKeyNum as keyof typeof keys];
-          
-          if (selectedKeyInfo) {
-            csvRows.push([
-              `${targetMessage}::${targetKey}`,
-              `${selectedKeyInfo.source_message}::${selectedKeyInfo.source_key}`
-            ].join(','));
-          }
-        }
+        const selectedKeyInfo = selectedKeyNum
+          ? keys[selectedKeyNum as keyof typeof keys]
+          : null;
+
+        csvRows.push([
+          `"${targetMessage}"`,           // quote in case commas exist
+          `"${targetKey}"`,
+          selectedKeyInfo ? `"${selectedKeyInfo.source_message}"` : 'None mapped',
+          selectedKeyInfo ? `"${selectedKeyInfo.source_key}"` : 'None mapped',
+        ].join(','));
       });
     });
 
@@ -390,19 +404,27 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
     }, [isOpen]);
   // Preview Mode Component
   if (isPreviewMode) {
-    const previewData: Array<{ targetKey: string; sourceKey: string; info: KeyInfo | null }> = [];
+    // NEW: keep every target, even when nothing is selected
+    const previewData: Array<{
+      targetKey: string;
+      sourceKey: string;
+      info: KeyInfo | null;
+    }> = [];
+
     Object.entries(results).forEach(([targetMessage, mappings]) => {
       Object.entries(mappings).forEach(([targetKey, keys]) => {
         const key = `${targetMessage}::${targetKey}`;
         const selectedKeyNum = selectedKeys[key];
-        const selectedKeyInfo = selectedKeyNum ? keys[selectedKeyNum as keyof typeof keys] : null;
-        
+        const selectedKeyInfo = selectedKeyNum
+          ? keys[selectedKeyNum as keyof typeof keys]
+          : null;
+
         previewData.push({
-          targetKey: `${targetMessage}::${targetKey}::${keys.target_value || ''}`,
-          sourceKey: selectedKeyInfo 
-            ? `${selectedKeyInfo.source_message}::${selectedKeyInfo.source_key}::${selectedKeyInfo.source_value || ''}`
-            : 'None',
-          info: selectedKeyInfo || null
+          targetKey: `${targetMessage}::${targetKey}::${keys.target_value ?? ''}`,
+          sourceKey: selectedKeyInfo
+            ? `${selectedKeyInfo.source_message}::${selectedKeyInfo.source_key}::${selectedKeyInfo.source_value ?? ''}`
+            : 'None mapped',
+          info: selectedKeyInfo ?? null,
         });
       });
     });
@@ -504,21 +526,23 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
 
   // Approved Mode Component
   if (isApproved) {
+    // NEW: keep every target, even when nothing is selected
     const approvedData: Array<{ targetKey: string; sourceKey: string }> = [];
+
     Object.entries(results).forEach(([targetMessage, mappings]) => {
       Object.entries(mappings).forEach(([targetKey, keys]) => {
         const key = `${targetMessage}::${targetKey}`;
         const selectedKeyNum = selectedKeys[key];
-        
-        if (selectedKeyNum) {
-          const selectedKeyInfo = keys[selectedKeyNum as keyof typeof keys];
-          if (selectedKeyInfo) {
-            approvedData.push({
-              targetKey: `${targetMessage}::${targetKey}`,
-              sourceKey: `${selectedKeyInfo.source_message}::${selectedKeyInfo.source_key}`
-            });
-          }
-        }
+        const selectedKeyInfo = selectedKeyNum
+          ? keys[selectedKeyNum as keyof typeof keys]
+          : null;
+
+        approvedData.push({
+          targetKey: `${targetMessage}::${targetKey}`,
+          sourceKey: selectedKeyInfo
+            ? `${selectedKeyInfo.source_message}::${selectedKeyInfo.source_key}`
+            : 'None mapped',
+        });
       });
     });
 
