@@ -8,6 +8,7 @@ from src.main import get_data_mapping
 from concurrent.futures import ProcessPoolExecutor
 from itertools import product
 import multiprocessing
+from src.utils.redisSave import get_progress, set_progress,destroy_all_progress_keys
 app = Flask(__name__)
 
 CORS(app, resources={r"/api/*": {"origins":[ "http://localhost:8080","http://localhost:8081"]}})
@@ -43,10 +44,10 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from itertools import product
 
 # Define this function at MODULE LEVEL (outside the route)
-def process_source_target_pair(src_file, src_json, tgt_file, tgt_json, metadata):
+def process_source_target_pair(src_file, src_json, tgt_file, tgt_json, metadata,progress_key ):
     """Process a single source-target pair"""
     src_meta = metadata[src_file]
-    mapping_result = get_data_mapping(src_json, tgt_json)
+    mapping_result = get_data_mapping(src_json, tgt_json,progress_key)
     
     # Enrich mappings with source metadata
     enriched_results = {}
@@ -65,29 +66,44 @@ def process_source_target_pair(src_file, src_json, tgt_file, tgt_json, metadata)
         enriched_results[tgt_key] = enriched_mappings
     
     return tgt_file, enriched_results
-import time
+
 
 import json
 import math
+import time
+@app.route("/api/progress",methods=["GET"])
+def get_mapping_progress():
+    total_tast_key = "total_tasks"
+    
+    n =int(get_progress(total_tast_key) )
+    final_progres = 0.0
+    for i in range(1,n+1):
+        progress_key = f'mapping_progress_{i}'
+        final_progres += get_progress(progress_key)
+        print('progress_key',progress_key,get_progress(progress_key))
+    final_progres = final_progres / n + get_progress("result")
+    print('result progress',get_progress("result"))
+    return {"progress":final_progres}
+
 @app.route('/api/map_files', methods=['POST'])
 def map_files():
     try:
-        start_total_t = time.time()
+        set_progress("result", 0)
         # Get all files (could be multiple)
         all_files = request.files.getlist("files")
         metadata_raw = request.form.get("metadata")
-      
+        set_progress("result", 0.5)
         if not all_files:
             return jsonify({"error": "No files uploaded"}), 400
         if not metadata_raw:
             return jsonify({"error": "No metadata provided"}), 400
 
         metadata = json.loads(metadata_raw)
-
+        set_progress("result", 1)
         # Separate source and target files
         source_files = [f for f in all_files if f.filename in metadata and metadata[f.filename].get("type") == "source"]
         target_files = [f for f in all_files if f.filename in metadata and metadata[f.filename].get("type") == "target"]
-       
+        set_progress("result", 1.5)
         if not source_files or not target_files:
             return jsonify({"error": "Need at least one source and one target file"}), 400
 
@@ -95,11 +111,11 @@ def map_files():
         source_data = {}
         for src in source_files:
             source_data[src.filename] = csv_to_json(src)
-          
+        set_progress("result", 3)
         target_data = {}
         for tgt in target_files:
             target_data[tgt.filename] = csv_to_json(tgt)
-       
+        set_progress("result", 4.5)
         # -------------------------------------------------------------
         # Build final result with parallel processing
         # -------------------------------------------------------------
@@ -107,19 +123,24 @@ def map_files():
 
         # Create all source-target pairs
         pairs = list(product(source_data.items(), target_data.items()))
-
+        set_progress("total_tasks", len(pairs))
+        print('total tasks:', len(pairs))
+        comp = 1
         # Use ThreadPoolExecutor instead of ProcessPoolExecutor
         max_workers = min(8, len(pairs))
-
+        
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             futures = []
+            set_progress("result", 4.9)
             for (src_file, src_json), (tgt_file, tgt_json) in pairs:
+                set_progress("result", 5)
+                progress_key = f'mapping_progress_{comp}'
                 future = executor.submit(
                     process_source_target_pair,
-                    src_file, src_json, tgt_file, tgt_json, metadata
+                    src_file, src_json, tgt_file, tgt_json, metadata,progress_key
                 )
                 futures.append(future)
-            
+                comp +=1
             # Aggregate results by target
             aggregated_by_target = {}
             for future in as_completed(futures):
@@ -177,7 +198,8 @@ def map_files():
         
         with open("final_result.json", "w", encoding="utf-8") as f:
             json.dump(final_result, f, indent=4, ensure_ascii=False)
-        print(f"✅ total time in api: {time.time() - start_total_t:.2f} sec")
+        time.sleep(1)
+        destroy_all_progress_keys()
         return jsonify(final_result), 200
 
     except Exception as e:

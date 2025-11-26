@@ -7,15 +7,15 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from src.utils.helper import *
 from src.utils.mapping_methods import *
 # def tarnsform_data(source_dict, target_list, data_mapping):
+import time
 
+from src.utils.redisSave import set_progress
 
-def get_data_mapping(source_dict, target_dict, full_mapping=True, save_csv=True):
-    start_total = time.time()
-    t1 = time.time()
+def get_data_mapping(source_dict, target_dict,progress_key, full_mapping=True, save_csv=True):
+
     keys = {**source_dict, **target_dict}
     descriptions, format_info = generate_description_format(keys)
-    print(f"✅ Step 1 - Description generation: {time.time() - t1:.2f} sec")
-    t2 = time.time()
+
     # print(descriptions)
     if descriptions == None:
         return format_info
@@ -29,12 +29,35 @@ def get_data_mapping(source_dict, target_dict, full_mapping=True, save_csv=True)
                     futures.append((tgt_key, executor.submit(compute_score, tgt_key, src_key, emb, groq)))
             
             # Collect results
+            import threading
+            import time
+
+            # --- Progress tracking setup ---
+            total_tasks = len(futures)
+            completed = 0
+            lock = threading.Lock()
+
+            
+
+            def write_progress():
+                while True:
+                    with lock:
+                        percent = (completed / total_tasks) * 95
+                    set_progress(progress_key, percent)
+                   
+                    if completed >= total_tasks:
+                        break
+                    time.sleep(1)
+
+            progress_thread = threading.Thread(target=write_progress, daemon=True)
+            progress_thread.start()
             for tgt_key, future in futures:
-                score_time = time.time()
+             
                 src_key, fuzzy, semantic, synonym = future.result()
-                llm_start = time.time()
+                
                 llm_score = llm_descriptions_similarity(tgt_key, src_key, descriptions, emb)
-                llm_time = time.time() - llm_start
+                with lock:
+                    completed += 1
                 if tgt_key not in result:
                     result[tgt_key] = []
                 
@@ -53,7 +76,7 @@ def get_data_mapping(source_dict, target_dict, full_mapping=True, save_csv=True)
                     "llm_score": llm_score,
                     "final_score": final_score
                 })
-            print(f"✅ Step 2 - Parallel scoring (fuzzy + semantic + synonym + LLM): {time.time() - t2:.2f} sec")
+        
         
         # with open("full_mapping.json", "w") as f:
         #     json.dump(result, f, indent=4)

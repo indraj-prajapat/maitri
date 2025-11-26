@@ -51,7 +51,20 @@ const StatusMessages = () => {
 const LoadingAnimation = ({ leftFiles = [], rightFiles = [] }) => {
   const [dataPoints, setDataPoints] = useState([]);
   const [mappingFlows, setMappingFlows] = useState([]);
+  const [progressm, setProgressm] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      fetch("http://127.0.0.1:5000/api/progress")
+        .then((res) => res.json())
+        .then((data) => {
+          setProgressm(data.progress);
+        })
+        .catch((err) => console.error("Progress fetch error:", err));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
   useEffect(() => {
     const interval = setInterval(() => {
       const newId = Date.now() + Math.random();
@@ -112,6 +125,37 @@ const LoadingAnimation = ({ leftFiles = [], rightFiles = [] }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-100 via-white to-purple-100 overflow-hidden">
+      <div className="absolute top-8 left-1/2 -translate-x-1/2 z-50">
+        <div className="flex items-center gap-4 bg-white/90 backdrop-blur-xl border-2 border-purple-200 rounded-2xl px-6 py-4 shadow-2xl shadow-purple-500/30">
+          
+          {/* left label */}
+          <span className="text-purple-700 text-base font-bold tracking-wide">
+            Overall Progress
+          </span>
+
+          {/* progress track with glow effect */}
+          <div className="relative w-64 h-3 bg-gradient-to-r from-purple-100 to-blue-100 rounded-full overflow-hidden shadow-inner">
+            {/* Background shimmer effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
+            
+            {/* Progress fill */}
+            <div
+              className="h-full bg-gradient-to-r from-purple-500 via-purple-600 to-blue-500 rounded-full transition-all duration-500 ease-out relative overflow-hidden shadow-lg"
+              style={{ width: `${progressm.toFixed(5)}%` }}
+            >
+              {/* Animated shine effect on progress bar */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-pulse"></div>
+            </div>
+          </div>
+
+          {/* percentage badge with gradient background */}
+          <div className="flex items-center gap-2 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl px-4 py-2 shadow-lg">
+            <span className="text-white text-lg font-bold tabular-nums drop-shadow-md">
+              {progressm.toFixed(1)}%
+            </span>
+          </div>
+        </div>
+      </div>
       <div className="relative w-full max-w-6xl h-[600px] px-8">
         
         {/* Source File - Left */}
