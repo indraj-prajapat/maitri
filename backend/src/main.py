@@ -125,6 +125,31 @@ def get_data_mapping(source_dict, target_dict,progress_key, full_mapping=True, s
         return result
 
 
+
+# Define this function at MODULE LEVEL (outside the route)
+def process_source_target_pair(src_file, src_json, tgt_file, tgt_json, metadata,progress_key ):
+    """Process a single source-target pair"""
+    src_meta = metadata[src_file]
+    mapping_result = get_data_mapping(src_json, tgt_json,progress_key)
+    
+    # Enrich mappings with source metadata
+    enriched_results = {}
+    for tgt_key, mappings in mapping_result.items():
+        enriched_mappings = []
+        for m in mappings:
+            m_copy = m.copy()
+            m_copy.update({
+                "source_message": src_meta["message_name"],
+                "source_file": src_file,
+                "source_country": src_meta["country"],
+                "source_domain": src_meta["domain"],
+                "source_system": src_meta["system"]
+            })
+            enriched_mappings.append(m_copy)
+        enriched_results[tgt_key] = enriched_mappings
+    
+    return tgt_file, enriched_results
+
 if __name__ == '__main__':
     source_dict = {
         "BLNumber": "BL123456789",

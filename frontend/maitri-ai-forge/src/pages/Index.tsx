@@ -241,10 +241,10 @@ const Index = () => {
               {/* Left Section */}
               <div className="bg-card rounded-xl border border-border shadow-lg overflow-hidden">
                 <UploadSection
-                  title="Origin"
-                  data={leftData}
-                  onChange={setLeftData}
-                  showErrors={showLeftErrors}
+                  title="Destination"
+                  data={rightData}
+                  onChange={setRightData}
+                  showErrors={showRightErrors}
                 />
               </div>
 
@@ -255,11 +255,12 @@ const Index = () => {
 
               {/* Right Section */}
               <div className="bg-card rounded-xl border border-border shadow-lg overflow-hidden">
+                
                 <UploadSection
-                  title="Destination"
-                  data={rightData}
-                  onChange={setRightData}
-                  showErrors={showRightErrors}
+                  title="Origin"
+                  data={leftData}
+                  onChange={setLeftData}
+                  showErrors={showLeftErrors}
                 />
               </div>
             </div>

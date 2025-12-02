@@ -18,6 +18,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
+import { set } from 'date-fns';
+import Transformation from './Transformation';
 
 interface MappingResult {
   [targetMessage: string]: {
@@ -56,7 +58,8 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
   const [currentThreshold, setCurrentThreshold] = useState(scoreThreshold);
   const [lowThreshold, setLowThreshold] = useState(0.4);
   const [highThreshold, setHighThreshold] = useState(0.8);
-
+  const [transData, setTransData] = useState(null);
+  const [transView, setTransView] = useState(false);
   // Initialize selected keys with key1 as default based on current threshold
   useEffect(() => {
     if (isOpen && Object.keys(results).length > 0) {
@@ -165,7 +168,32 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
         }
       });
     });
+    const previewTData: Array<{
+      targetKey: string;
+      sourceKey: string;
+      targetValue: string;
+      sourceValue: string;
+    }> = [];
 
+    Object.entries(results).forEach(([targetMessage, mappings]) => {
+      Object.entries(mappings).forEach(([targetKey, keys]) => {
+        const key = `${targetMessage}::${targetKey}`;
+        const selectedKeyNum = selectedKeys[key];
+        const selectedKeyInfo = selectedKeyNum
+          ? keys[selectedKeyNum as keyof typeof keys]
+          : null;
+
+        previewTData.push({
+          targetKey: targetKey,
+          targetValue: keys.target_value ?? '',
+          sourceValue: selectedKeyInfo?.source_value ?? '',
+          sourceKey: selectedKeyInfo
+            ? selectedKeyInfo.source_key
+            : 'None mapped',
+        });
+      });
+    });
+    setTransData(previewTData);
     setIsPreviewMode(false);
     setIsApproved(true);
     onApprove?.(approvedMappings);
@@ -428,8 +456,10 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
         });
       });
     });
-
+    
+    // setTransData(previewData);
     return (
+      <>
       <Dialog open={isOpen} onOpenChange={onClose}>
         <DialogContent className="max-w-5xl w-full max-h-[100vh] h-screen flex flex-col overflow-scroll">
           <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-accent text-center bg-clip-text text-transparent">
@@ -518,9 +548,12 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
               <CheckCircle className="w-5 h-5 mr-2" />
               Approve Mapping
             </Button>
+            
           </div>
         </DialogContent>
       </Dialog>
+      
+      </>
     );
   }
 
@@ -547,6 +580,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
     });
 
     return (
+      <>
       <Dialog open={isOpen} onOpenChange={onClose}>
         <DialogContent className="max-w-5xl max-h-[90vh] flex flex-col">
           <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -582,7 +616,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
               </tbody>
             </table>
           </ScrollArea>
-
+          <div className='flex flex-row justify-center gap-5'>
           <div className="flex justify-center pt-4 border-t">
             <Button
               size="lg"
@@ -593,12 +627,33 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
               Download as CSV
             </Button>
           </div>
+          <div className="flex justify-center pt-4 border-t">
+            {/* <Button
+              size="lg"
+              onClick={() => setTransView(true)}
+              className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg"
+            >
+              <CheckCircle className="w-5 h-5 mr-2" />
+              See Transformations
+            </Button> */}
+          </div>
+          </div>
         </DialogContent>
       </Dialog>
+      <Dialog open ={transView} onOpenChange={setTransView}>
+        <DialogContent className="max-w-[95vw] h-[90vh] flex flex-col ">
+          <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-center text-transparent">
+            Transforamtion View
+          </DialogTitle>
+          <Transformation transData={transData}/>
+        </DialogContent>
+      </Dialog>
+      </>
     );
   }
 
   return (
+    <>
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-[95vw] max-h-[90vh] flex flex-col ">
         <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-center text-transparent">
@@ -798,8 +853,14 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
               </>
             )}
           </Button>
+         
+          
+          
         </div>
       </DialogContent>
     </Dialog>
+   
+    
+    </>
   );
 };
