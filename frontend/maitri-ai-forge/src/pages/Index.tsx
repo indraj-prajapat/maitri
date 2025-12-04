@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { UploadSection, UploadSectionData } from '@/components/UploadSection';
 import { MappingResultsModal } from '@/components/MappingResultsModal';
+// import { MappingResultsModal } from '@/components/mapping-results';
 import LoadingAnimation  from '@/components/LoadingAnimation';
 import { PastMappingsView, SavedMapping } from '@/components/PastMappingsView';
 import { ApprovedMappingView } from '@/components/ApprovedMappingView';

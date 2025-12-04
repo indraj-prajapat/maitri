@@ -2,7 +2,7 @@ import { useState ,useEffect} from 'react';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { CheckCircle, Info, Edit, Eye, ArrowLeft, Search, X } from 'lucide-react';
+import { CheckCircle, Info, Edit, Eye, ArrowLeft, Search, X, AtSignIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import {
   Tooltip,
@@ -17,6 +17,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import * as XLSX from 'xlsx';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import { Input } from "@/components/ui/input";
 import { set } from 'date-fns';
 import Transformation from './Transformation';
@@ -48,7 +55,7 @@ interface MappingResultsModalProps {
   onApprove?: (approvedMappings: Array<{ targetKey: string; sourceKey: string }>) => void;
   scoreThreshold?: number;
 }
-
+const API_BASE_URL = 'http://localhost:5000/api';
 export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, scoreThreshold = 0.5 }: MappingResultsModalProps) => {
   const [selectedKeys, setSelectedKeys] = useState<Record<string, string | null>>({});
   const [isApproved, setIsApproved] = useState(false);
@@ -60,6 +67,8 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
   const [highThreshold, setHighThreshold] = useState(0.8);
   const [transData, setTransData] = useState(null);
   const [transView, setTransView] = useState(false);
+  // near the other useState calls
+  const [editedMap, setEditedMap] = useState<Record<string, string>>({});
   // Initialize selected keys with key1 as default based on current threshold
   useEffect(() => {
     if (isOpen && Object.keys(results).length > 0) {
@@ -79,7 +88,31 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
     }
   }, [isOpen, results, currentThreshold]);
 
+  /* call this inside handleKeySelect & handleDropdownSelect */
+  const updateEditedMap = (targetFullKey: string, newSourceKey: string | null) => {
+    setEditedMap(prev => {
+      const copy = { ...prev };
 
+      /* if the user puts it back to the default (key1) we remove the entry */
+      const mappings = results[targetFullKey.split("::")[0]]?.[targetFullKey.split("::")[1]];
+      const defaultKey = mappings?.key1
+        ? `${mappings.key1.source_message}::${mappings.key1.source_key}`
+        : null;
+
+      if (newSourceKey === "key1" || (newSourceKey === null && defaultKey === null)) {
+        delete copy[targetFullKey];
+      } else {
+        /* store the real source key name */
+        const keyInfo = newSourceKey
+          ? mappings?.[newSourceKey as keyof typeof mappings]
+          : null;
+        copy[targetFullKey] = keyInfo
+          ? `${keyInfo.source_message}::${keyInfo.source_key}`
+          : "NONE";
+      }
+      return copy;
+    });
+  };
   // Get all available keys for a target
   const getAllKeysForTarget = (targetMessage: string, targetKey: string) => {
     const mappings = results[targetMessage]?.[targetKey];
@@ -109,33 +142,26 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
 
   const handleKeySelect = (targetMessage: string, targetKey: string, keyNum: string | null) => {
     const key = `${targetMessage}::${targetKey}`;
-    const currentSelection = selectedKeys[key];
-    
-    // If clicking the same key, deselect it
-    if (currentSelection === keyNum) {
-      setSelectedKeys({
-        ...selectedKeys,
-        [key]: null
-      });
-    } else {
-      setSelectedKeys({
-        ...selectedKeys,
-        [key]: keyNum
-      });
+    const current = selectedKeys[key];
+
+    if (current === keyNum) {          // deselect
+      setSelectedKeys({ ...selectedKeys, [key]: null });
+      updateEditedMap(key, null);
+    } else {                           // select
+      setSelectedKeys({ ...selectedKeys, [key]: keyNum });
+      updateEditedMap(key, keyNum);
     }
     setHasEdited(true);
   };
 
   const handleDropdownSelect = (targetMessage: string, targetKey: string, keyNum: string) => {
     const key = `${targetMessage}::${targetKey}`;
-    setSelectedKeys({
-      ...selectedKeys,
-      [key]: keyNum
-    });
+    setSelectedKeys({ ...selectedKeys, [key]: keyNum });
+    updateEditedMap(key, keyNum);
     setHasEdited(true);
   };
 
-  const handleApprove = () => {
+  const handleApprove = async() => {
     const approvedMappings: Array<{ targetKey: string; sourceKey: string }> = [];
 
     Object.entries(results).forEach(([targetMessage, mappings]) => {
@@ -183,16 +209,30 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
           ? keys[selectedKeyNum as keyof typeof keys]
           : null;
 
+        // skip rows whose source key is "None mapped"
+        if (!selectedKeyInfo) return;
+
         previewTData.push({
-          targetKey: targetKey,
+          targetKey,
           targetValue: keys.target_value ?? '',
-          sourceValue: selectedKeyInfo?.source_value ?? '',
-          sourceKey: selectedKeyInfo
-            ? selectedKeyInfo.source_key
-            : 'None mapped',
+          sourceValue: selectedKeyInfo.source_value ?? '',
+          sourceKey: selectedKeyInfo.source_key,
         });
       });
     });
+    /* NEW: send only the edited ones */
+    if (Object.keys(editedMap).length) {
+      try {
+        await fetch(`${API_BASE_URL}/editedMapping`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(editedMap),
+        });
+      } catch (e) {
+        console.error("editedMapping call failed", e);
+      }
+    }
+    console.log('editedMap',editedMap);
     setTransData(previewTData);
     setIsPreviewMode(false);
     setIsApproved(true);
@@ -200,37 +240,6 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
   };
 
 
-  const handleDownloadCSV = () => {
-    const csvRows: string[] = ['Target message,Target Key,Source message,Source Key'];
-
-    Object.entries(results).forEach(([targetMessage, mappings]) => {
-      Object.entries(mappings).forEach(([targetKey, keys]) => {
-        const key = `${targetMessage}::${targetKey}`;
-        const selectedKeyNum = selectedKeys[key];
-        const selectedKeyInfo = selectedKeyNum
-          ? keys[selectedKeyNum as keyof typeof keys]
-          : null;
-
-        csvRows.push([
-          `"${targetMessage}"`,           // quote in case commas exist
-          `"${targetKey}"`,
-          selectedKeyInfo ? `"${selectedKeyInfo.source_message}"` : 'None mapped',
-          selectedKeyInfo ? `"${selectedKeyInfo.source_key}"` : 'None mapped',
-        ].join(','));
-      });
-    });
-
-    const csvContent = csvRows.join('\n');
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    const link = document.createElement('a');
-    const url = URL.createObjectURL(blob);
-    link.setAttribute('href', url);
-    link.setAttribute('download', 'approved_mapping.csv');
-    link.style.visibility = 'hidden';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   const renderSelectedCell = (targetMessage: string, targetKey: string) => {
     const key = `${targetMessage}::${targetKey}`;
@@ -344,6 +353,86 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
     );
   };
 
+  const downloadFile = (format: 'csv' | 'xlsx' | 'xml' | 'json') => {
+    /* 1. build 4-column array */
+    const rows: string[][] = [
+      ['Target Message', 'Target Key', 'Source Message', 'Source Key'],
+    ];
+
+    Object.entries(results).forEach(([targetMessage, mappings]) => {
+      Object.entries(mappings).forEach(([targetKey, keys]) => {
+        const fullTarget = `${targetMessage}::${targetKey}`;
+        const selected   = selectedKeys[fullTarget];
+        const keyInfo    = selected ? keys[selected as keyof typeof keys] : null;
+
+        rows.push([
+          targetMessage,
+          targetKey,
+          keyInfo ? keyInfo.source_message : 'None mapped',
+          keyInfo ? keyInfo.source_key     : 'None mapped',
+        ]);
+      });
+    });
+
+    /* 2. convert to requested format */
+    let blob: Blob;
+    let fileName: string;
+
+    /* ---------- CSV ---------- */
+    if (format === 'csv') {
+      const csv = rows.map(r => r.map(cell => `"${cell}"`).join(',')).join('\n');
+      blob      = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      fileName  = 'approved_mapping.csv';
+    }
+
+    /* ---------- XLSX ---------- */
+    else if (format === 'xlsx') {
+      const ws = XLSX.utils.aoa_to_sheet(rows);
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Mapping');
+      const buffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+      blob   = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+      fileName = 'approved_mapping.xlsx';
+    }
+
+    /* ---------- XML ---------- */
+    else if (format === 'xml') {
+      let xml = '<?xml version="1.0" encoding="UTF-8"?><Mapping>';
+      rows.slice(1).forEach(([tm, tk, sm, sk]) => {
+        xml += `<item>`;
+        xml += `<TargetMessage>${tm}</TargetMessage>`;
+        xml += `<TargetKey>${tk}</TargetKey>`;
+        xml += `<SourceMessage>${sm}</SourceMessage>`;
+        xml += `<SourceKey>${sk}</SourceKey>`;
+        xml += `</item>`;
+      });
+      xml += '</Mapping>';
+      blob     = new Blob([xml], { type: 'application/xml' });
+      fileName = 'approved_mapping.xml';
+    }
+
+    /* ---------- JSON ---------- */
+    else {
+      const arr = rows.slice(1).map(([tm, tk, sm, sk]) => ({
+        targetMessage: tm,
+        targetKey:     tk,
+        sourceMessage: sm,
+        sourceKey:     sk,
+      }));
+      blob     = new Blob([JSON.stringify(arr, null, 2)], { type: 'application/json' });
+      fileName = 'approved_mapping.json';
+    }
+
+    /* 3. trigger browser download */
+    const url = URL.createObjectURL(blob);
+    const a   = document.createElement('a');
+    a.href    = url;
+    a.download= fileName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
 
   const renderDropdownCell = (targetMessage: string, targetKey: string) => {
     const key = `${targetMessage}::${targetKey}`;
@@ -436,6 +525,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
     const previewData: Array<{
       targetKey: string;
       sourceKey: string;
+      target_madetory: string;
       info: KeyInfo | null;
     }> = [];
 
@@ -452,8 +542,11 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
           sourceKey: selectedKeyInfo
             ? `${selectedKeyInfo.source_message}::${selectedKeyInfo.source_key}::${selectedKeyInfo.source_value ?? ''}`
             : 'None mapped',
+          target_madetory: keys.target_m_n,
+            
           info: selectedKeyInfo ?? null,
         });
+        console.log('preview data',previewData);
       });
     });
     
@@ -492,8 +585,12 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
                       index % 2 === 0 ? "bg-card" : "bg-card"
                     )}
                   >
-                    <td className="px-6 py-4 border-r-2 border-border text-gray-300">
+                    <td className="px-6 py-4 border-r-2 border-border text-gray-300 flex flex-row items-center justify-center">
                       {formatKey(mapping.targetKey)}
+                      {mapping.target_madetory === 'M' && (
+                        <div><AtSignIcon className="w-4 h-4 inline-block ml-2 text-red-500" /></div>
+                        
+                      )}
                     </td>
                     <td className="px-6 py-4">
                       {mapping.info ? (
@@ -618,24 +715,30 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
           </ScrollArea>
           <div className='flex flex-row justify-center gap-5'>
           <div className="flex justify-center pt-4 border-t">
-            <Button
-              size="lg"
-              onClick={handleDownloadCSV}
-              className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg"
-            >
-              <CheckCircle className="w-5 h-5 mr-2" />
-              Download as CSV
-            </Button>
+            {/* ---- DOWNLOAD BUTTON WITH FORMAT CHOICE ---- */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button size="lg" className="bg-gradient-to-r from-primary to-accent shadow-lg">
+                Download
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="center">
+              <DropdownMenuItem onClick={() => downloadFile('csv')}>CSV</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => downloadFile('xlsx')}>XLSX</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => downloadFile('xml')}>XML</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => downloadFile('json')}>JSON</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           </div>
           <div className="flex justify-center pt-4 border-t">
-            {/* <Button
+            <Button
               size="lg"
               onClick={() => setTransView(true)}
               className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg"
             >
               <CheckCircle className="w-5 h-5 mr-2" />
               See Transformations
-            </Button> */}
+            </Button>
           </div>
           </div>
         </DialogContent>
@@ -806,7 +909,14 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
                         >
                           <td className="px-6 py-4 font-bold border-r-2 border-border bg-white text-black">
                             <div className="flex flex-col">
-                              <span className="font-bold text-black">{targetKey}</span>
+                              <div className='flex flex-row'>
+                                <span className="font-bold text-black">{targetKey}</span>
+                                {keys.target_m_n === 'M' && (
+                                  <div><AtSignIcon className="w-4 h-4 inline-block ml-2 text-red-500" /></div>
+                                  
+                                )}
+                              </div>
+                              
                               <span className="text-xs text-gray-600 mt-1 font-normal">
                                 {keys?.target_value || "--"}
                               </span>

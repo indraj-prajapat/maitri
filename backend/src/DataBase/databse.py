@@ -46,6 +46,14 @@ class Mapping(Base):
     meta = relationship("Metadata", back_populates="mappings")
 
 
+
+class PastMapping(Base):
+    __tablename__ = "past_mapping"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    source_key = Column(String, nullable=False)
+    target_key = Column(String, nullable=False)
+    number = Column(Integer, nullable=False)
 # ------------------------------------------------------------------
 # 3. Ensure tables exist
 # ------------------------------------------------------------------

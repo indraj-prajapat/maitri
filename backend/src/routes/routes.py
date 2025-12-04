@@ -8,7 +8,9 @@ from itertools import product
 import pandas as pd
 from src.DataBase.databse import *
 import multiprocessing
+from sqlalchemy import tuple_
 from src.Transformation import SemanticTransformationEngine
+from src.input.inputData import FileToJson
 engine = SemanticTransformationEngine()
 app_bp = Blueprint('api', __name__)
 
@@ -33,8 +35,8 @@ def get_mapping_progress():
 def map_files():
     try:
         set_progress("result", 0)
-        # Get all files (could be multiple)
         all_files = request.files.getlist("files")
+        print('Uploaded files:', [f.filename for f in all_files])
         metadata_raw = request.form.get("metadata")
         set_progress("result", 0.5)
         if not all_files:
@@ -44,104 +46,127 @@ def map_files():
 
         metadata = json.loads(metadata_raw)
         set_progress("result", 1)
-        # Separate source and target files
+
         source_files = [f for f in all_files if f.filename in metadata and metadata[f.filename].get("type") == "source"]
         target_files = [f for f in all_files if f.filename in metadata and metadata[f.filename].get("type") == "target"]
+
         set_progress("result", 1.5)
         if not source_files or not target_files:
             return jsonify({"error": "Need at least one source and one target file"}), 400
 
-        # Convert all source and target CSVs to JSON
+        # --- CSV → JSON ---
         source_data = {}
         for src in source_files:
-            source_data[src.filename] = csv_to_json(src)
+            c = FileToJson(src)
+            source_data[src.filename] = c.to_key_val()
         set_progress("result", 3)
-        target_data = {}
-        for tgt in target_files:
-            target_data[tgt.filename] = csv_to_json(tgt)
-        set_progress("result", 4.5)
-        # -------------------------------------------------------------
-        # Build final result with parallel processing
-        # -------------------------------------------------------------
-        final_result = {}
 
-        # Create all source-target pairs
+        target_data = {}
+        target_mn = {}
+        for tgt in target_files:
+            c = FileToJson(tgt)
+            target_data[tgt.filename] = c.to_key_val()
+            target_mn[tgt.filename] = {rec["field_name"]: rec["m/n"] for rec in c.to_meta()}
+        set_progress("result", 4.5)
+
+        # --- parallel mapping ---
         pairs = list(product(source_data.items(), target_data.items()))
         set_progress("total_tasks", len(pairs))
-        print('total tasks:', len(pairs))
         comp = 1
-        # Use ThreadPoolExecutor instead of ProcessPoolExecutor
         max_workers = min(8, len(pairs))
-        
+
+        aggregated_by_target = {}
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             futures = []
-            set_progress("result", 4.9)
             for (src_file, src_json), (tgt_file, tgt_json) in pairs:
-                set_progress("result", 5)
                 progress_key = f'mapping_progress_{comp}'
                 future = executor.submit(
                     process_source_target_pair,
-                    src_file, src_json, tgt_file, tgt_json, metadata,progress_key
+                    src_file, src_json, tgt_file, tgt_json, metadata, progress_key
                 )
                 futures.append(future)
-                comp +=1
-            # Aggregate results by target
-            aggregated_by_target = {}
+                comp += 1
+
             for future in as_completed(futures):
                 tgt_file, enriched_results = future.result()
                 if tgt_file not in aggregated_by_target:
                     aggregated_by_target[tgt_file] = {}
-                
                 for tgt_key, mappings in enriched_results.items():
                     if tgt_key not in aggregated_by_target[tgt_file]:
                         aggregated_by_target[tgt_file][tgt_key] = []
                     aggregated_by_target[tgt_file][tgt_key].extend(mappings)
-            
-            # Final structuring with values
-            for tgt_file in target_data.keys():
-                tgt_meta = metadata[tgt_file]
-                tgt_msg_name = tgt_meta["message_name"]
-                tgt_json = target_data[tgt_file]
-                
-                final_result[tgt_msg_name] = {}
-                
-                for tgt_key, mappings in aggregated_by_target.get(tgt_file, {}).items():
-                    sorted_mappings = sorted(mappings, key=lambda x: x["final_score"], reverse=True)
-                    
-                    # Get target key value from target JSON
-                    target_value = tgt_json.get(tgt_key, "")
-                    # Clean NaN values
-                    if pd.isna(target_value) or (isinstance(target_value, float) and math.isnan(target_value)):
-                        target_value = ""
-                    entry = {
-                        "target_key": tgt_key,
-                        "target_value": target_value,
-                       
-                    }
-                    
-                    for idx, m in enumerate(sorted_mappings, start=1):
-                        # Get source value from source JSON
-                        src_file_name = m["source_file"]
-                        src_key = m["source_key"]
-                        src_json = source_data.get(src_file_name, {})
-                        source_value = src_json.get(src_key, "")
-                        if pd.isna(source_value) or (isinstance(source_value, float) and math.isnan(source_value)):
-                            source_value = ""
-                        entry[f"key{idx}"] = {
-                            "final_score": m["final_score"],
-                            "source_message": m["source_message"],
-                            "source_key": m["source_key"],
-                            "source_value": source_value,  # Added source value
-                            "source_file": m["source_file"],
-                            "source_country": m["source_country"],
-                            "source_domain": m["source_domain"],
-                            "source_system": m["source_system"]
-                        }
-                    
-                    final_result[tgt_msg_name][tgt_key] = entry
-        
+
+        # --- build final_result ---
+        final_result = {}
+        for tgt_file in target_data.keys():
+            tgt_meta = metadata[tgt_file]
+            tgt_msg_name = tgt_meta["message_name"]
+            tgt_json = target_data[tgt_file]
+            final_result[tgt_msg_name] = {}
+
+            for tgt_key, mappings in aggregated_by_target.get(tgt_file, {}).items():
+                target_value = tgt_json.get(tgt_key, "")
+                if pd.isna(target_value) or (isinstance(target_value, float) and math.isnan(target_value)):
+                    target_value = ""
+
+                entry = {
+                    "target_key": tgt_key,
+                    "target_value": target_value,
+                    "target_m_n": target_mn[tgt_file].get(tgt_key, "")
+                }
+
+                # --- build scored list ---
+                scored = []
+                for m in sorted(mappings, key=lambda x: x["final_score"], reverse=True):
+                    src_file_name = m["source_file"]
+                    src_key = m["source_key"]
+                    src_json = source_data.get(src_file_name, {})
+                    source_value = src_json.get(src_key, "")
+                    if pd.isna(source_value) or (isinstance(source_value, float) and math.isnan(source_value)):
+                        source_value = ""
+
+                    scored.append({
+                        "final_score": m["final_score"],
+                        "source_message": m["source_message"],
+                        "source_key": m["source_key"],
+                        "source_value": source_value,
+                        "source_file": m["source_file"],
+                        "source_country": m["source_country"],
+                        "source_domain": m["source_domain"],
+                        "source_system": m["source_system"]
+                    })
+
+                # ---------- PAST-MAPPING BONUS ----------
+                with SessionLocal.begin() as db:
+                    rows = db.query(PastMapping).filter(
+                        tuple_(PastMapping.target_key, PastMapping.source_key).in_(
+                            [(tgt_key, d["source_key"]) for d in scored]
+                        )
+                    ).all()
+                    bonus_map = {(r.target_key, r.source_key): r.number for r in rows}
+
+                    for d in scored:
+                        n = bonus_map.get((tgt_key, d["source_key"]), 0)
+                        if n == 0:
+                            continue
+                        if n >= 4:
+                            d["final_score"] = 1.0
+                        else:
+                            d["final_score"] = min(d["final_score"] + 0.2 * n, 1.0)
+                        d["source_message"] += " (biased on past mapping)"
+
+                    # re-sort by updated score
+                    scored.sort(key=lambda x: x["final_score"], reverse=True)
+
+                # store top-3
+                for idx, d in enumerate(scored[:3], start=1):
+                    entry[f"key{idx}"] = d
+
+                final_result[tgt_msg_name][tgt_key] = entry
+
         with open("final_result.json", "w", encoding="utf-8") as f:
             json.dump(final_result, f, indent=4, ensure_ascii=False)
+
         time.sleep(1)
         destroy_all_progress_keys()
         return jsonify(final_result), 200
@@ -150,10 +175,9 @@ def map_files():
         import traceback
         traceback.print_exc()
         return jsonify({"error": str(e)}), 500
+    
 
-
-
-
+    
 # ----------  GET /api/mappings  ----------
 @app_bp.route("/mappings", methods=["GET"])
 def get_mappings():
@@ -286,3 +310,88 @@ def transform():
     print(safe)
     return jsonify({"results": safe}),200
 
+@app_bp.route('/editedMapping', methods=['POST'])
+def save_edited_mappings():
+
+    data = request.get_json(silent=True) or {}
+    if not data:
+        return jsonify({"error": "Empty payload"}), 400
+
+    try:
+        with SessionLocal.begin() as db:          # gives you an active session + transaction
+            for target_full_key, source_full_key in data.items():
+                source_key = (
+                    source_full_key.split("::", 1)[1]
+                    if "::" in source_full_key
+                    else "NONE"
+                )
+                target_key = (
+                    target_full_key.split("::", 1)[1]
+                    if "::" in target_full_key
+                    else target_full_key
+                )
+
+                existing = (db.query(PastMapping)
+                           .filter_by(source_key=source_key, target_key=target_key)
+                           .with_for_update()
+                           .first())
+
+                if existing:
+                    existing.number += 1
+                else:
+                    db.add(PastMapping(
+                        source_key=source_key,
+                        target_key=target_key,
+                        number=1
+                    ))
+        # commit is automatic when exiting the context manager
+        return jsonify({"status": "saved"}), 200
+    except Exception as exc:
+        current_app.logger.exception("save_edited_mappings failed")
+        return jsonify({"error": str(exc)}), 500
+    
+    
+    
+    
+    """
+    Expects JSON:  { "targetMessage::targetKey": "sourceMessage::sourceKey", ... }
+    If the pair (source_key, target_key) already exists → increment `number`.
+    Otherwise insert with `number = 0`.
+    """
+    data: dict = request.get_json(silent=True) or {}
+    if not data:
+        return jsonify({"error": "Empty payload"}), 400
+
+    session = db.session
+    try:
+        for target_full_key, source_full_key in data.items():
+            # split the composite strings
+            try:
+                source_msg, source_key = source_full_key.split("::", 1)
+            except ValueError:          # "NONE" or malformed
+                source_msg, source_key = "NONE", "NONE"
+
+            # look for an existing row
+            existing = (session.query(PastMapping)
+                        .filter_by(source_key=source_key, target_key=target_full_key)
+                        .with_for_update()          # avoid race
+                        .first())
+
+            if existing:
+                existing.number += 1
+            else:
+                new_row = PastMapping(
+                    source_key=source_key,
+                    target_key=target_full_key,
+                    number=0
+                )
+                session.add(new_row)
+
+        session.commit()
+        return jsonify({"status": "saved"}), 200
+    except Exception as exc:
+        session.rollback()
+        current_app.logger.exception("save_edited_mappings failed")
+        return jsonify({"error": str(exc)}), 500
+    finally:
+        session.close()
