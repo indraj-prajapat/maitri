@@ -41,7 +41,7 @@ export default function Transformation({ transData }: { transData: any[] }) {
   const [results, setResults] = useState<BackendItem[] | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
+  console.log("transData", transData);
   useEffect(() => {
     if (!transData.length) return;
     const controller = new AbortController();
@@ -57,6 +57,7 @@ export default function Transformation({ transData }: { transData: any[] }) {
         });
         if (!res.ok) throw new Error(await res.text());
         const json = await res.json();
+        console.log("transformation response", json.results);
         setResults(json.results);
       } catch (e: any) {
         if (e.name !== "AbortError") setError(e.message || "Network error");

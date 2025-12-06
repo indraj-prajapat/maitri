@@ -1,598 +1,738 @@
 {
-    "VESDEP_NLP": {
-        "RecordType": {
-            "target_key": "RecordType",
-            "target_value": "N",
-            "target_m_n": "N",
+    "VESDEP_DT": {
+        "voyageNo": {
+            "target_key": "voyageNo",
+            "target_value": "2862507512",
+            "target_m_n": "M",
             "key1": {
-                "final_score": 0.5363255104242335,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "DocumentType",
-                "source_value": "CODECO",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
+                "final_score": 0.866406749780014,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.47960623574394523,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "MessageType",
-                "source_value": "9",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key3": {
-                "final_score": 0.41267010802848214,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "CargoType",
-                "source_value": "12",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            }
-        },
-        "BerthNumber": {
-            "target_key": "BerthNumber",
-            "target_value": "EQ9",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.4966726354904576,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "GateNumber",
+                "final_score": 0.485114972801033,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NoOfEngines",
                 "source_value": "1",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key2": {
-                "final_score": 0.4621394452229515,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "DocumentNumber",
-                "source_value": "8.08E+12",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.4520254531690816,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "IMONumber",
-                "source_value": "9270696",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
+                "final_score": 0.41243324527732533,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselGear_RecordNumber",
+                "source_value": "1",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "VCN": {
-            "target_key": "VCN",
-            "target_value": "INVTZ120240997",
+        "portOfRegistration": {
+            "target_key": "portOfRegistration",
+            "target_value": "MYPKG1",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.6296273899474751,
+                "source_message": "VESPRO_NLP",
+                "source_key": "PortOfApproval",
+                "source_value": "INCCU1",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.5452391761908149,
+                "source_message": "VESPRO_NLP",
+                "source_key": "RegPort",
+                "source_value": "MYPKG1",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.5355711508668917,
+                "source_message": "VESDEP_NLP",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "beam": {
+            "target_key": "beam",
+            "target_value": "24.61",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.9999997542234185,
+                "source_message": "VESPRO_NLP",
+                "source_key": "Beam",
+                "source_value": "24.61",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.3763504727054742,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.36595656183298386,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "vesselLOA": {
+            "target_key": "vesselLOA",
+            "target_value": "159.98",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.9999997125001672,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "VCN",
-                "source_value": "INNSA1NG0R0286",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
+                "final_score": 0.7234008526744202,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.3267862169925854,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "VehicleNo",
-                "source_value": "MH46H5586",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
+                "final_score": 0.6173527442592772,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.2729484964611006,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "ContISOCode",
-                "source_value": "42G1",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
+                "final_score": 0.6173527442592772,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselName",
+                "source_value": "MTT SEMPORNA",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "IMONumber": {
-            "target_key": "IMONumber",
-            "target_value": "1598677890",
+        "vesselOwner": {
+            "target_key": "vesselOwner",
+            "target_value": "MTT SHIPPING",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.999999791348918,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselOwner",
+                "source_value": "MTT SHIPPING",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.642081643393513,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.642081643393513,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselName",
+                "source_value": "MTT SEMPORNA",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "nextPortCall": {
+            "target_key": "nextPortCall",
+            "target_value": "SGSIN1",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.9910537292949644,
+                "source_message": "VESDEP_NLP",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.4556228680014146,
+                "source_message": "VESDEP_NLP",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.44449977714101674,
+                "source_message": "VESDEP_NLP",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "rotationNo": {
+            "target_key": "rotationNo",
+            "target_value": "123456",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.4486911735032912,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NoOfEngines",
+                "source_value": "1",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.40115649059846203,
+                "source_message": "VESPRO_NLP",
+                "source_key": "IMONumber",
+                "source_value": "9813888",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.3940801294535155,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselGear_RecordNumber",
+                "source_value": "1",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "cell": {
+            "target_key": "cell",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.24182728005527826,
+                "source_message": "VESPRO_NLP",
+                "source_key": "IMONumber",
+                "source_value": "9813888",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.20032865840249758,
+                "source_message": "VESDEP_NLP",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.19831360211225973,
+                "source_message": "VESPRO_NLP",
+                "source_key": "CallSign",
+                "source_value": "9M2379",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "vesselLineCode": {
+            "target_key": "vesselLineCode",
+            "target_value": "",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6177733290330478,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselType",
+                "source_value": "1511",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.5743676560546052,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselGear_RecordNumber",
+                "source_value": "1",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.5703677051058273,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "teuCapacity": {
+            "target_key": "teuCapacity",
+            "target_value": "1162",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5351022233233831,
+                "source_message": "VESPRO_NLP",
+                "source_key": "TEU",
+                "source_value": "1162",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.29388852556892126,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselType",
+                "source_value": "1511",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.2832519023568377,
+                "source_message": "VESPRO_NLP",
+                "source_key": "ClassificationSociety",
+                "source_value": "Ship Classification Society of Mala",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "estimatedTimeOfArrival": {
+            "target_key": "estimatedTimeOfArrival",
+            "target_value": "17042025:12:56",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.7207701112209239,
+                "source_message": "VESDEP_NLP",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.46032212753545126,
+                "source_message": "VESDEP_NLP",
+                "source_key": "IssuedDateTime",
+                "source_value": "21042025110504",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.4470388030302701,
+                "source_message": "VESPRO_NLP",
+                "source_key": "IssuedDateTime",
+                "source_value": "21052025135340",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "vesselCallSign": {
+            "target_key": "vesselCallSign",
+            "target_value": "EPDF6",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.8205371899203793,
+                "source_message": "VESDEP_NLP",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.7482654677394804,
+                "source_message": "VESPRO_NLP",
+                "source_key": "CallSign",
+                "source_value": "9M2379",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.5669727494309763,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselName",
+                "source_value": "MTT SEMPORNA",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "nationality": {
+            "target_key": "nationality",
+            "target_value": "IN",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.38029140624102836,
+                "source_message": "VESDEP_NLP",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.3763820060278107,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.3763820060278107,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselName",
+                "source_value": "MTT SEMPORNA",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "vesselAgentCode": {
+            "target_key": "vesselAgentCode",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6065690581496207,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselType",
+                "source_value": "1511",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.5736528551466911,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselGear_RecordNumber",
+                "source_value": "1",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.5599605881836438,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "portArrivalDate": {
+            "target_key": "portArrivalDate",
+            "target_value": "29-08-2025 06:00",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.685259184549156,
+                "source_message": "VESDEP_NLP",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.6474367878165133,
+                "source_message": "VESDEP_NLP",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.49312436448538977,
+                "source_message": "VESDEP_NLP",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "countryCode": {
+            "target_key": "countryCode",
+            "target_value": "IN",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.7057829232294756,
+                "source_message": "VESDEP_NLP",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.503461615632838,
+                "source_message": "VESPRO_NLP",
+                "source_key": "AgencyCode",
+                "source_value": "AAHCM8479K",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.43587187949014183,
+                "source_message": "VESDEP_NLP",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "maximumDraft": {
+            "target_key": "maximumDraft",
+            "target_value": "7.7",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.8005833141372356,
+                "source_message": "VESPRO_NLP",
+                "source_key": "MaxDraft",
+                "source_value": "7.7",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.3041270563027106,
+                "source_message": "VESPRO_NLP",
+                "source_key": "DWT",
+                "source_value": "15380",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.29911187640077,
+                "source_message": "VESPRO_NLP",
+                "source_key": "IMONumber",
+                "source_value": "9813888",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "grt1": {
+            "target_key": "grt1",
+            "target_value": "13059",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.648745315726767,
+                "source_message": "VESPRO_NLP",
+                "source_key": "GRT",
+                "source_value": "13059",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.4892088381585819,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NRT",
+                "source_value": "5040",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.4122823698688465,
+                "source_message": "VESPRO_NLP",
+                "source_key": "DWT",
+                "source_value": "15380",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "grt2": {
+            "target_key": "grt2",
+            "target_value": "13059",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.646254944261084,
+                "source_message": "VESPRO_NLP",
+                "source_key": "GRT",
+                "source_value": "13059",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.4944795487460798,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NRT",
+                "source_value": "5040",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.41679752601870546,
+                "source_message": "VESPRO_NLP",
+                "source_key": "DWT",
+                "source_value": "15380",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "sailDate": {
+            "target_key": "sailDate",
+            "target_value": "29-08-2025 06:00",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6161898976099479,
+                "source_message": "VESDEP_NLP",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.49738425299868044,
+                "source_message": "VESDEP_NLP",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.4556138864134222,
+                "source_message": "VESPRO_NLP",
+                "source_key": "IssuedDateTime",
+                "source_value": "21052025135340",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "vesselName": {
+            "target_key": "vesselName",
+            "target_value": "Test Sample",
             "target_m_n": "N",
             "key1": {
                 "final_score": 0.9999997636364756,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "IMONumber",
-                "source_value": "9270696",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
+                "source_message": "VESDEP_NLP",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.37975202739820474,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "DocumentNumber",
-                "source_value": "8.08E+12",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
+                "final_score": 0.9999997636364756,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselName",
+                "source_value": "MTT SEMPORNA",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.37867916907254506,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "CommonRefNumber",
-                "source_value": "8.08E+12",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
+                "final_score": 0.710263409276808,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselOwner",
+                "source_value": "MTT SHIPPING",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            }
-        },
-        "CallSign": {
-            "target_key": "CallSign",
-            "target_value": "587104",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.9999998479733305,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "CallSign",
-                "source_value": "EPDF6",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key2": {
-                "final_score": 0.29152908338064765,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "SenderID",
-                "source_value": "INNSA1NSG1",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key3": {
-                "final_score": 0.2881593406458087,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "VesselCountry",
-                "source_value": "IR",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            }
-        },
-        "VoyageNumber": {
-            "target_key": "VoyageNumber",
-            "target_value": "2862507512",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.4718234134678836,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "GateNumber",
-                "source_value": "1",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key2": {
-                "final_score": 0.4413989837835497,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "DocumentNumber",
-                "source_value": "8.08E+12",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key3": {
-                "final_score": 0.44075614707339694,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "IMONumber",
-                "source_value": "9270696",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            }
-        },
-        "TOOrDOckCode": {
-            "target_key": "TOOrDOckCode",
-            "target_value": "INVTZ1",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.3534845183423328,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "CACode",
-                "source_value": "MSK",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key2": {
-                "final_score": 0.3519353052067664,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "ContTypeClassificationCode",
-                "source_value": "FCL",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key3": {
-                "final_score": 0.34984986362281684,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "ShippingAgentCode",
-                "source_value": "MSK",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            }
-        },
-        "VesselName": {
-            "target_key": "VesselName",
-            "target_value": "MV ECO VESSEL",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.6803056678573234,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "VesselCountry",
-                "source_value": "IR",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key2": {
-                "final_score": 0.47880678132722343,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "DocumentName",
-                "source_value": "Cont/CargoGate-in Gate-Out Report",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key3": {
-                "final_score": 0.3308574375640994,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "CallSign",
-                "source_value": "EPDF6",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            }
-        },
-        "CountryOfVessel": {
-            "target_key": "CountryOfVessel",
-            "target_value": "IN",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.8495428874144393,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "VesselCountry",
-                "source_value": "IR",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key2": {
-                "final_score": 0.22804637851907683,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "CallSign",
-                "source_value": "EPDF6",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key3": {
-                "final_score": 0.2195580266449216,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "DestPort",
-                "source_value": "AEJEA",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            }
-        },
-        "SACode": {
-            "target_key": "SACode",
-            "target_value": "ZUARI",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.6031189264304418,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "ShippingAgentCode",
-                "source_value": "MSK",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key2": {
-                "final_score": 0.4957186792746014,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "CACode",
-                "source_value": "MSK",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key3": {
-                "final_score": 0.3975704977644529,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "EquipmentStatusCode",
-                "source_value": "FCL",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            }
-        },
-        "PortClearanceNumber": {
-            "target_key": "PortClearanceNumber",
-            "target_value": "546465",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.44672448180357044,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "DestPort",
-                "source_value": "AEJEA",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key2": {
-                "final_score": 0.444312926625519,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "FinalPortOfDischarge",
-                "source_value": "AEJEA",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key3": {
-                "final_score": 0.429838214964282,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "LoadingPort",
-                "source_value": "INNSA1",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            }
-        },
-        "NextPortOfCall": {
-            "target_key": "NextPortOfCall",
-            "target_value": "SGSIN1",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.5070917365288368,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "DestPort",
-                "source_value": "AEJEA",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key2": {
-                "final_score": 0.476536206097114,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "FinalPortOfDischarge",
-                "source_value": "AEJEA",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key3": {
-                "final_score": 0.4692139998039482,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "CallSign",
-                "source_value": "EPDF6",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            }
-        },
-        "SailingDateTimeOfPort": {
-            "target_key": "SailingDateTimeOfPort",
-            "target_value": "21042025:10:19",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.5263704292168663,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "ArrivalDateTime",
-                "source_value": "08082025:03:03",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key2": {
-                "final_score": 0.49058195686480144,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "IssuedDateTime",
-                "source_value": "8.08E+12",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key3": {
-                "final_score": 0.465138415809587,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "GatePassDateTime",
-                "source_value": "08082025:02:56",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            }
-        },
-        "EDTA": {
-            "target_key": "EDTA",
-            "target_value": "16042025:13:29",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.37100096607135113,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "ArrivalDateTime",
-                "source_value": "08082025:03:03",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key2": {
-                "final_score": 0.27739961685529363,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "IssuedDateTime",
-                "source_value": "8.08E+12",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key3": {
-                "final_score": 0.24764157922249944,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "ReceiptDate",
-                "source_value": "8082025",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            }
-        },
-        "DateTimeArrivalVessel": {
-            "target_key": "DateTimeArrivalVessel",
-            "target_value": "17042025:12:56",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.7593693750258302,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "ArrivalDateTime",
-                "source_value": "08082025:03:03",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key2": {
-                "final_score": 0.5544962594552351,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "IssuedDateTime",
-                "source_value": "8.08E+12",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key3": {
-                "final_score": 0.4857562280997202,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "GatePassDateTime",
-                "source_value": "08082025:02:56",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            }
-        },
-        "ReceivingPartyList": {
-            "target_key": "ReceivingPartyList",
-            "target_value": "actin050",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.7467368089692406,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "ReceivingParty",
-                "source_value": "INNSA1",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key2": {
-                "final_score": 0.2576493140341176,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "ReceiptDate",
-                "source_value": "8082025",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key3": {
-                "final_score": 0.23580269662942385,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "ShippingAgentCode",
-                "source_value": "MSK",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            }
-        },
-        "IssuedDateTime": {
-            "target_key": "IssuedDateTime",
-            "target_value": "21042025110504",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.9999998190658809,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "IssuedDateTime",
-                "source_value": "8.08E+12",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key2": {
-                "final_score": 0.6617277275900306,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "ArrivalDateTime",
-                "source_value": "08082025:03:03",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
-            },
-            "key3": {
-                "final_score": 0.6089311387264972,
-                "source_message": "CODECO_CCSDPW",
-                "source_key": "GatePassDateTime",
-                "source_value": "08082025:02:56",
-                "source_file": "CODECO_CCSDPW.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Brisbane"
+                "source_system": "Customs - Jebel Ali"
             }
         }
     }
