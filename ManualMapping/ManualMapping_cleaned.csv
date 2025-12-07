@@ -1,0 +1,415 @@
+targetField,sourceField
+MsgName,MessageType
+MsgRefNbr,MessageType
+VesselID,VesselID
+VesselName,Vessel
+VesselCallSign,CallSign
+VslInVoyageNbr,InboundVoyage
+VslOutVoyageNbr,OutboundVoyage
+ContainerNbr,ContainerNumber
+ContainerCategory,Category
+ContainerLoadPort,PortOfLoading
+ContainerDischPort,PortOfDischarge
+ContainerIsReefer,ReeferDetails
+ContainerRequiredTemp,ReeferDetails
+ContainerReqTempUnit,ReeferDetails
+ContainerGrossWt,GrossWeight
+ContainerGrossWtUnit,GrossWeight
+Container SealNo1,SealNumber
+VesselName,Name
+BLNumber,Shipping Bill Number
+ContainerNumber,Container Number
+DateOfMovement,Date and Time of Departure from Anchorage
+PortOfDischarge,Port of destination
+PortOfLoading,Original Port of Loading
+SealNumber,Shipping Container Seal Number
+ShippingLineID,Shipping Line Code
+VesselID,Call Sign
+VGM,Weight Quantity
+VoyageID,Voyage Number
+ShipperCode,Shipping Agent Code
+ShipperName,Shipping Agent
+OOGHeight,Over Dimension Height
+OOGFront,Dimension Code
+OOGBack,Dimension Code
+OOGLeft,Over Dimension Width
+OOGRight,Over Dimension Length
+DangerousGoods,IMO Class
+ReeferDetails,Temperature Value of Reefer Container
+DangerousGoodClass,IMO Class
+VoyageShippingLine,Shipping Line Code
+FKind,Container Type Classification Code
+ContainerDocumentReference,Container Number
+SealNumber,Custom’s Container Seal Number
+ShippingLineCode,Shipping Line Code
+AgentCode,Shipping Agent Code
+AgentName,Shipping Agent
+Vessel,Vessel Name
+Name,Vessel Name
+IMONumber,IMO Number
+CallSign,Call Sign
+ETA,Expected Date and Time of arrival
+LoadingOperationUnits,Load Operational Unit
+UnloadingOperationUnits,Discharge Operational Unit No
+RotationNumber,Rotation Number
+Voyage,Voyage Number
+ETD,Expected Date and Time of Departure
+ETB,Expected Date and Time of Berthing
+ShipOwner,Name of Owner
+VesselMasterEmail,Owner
+LoadPorts,Port Of Loading
+VesselNumber,Vessel Code
+InboundVoyage,Voyage Number
+OutboundVoyage,Voyage Number
+VesselServiceID,MMSI Number
+LoadingOperations,Total Number of Container for Loaded
+UnloadingOperations,Total Number of Container for Loaded
+Port,Portcode
+NextPort,Next Port of Call
+LastPortDepartDate,Date and Time of Departure from Anchorage
+OperatorCode,Terminal Operator Code
+ActualAirDraft,Free Board AFT at this Draft
+ATA,Date and time of arrival at port
+ATD,Date and Time of Departure from Achorage or Sailing
+PortName,Portcode
+NextPortDueDate,Expected Date and Time of Arrival
+PreviousPort,Port of Loading
+LastPort,Port of Loading
+Destination,Port of destination
+ForwardDraft,Draft – Forward
+AfterDraft,Draft – AFT
+PortCode,need to check with MAQTA
+RequestType,Record Type
+ShippingLineName,Shipping Line Code
+LoadUnitDescription,to be drived from Load Operational Unit
+UnloadUnitDescription,to be derived from Discharge Operational Unit No
+LastPortName,to be derived from Port Code
+NextPortName,Next Port of Call
+SpecialMovement,Handling Instructions
+Origin,Port of Loading
+ShipPrincipal,Name of Owner
+Items,Total Number of Packages
+Berth,Berth Number
+BerthStatus,Vessel Berthing Status-W
+CountryCode,Flag
+CountryName,Flag
+Type,Type of Vessel
+Flag,Flag
+FlagName,To be derived from Flag Code
+ClassificationEntity,Classification Society
+BaysAft,Number of Bays
+BridgeToBowLength,Dist
+Capacity,TEU Capacity
+GrossRegTons,G
+LOA,LOA
+PortOfReference,Port of Registration
+DeadWeight,Summer Dead Weight
+MainPropulsionPower,Engine Power
+Name,Authorized Representative of Terminal
+Beam,Beam
+TypeDescription,Type of Vessel
+RegistrationYear,Ship Registry Certificate Number
+VesselNumber,IMO number
+VesselClass,IMO Class
+BaysForward,Number of Bays
+BowOverhang,Dist
+GeneratorPower,Engine Power
+CapacityUnit,TEU Capacity
+NetRegisteredTons,N
+SternOverhang,Dist
+AirDraft,Vessel Height
+SternDraft,Draft – AFT
+Displacement,Summer Dead Weight
+Sailing date and time of the Port,ETD
+Expected Date and Time of arrival,ETA
+Arrival Date and time in Port,ETA
+Date and Time of Arrival of Vessel,ETA
+Shipping Line Code,ShippingLineCode
+IMO Number,IMONumber
+Vessel Name,Vessel
+Flag,CountryCode
+Call Sign,CallSign
+Voyage Number,VoyageID
+Terminal Operator Code,TerminalCode
+Shipping Agent Code,AgentCode
+Berth Number,Berth
+Port of Loading,LoadPorts
+Unit of Quantity,CapacityUnit
+Arrival Date and Time at Berth,ATA
+VCN,VesselNumber
+Next Port of Call,To be checked in VESDEP
+Vessel Name,Vessel Name
+Expected Date and Time of Arrival,ETA
+Expected Date and Time of Departure,ETD
+Record Type,MessageType
+Draft – AFT,AfterDraft
+Draft – Forward,ForwardDraft
+Expected Date and Time of Berthing,ETB
+Over dimension Length,OOGFront
+Over dimension Width,OOGBack
+Over dimension Height,OOGHeight
+Temperature Value of Reefer Container,ReeferDetails
+IMO Class,DangerousGoodClass
+Container Number,ContainerNumber
+Shipping Bill Number,BLNumber
+Port of discharge stowage,PortOfDischarge
+UN,DangerousGoodClass
+Unit of temperature,ReeferDetails
+VCN,Vessel
+Unit of quantity,CapacityUnit
+Over Dimension Width,OOGBack
+Over Dimension Length,OOGFront
+Over Dimension Height,OOGHeight
+Vessel Agent Code,AgentCode
+Country of Vessel,CountryName
+Custom’s Container Seal Number,SealNumber
+Shipping Container Seal Number,SealNumber
+Containe Line Code,ShippingLineCode
+Container Agent Code,CargoAgentID
+Container Type of Classification Code,SizeType
+Container Shipping Date & Time,DateOfMovement
+Flag,CountryName
+Original Port of Loading,PortOfLoading
+Port of destination,PortOfDischarge
+Final place,PortOfDischarge
+Bill of Lading Number,BLNumber
+Container Seal Number,SealNumber
+Vessel Code,VesselNumber
+Container Agent code,CargoAgentID
+Container Line Code,ShippingLineID
+Discharge Operational Unit No,UnloadingOperationUnits
+Load Operational Unit,LoadingOperationUnits
+Call Sign,Call Sign
+Voyage No,Voyage Number
+Container Number,Container Number
+IMCO Code,IMO Class
+UNDG No,UN
+Line Code,Shipping Line Code
+Departure Port Code,Port Of Loading
+Load Port Code,Port Of Loading
+Discharge Port Code,Port Of Discharge stowage
+Container Line Code,Container Line Code
+Estimated Arrival DateTime,Expected Date and Time of Arrival
+Out Of Guage Front,Over dimension Length
+Out Of Guage Back,Over dimension Width
+Out Of Guage Top,Over dimension Height
+ISO Code,ISO Code of Container
+VGM Weight,Weight Quantity
+Out Of Guage Right,Dimension Code
+Out Of Guage Left,Dimension Code
+Temperature,Temperature Value of Reefer Container
+Place of delivery,Port of discharge stowage
+Voyage No,Voyage No
+Discharge,Port of Loading
+ISO Code,ISO Code of container
+Container Category,Container Type of Classification Code
+Destination Port Code,Shipping Container Seal Number
+terminalId,Dock Code
+containerCategoryStatus,Action
+containerMoveDate,Container Shipping Date & Time
+containerIMCO1,IMO Class
+containerUNNO1,UN
+Load Port Code,Port of Loading
+Discharge Code,Port of Loading
+Destination Port Code,Port Of Discharge
+ReeferTemeperature,Temperature Value of Reefer Container
+rotationNo,Rotation Number
+vesselCallSign,Call Sign
+containerWeight,Weight Quantity
+vgmWeight,Measurements
+Out Of Guage Bottom,Dimension Code
+reeferTemperatureUnit,Unit of temperature
+stowageLocation,Vessel Bay
+vesselName,Vessel Name
+portOfRegistration,Port of Registration
+nationality,Flag
+countryCode,Flag
+beam,Beam
+grt1,G
+grt2,G
+teuCapacity,TEU Capacity
+maximumDraft,Maximum Draft
+cell,Cell type
+vesselLOA,LOA
+sailDate,Date and Time of Departure from Anchorage
+estimatedTimeOfArrival,Expected Date and Time of arrival
+portArrivalDate,Arrival Date and time in Port
+nextPortCall,Next Port of Call
+CallSign,vesselCallSign
+VesselFlag,nationality
+ContISOCode,isoCode
+ContainerNumber,containerNumber
+PortOfDischarge,dischargePort
+VesselAgentCode,vesselAgentCode
+BerthingDateTime,containerMoveDate
+CustomsContSealNumber,sealNumber
+ContClasssificationCode,containeCategory
+ShipperContainerSealNumber,sealNumber
+CallSign,callSign
+DestPort,destinationPort
+CargoType,containerCategory
+ContainerNO,containerNumber
+LoadingPort,loadPort
+VesselCountry,countryCode
+ArrivalDateTime,portArrivalDate
+EquipmentStatusCode,containerCategoryStatus
+FinalPortOfDischarge,dischargePort
+containeCategory,ContClasssificationCode
+containerMoveDate,BerthingDateTime
+containerNumber,ContainerNumber
+destinationPort,PortOfDischarge
+dischargePort,PortOfDischarge
+isoCode,ContISOCode
+lineCode,Shipping Line Code
+loadPort,LoadingPort
+oogBack,Over Dimension Width
+oogBottom,Dimension Code
+oogFront,Over Dimension Length
+oogLeft,Dimension Code
+oogRight,Dimension Code
+oogTop,Over dimension Height
+reeferTemperature,Temperature Value of Reefer Container
+sealNumber,ShipperContainerSealNumber
+terminalId,Terminal Operator Code
+vesselCallSign,CallSign
+vgmWeight,Total Weight of Consignments
+voyageNo,Voyage Number
+callSign,CallSign
+containerCategory,CargoType
+containerMoveDate,ArrivalDateTime
+containerNumber,ContainerNO
+destinationPort,DestPort
+dischargePort,FinalPortOfDischarge
+rotationNumber,Rotation Number
+voyageNumber,Voyage Number
+nationality,VesselFlag
+countryCode,VesselCountry
+vesselAgentCode,VesselAgentCode
+vesselLineCode,Vessel Line Code
+sailDate,Sailing date and time of the Port
+Sailing date and time of the Port,sailDate
+Expected Date and Time of arrival,Estimated Arrival DateTime
+Arrival Date and time in Port,Estimated Arrival DateTime
+Date and Time of Arrival of Vessel,Estimated Arrival DateTime
+Shipping Line Code,Line Code
+Flag,countryCode
+Voyage Number,Voyage No
+Shipping Agent Code,vesselAgentCode
+Rotation Number,rotationNo
+Arrival Date and Time at Berth,Estimated Arrival DateTime
+Date and Time of Berth,portArrivalDate
+Date and Time of Departure from Anchorage,sailDate
+Next Port of Call,nextPortCall
+Expected Date and Time of Arrival,Estimated Arrival DateTime
+Expected Date and Time of Departure,sailDate
+Draft – AFT,maximumDraft
+Draft – Forward,maximumDraft
+Expected Date and Time of Berthing,portArrivalDate
+VCN Number,rotationNo
+Sailing,maximumDraft
+Port of Registration,Jebel Ali Code
+Ex,vesselName
+Ex Call Sign,vesselCallSign
+Nationality of the Vessel,nationality
+Ship Registry Certificate Number,portOfRegistration
+Beam,beam
+LOA,vesselLOA
+G,grt1
+N,grt2
+TEU Capacity,teuCapacity
+Name of Owner,vesselOwner
+Classification Society,vesselLineCode
+Agency Function code,Agent Booking Reference
+Agency Code,vesselAgentCode
+Maximum Draft,maximumDraft
+Number of Bays,cell
+Number of Rows on Deck,cell
+Vessel Agent Code,vesselAgentCode
+Country of Vessel,nationality
+Total Number of Container Loaded,teuCapacity
+Container Land Date & Time,portArrivalDate
+Berthing Date and Time,portArrivalDate
+IGM Date,sailDate
+Rotation Date,sailDate
+Bill of Lading Date,sailDate
+Date of Receipt of goods,sailDate
+Container Type Classification Code,cell
+Entry,sailDate
+Over dimension Length,Out Of Guage Front
+Over dimension Width,Out Of Guage Back
+Over dimension Height,Out Of Guage Top
+IMO Class,IMCO Code
+Vessel Bay,cell
+Vessel Row,cell
+Vessel Tier,cell
+Vessel Sub tier,cell
+Port of discharge stowage,nextPortCall
+Cell type,cell
+UN,UNDG No
+Voyage Number,voyageNo
+Flag,nationality
+BLNumber,Bill of Lading Number
+Category,ContainerCategory
+ContainerNumber,ContainerNbr
+DateOfMovement,Sailing date and time of the Port
+FKind,ContainerStatus
+MessageType,MsgName
+MovementType,ActivityType
+PortOfDischarge,ContainerDischPort
+PortOfLoading,ContainerLoadPort
+SealNumber,Container SealNo1
+ShippingLineID,ContainerLineOpr
+SizeType,ContainerISOType
+VoyageID,VslInVoyageNbr
+OOGFront,Over Dimension Length
+OOGBack,Over Dimension Width
+OOGLeft,Dimension Code
+OOGRight,Dimension Code
+ReeferDetails,ContainerIsReefer
+GrossWeight,ContainerGrossWt
+AgentName,Shipping Agent Code
+Vessel,VesselName
+Name,VesselName
+CallSign,VesselCallSign
+VesselNumber,VesselID
+ETA,Expected Date and Time of Arrival
+InboundVoyage,VslInVoyageNbr
+OutboundVoyage,VslOutVoyageNbr
+UnloadingOperationUnits,Load Operational Unit
+UnloadUnitDescription,Operational Unit Load Sequence
+Voyage,VslInVoyageNbr
+Port,Port of Loading
+PortName,Port of Loading
+LastPortName,ContainerLoadPort
+NextPortDueDate,Expected Date and Time of arrival
+Destination,ContainerDischPort
+HusbandryAgentCode,Shipping Agent Code
+TerminalRejectionReason,"If berthing status is waiting, reason for waiting"
+ATA,Arrival Date and time in Port
+ATD,Date and Time of Departure from Anchorage
+LoadPorts,Port of Loading
+PortCode,Port of Loading
+BerthDetails,Barth Number
+Berth,Barth Number
+BerthSide,Vessel Berthing Status-W
+BerthStatus,Vessel Berthing Sub Status
+CountryCode,Country Code of Vessel
+CountryName,Nationality of the Vessel
+Notes,Remarks
+OfficialNumber,Ship Registry Certificate Number
+FlagName,Nationality of the Vessel
+ConstructionYear,Vessel Building Date
+RegistrationYear,Ship Registry Validity Date
+Remarks,Remarks
+VesselClass,Type of Vessel
+Note,Remarks
+PortOfReference,Port of Approval
+PortOfReferenceName,Port of Approval
+DeadWeight,DWT
+TerminalDetail,Terminal Operator Code
+Type,ContainerCategory
+ShippingLineCode,ContainerLineOpr
+CapacityUnit,ContainerGrossWtUnit
+PortCode,ContainerLoadPort
+Origin,ContainerLoadPort
+LoadPorts,ContainerLoadPort

@@ -26,7 +26,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Input } from "@/components/ui/input";
 import { set } from 'date-fns';
-import Transformation from './Transformation';
+import TransformationResults from './Transformation';
 
 interface MappingResult {
   [targetMessage: string]: {
@@ -748,7 +748,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
           <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-center text-transparent">
             Transforamtion View
           </DialogTitle>
-          <Transformation transData={transData}/>
+          <TransformationResults transData={transData}/>
         </DialogContent>
       </Dialog>
       </>

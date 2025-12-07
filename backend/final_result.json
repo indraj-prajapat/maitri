@@ -1,18 +1,53 @@
 {
-    "VESDEP_DT": {
+    "COARRI_DT": {
+        "rotationNo": {
+            "target_key": "rotationNo",
+            "target_value": "940965",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.45209974089147154,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.4486911735032912,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NoOfEngines",
+                "source_value": "1",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.4266247267154798,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "VehicleNo",
+                "source_value": "MH46H5586",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
         "voyageNo": {
             "target_key": "voyageNo",
-            "target_value": "2862507512",
-            "target_m_n": "M",
+            "target_value": "2531E",
+            "target_m_n": "N",
             "key1": {
-                "final_score": 0.866406749780014,
+                "final_score": 0.8427560793645372,
                 "source_message": "VESDEP_NLP",
                 "source_key": "VoyageNumber",
                 "source_value": "2862507512",
                 "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
                 "final_score": 0.485114972801033,
@@ -21,18 +56,1350 @@
                 "source_value": "1",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key3": {
-                "final_score": 0.41243324527732533,
+                "final_score": 0.4697817712480713,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "vesselName": {
+            "target_key": "vesselName",
+            "target_value": "SAFEEN POWER",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.9999997636364756,
+                "source_message": "ETAETD_NLP",
+                "source_key": "VesselName",
+                "source_value": "BULK CARGO",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.9999997636364756,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.9999997636364756,
                 "source_message": "VESPRO_NLP",
-                "source_key": "VesselGear_RecordNumber",
+                "source_key": "VesselName",
+                "source_value": "MTT SEMPORNA",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "vesselCallSign": {
+            "target_key": "vesselCallSign",
+            "target_value": "V7A5686",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "ETAETD_NLP (biased on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "K5432",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "VESPRO_NLP (biased on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "9M2379",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "EPDF6",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerNumber": {
+            "target_key": "containerNumber",
+            "target_value": "WHLU0246504",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.7345349241561427,
+                "source_message": "COARRI_NLP",
+                "source_key": "ShipperContainerSealNumber",
+                "source_value": "dadasd",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "loadPort": {
+            "target_key": "loadPort",
+            "target_value": "AEJEA",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "LoadingPort",
+                "source_value": "INNSA1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5916116140917828,
+                "source_message": "COARRI_NLP",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5306803677551257,
+                "source_message": "VESDEP_NLP",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "dischargePort": {
+            "target_key": "dischargePort",
+            "target_value": "INNSA",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "FinalPortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5210100790985575,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "LoadingPort",
+                "source_value": "INNSA1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "destinationPort": {
+            "target_key": "destinationPort",
+            "target_value": "INNSA",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "DestPort",
+                "source_value": "AEJEA",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.9688982386355449,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5631376784319457,
+                "source_message": "VESDEP_NLP",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "lineCode": {
+            "target_key": "lineCode",
+            "target_value": "46862L",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.577026335048204,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ShippingAgentCode",
+                "source_value": "MSK",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5527434485883873,
+                "source_message": "VESDEP_NLP",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.511109093098222,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "CACode",
+                "source_value": "MSK",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "terminalId": {
+            "target_key": "terminalId",
+            "target_value": "T2",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.4920547577261352,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "Channel_ID",
+                "source_value": "IndianPCS",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.47070933136911874,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "Service_ID",
+                "source_value": "1170",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.46080214740886316,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "SenderID",
+                "source_value": "INNSA1NSG1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "isoCode": {
+            "target_key": "isoCode",
+            "target_value": "2200",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "ContISOCode",
+                "source_value": "42G1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "ContISOCode",
+                "source_value": "42G1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5017556578586491,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContClasssificationCode",
+                "source_value": "FCL",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containeCategory": {
+            "target_key": "containeCategory",
+            "target_value": "F",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.749667765351201,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "ContClasssificationCode",
+                "source_value": "FCL",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.34998257540606736,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.3468589105768319,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerCategoryStatus": {
+            "target_key": "containerCategoryStatus",
+            "target_value": "E",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5187847574404497,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5043896585496741,
+                "source_message": "COARRI_NLP",
+                "source_key": "SealStatus",
+                "source_value": "1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.4895018414485829,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ConSealStatus",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "listCode": {
+            "target_key": "listCode",
+            "target_value": "L",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.49849189358574375,
+                "source_message": "COARRI_NLP",
+                "source_key": "TOCode",
+                "source_value": "INNSA1NSG1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.49367530336677445,
+                "source_message": "ETAETD_NLP",
+                "source_key": "ReceivingPartyList",
+                "source_value": "rites001|vpt001",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.4807316281616476,
+                "source_message": "VESDEP_NLP",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerMoveDate": {
+            "target_key": "containerMoveDate",
+            "target_value": "04-08-2025 17:07",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.8213029758027552,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "BerthingDateTime",
+                "source_value": "08082025:02:45",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.7735787944922613,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "ArrivalDateTime",
+                "source_value": "08082025:03:03",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5130658935441789,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerWeight": {
+            "target_key": "containerWeight",
+            "target_value": "7.7",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.5284985462864009,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5130390603063926,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5096836264999771,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "vgmWeight": {
+            "target_key": "vgmWeight",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.27182065290210927,
+                "source_message": "VESPRO_NLP",
+                "source_key": "GRT",
+                "source_value": "13059",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.23160257969049583,
+                "source_message": "VESPRO_NLP",
+                "source_key": "DWT",
+                "source_value": "15380",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.2054351620937756,
+                "source_message": "VESPRO_NLP",
+                "source_key": "MTMV",
+                "source_value": "MV",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "sealNumber": {
+            "target_key": "sealNumber",
+            "target_value": "12190",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "ShipperContainerSealNumber",
+                "source_value": "dadasd",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.7909439154824736,
+                "source_message": "COARRI_NLP",
+                "source_key": "CustomsContSealNumber",
+                "source_value": "dadasd",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.7063933469426789,
+                "source_message": "COARRI_NLP",
+                "source_key": "SealStatus",
+                "source_value": "1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "oogTop": {
+            "target_key": "oogTop",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.23340373847062312,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.22309157653983797,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftAft",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.21534999426431267,
+                "source_message": "VESPRO_NLP",
+                "source_key": "TEU",
+                "source_value": "1162",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "oogBottom": {
+            "target_key": "oogBottom",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.25547355550632594,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.2372839794309948,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftAft",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.19935225369745693,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftFwd",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "oogRight": {
+            "target_key": "oogRight",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.23216622443090595,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.2278616551610531,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftAft",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.21535114221697135,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftFwd",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "oogLeft": {
+            "target_key": "oogLeft",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.2795853483618541,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftAft",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.2544226947302002,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftFwd",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.23671304729511844,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "oogFront": {
+            "target_key": "oogFront",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.28355028823947437,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftAft",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.2584826368037182,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftFwd",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.24365154760692037,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "oogBack": {
+            "target_key": "oogBack",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.26040147578401807,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftAft",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.22725231117243047,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.225866120388944,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftFwd",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "reeferTemperature": {
+            "target_key": "reeferTemperature",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.31070822654019287,
+                "source_message": "COARRI_NLP",
+                "source_key": "SealStatus",
+                "source_value": "1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.2854101369557598,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ConSealStatus",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.23385172998279807,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "reeferTemperatureUnit": {
+            "target_key": "reeferTemperatureUnit",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.22912932313197412,
+                "source_message": "COARRI_NLP",
+                "source_key": "ShipperContainerSealNumber",
+                "source_value": "dadasd",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.2119155847874092,
+                "source_message": "COARRI_NLP",
+                "source_key": "SealStatus",
+                "source_value": "1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.20069991413898597,
+                "source_message": "VESPRO_NLP",
+                "source_key": "ShipRegCertNumber",
+                "source_value": "337628",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "stowageLocation": {
+            "target_key": "stowageLocation",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.31791203658610123,
+                "source_message": "COARRI_NLP",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.2836821747619486,
+                "source_message": "COARRI_NLP",
+                "source_key": "SealStatus",
+                "source_value": "1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.2713712925626543,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "CargoType",
+                "source_value": "12",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerIMCO1": {
+            "target_key": "containerIMCO1",
+            "target_value": "150504",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.558985718482673,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.4881768739374808,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.4836955837613168,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerUNNO1": {
+            "target_key": "containerUNNO1",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6555196804083375,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5666814669882698,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5607285653471108,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerIMCO2": {
+            "target_key": "containerIMCO2",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5494754007116962,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.4880318207576508,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.4800231545360009,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerUNNO2": {
+            "target_key": "containerUNNO2",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6401827778697456,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5590449025899134,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5496944503789982,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerIMCO3": {
+            "target_key": "containerIMCO3",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.5521773011029177,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.4854923479688069,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.47885249568879484,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerUNNO3": {
+            "target_key": "containerUNNO3",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.6475698426528709,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5575128359866017,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5511291444217621,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerIMCO4": {
+            "target_key": "containerIMCO4",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.5530892623593257,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.48877164414632085,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.48132432790052654,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerUNNO4": {
+            "target_key": "containerUNNO4",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.6543539392554352,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5641366688681617,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5567112892782148,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerIMCO5": {
+            "target_key": "containerIMCO5",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5617000891301609,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.4960166495529137,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.4917434053581384,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerUNNO5": {
+            "target_key": "containerUNNO5",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6521857312028616,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5699233860701554,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5626056477343486,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerIMCO6": {
+            "target_key": "containerIMCO6",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5533335582373682,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.48994804789239377,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.48634769865525523,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerUNNO6": {
+            "target_key": "containerUNNO6",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6428359539510506,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5623822420709996,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.561482432476227,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        }
+    },
+    "VESDEP_DT": {
+        "voyageNo": {
+            "target_key": "voyageNo",
+            "target_value": "2862507512",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.7377833801148742,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.485114972801033,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NoOfEngines",
                 "source_value": "1",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.4697817712480713,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "portOfRegistration": {
@@ -46,28 +1413,28 @@
                 "source_value": "INCCU1",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
+                "final_score": 0.5985777926874689,
+                "source_message": "COARRI_NLP",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
                 "final_score": 0.5452391761908149,
                 "source_message": "VESPRO_NLP",
                 "source_key": "RegPort",
                 "source_value": "MYPKG1",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
-            },
-            "key3": {
-                "final_score": 0.5355711508668917,
-                "source_message": "VESDEP_NLP",
-                "source_key": "NextPortOfCall",
-                "source_value": "SGSIN1",
-                "source_file": "VESDEP_NLP.xlsx",
-                "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "beam": {
@@ -75,14 +1442,14 @@
             "target_value": "24.61",
             "target_m_n": "M",
             "key1": {
-                "final_score": 0.9999997542234185,
-                "source_message": "VESPRO_NLP",
+                "final_score": 1.0,
+                "source_message": "VESPRO_NLP (biased on past mapping)",
                 "source_key": "Beam",
                 "source_value": "24.61",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
                 "final_score": 0.3763504727054742,
@@ -91,18 +1458,18 @@
                 "source_value": "159.98",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key3": {
                 "final_score": 0.36595656183298386,
-                "source_message": "VESDEP_NLP",
+                "source_message": "ETAETD_NLP",
                 "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "VESDEP_NLP.xlsx",
+                "source_value": "BULK CARGO",
+                "source_file": "ETAETD_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "vesselLOA": {
@@ -110,34 +1477,34 @@
             "target_value": "159.98",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.7234008526744202,
-                "source_message": "VESPRO_NLP",
+                "final_score": 1.0,
+                "source_message": "VESPRO_NLP (biased on past mapping)",
                 "source_key": "LOA",
                 "source_value": "159.98",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
+                "final_score": 0.6173527442592772,
+                "source_message": "ETAETD_NLP",
+                "source_key": "VesselName",
+                "source_value": "BULK CARGO",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
                 "final_score": 0.6173527442592772,
                 "source_message": "VESDEP_NLP",
                 "source_key": "VesselName",
                 "source_value": "MV ECO VESSEL",
                 "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
-            },
-            "key3": {
-                "final_score": 0.6173527442592772,
-                "source_message": "VESPRO_NLP",
-                "source_key": "VesselName",
-                "source_value": "MTT SEMPORNA",
-                "source_file": "VESPRO_NLP.xlsx",
-                "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "vesselOwner": {
@@ -151,28 +1518,28 @@
                 "source_value": "MTT SHIPPING",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
+                "final_score": 0.642081643393513,
+                "source_message": "ETAETD_NLP",
+                "source_key": "VesselName",
+                "source_value": "BULK CARGO",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
                 "final_score": 0.642081643393513,
                 "source_message": "VESDEP_NLP",
                 "source_key": "VesselName",
                 "source_value": "MV ECO VESSEL",
                 "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
-            },
-            "key3": {
-                "final_score": 0.642081643393513,
-                "source_message": "VESPRO_NLP",
-                "source_key": "VesselName",
-                "source_value": "MTT SEMPORNA",
-                "source_file": "VESPRO_NLP.xlsx",
-                "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "nextPortCall": {
@@ -180,34 +1547,34 @@
             "target_value": "SGSIN1",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.9910537292949644,
+                "final_score": 0.8878809831062329,
                 "source_message": "VESDEP_NLP",
                 "source_key": "NextPortOfCall",
                 "source_value": "SGSIN1",
                 "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
-                "final_score": 0.4556228680014146,
-                "source_message": "VESDEP_NLP",
-                "source_key": "SailingDateTimeOfPort",
-                "source_value": "21042025:10:19",
-                "source_file": "VESDEP_NLP.xlsx",
+                "final_score": 0.4834308435584631,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "DestPort",
+                "source_value": "AEJEA",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key3": {
-                "final_score": 0.44449977714101674,
-                "source_message": "VESDEP_NLP",
+                "final_score": 0.4796400984055317,
+                "source_message": "COARRI_NLP",
                 "source_key": "CallSign",
-                "source_value": "587104",
-                "source_file": "VESDEP_NLP.xlsx",
+                "source_value": "EPDF6",
+                "source_file": "COARRI_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "rotationNo": {
@@ -215,34 +1582,34 @@
             "target_value": "123456",
             "target_m_n": "N",
             "key1": {
+                "final_score": 0.45209974089147154,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
                 "final_score": 0.4486911735032912,
                 "source_message": "VESPRO_NLP",
                 "source_key": "NoOfEngines",
                 "source_value": "1",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
-            },
-            "key2": {
-                "final_score": 0.40115649059846203,
-                "source_message": "VESPRO_NLP",
-                "source_key": "IMONumber",
-                "source_value": "9813888",
-                "source_file": "VESPRO_NLP.xlsx",
-                "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key3": {
-                "final_score": 0.3940801294535155,
-                "source_message": "VESPRO_NLP",
-                "source_key": "VesselGear_RecordNumber",
-                "source_value": "1",
-                "source_file": "VESPRO_NLP.xlsx",
+                "final_score": 0.44458181214333425,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "VehicleNo",
+                "source_value": "MH46H5586",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "cell": {
@@ -250,34 +1617,34 @@
             "target_value": "nan",
             "target_m_n": "N",
             "key1": {
+                "final_score": 0.24961762103064888,
+                "source_message": "COARRI_NLP",
+                "source_key": "CallSign",
+                "source_value": "EPDF6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.24507059658960173,
+                "source_message": "COARRI_NLP",
+                "source_key": "VesselAgentCode",
+                "source_value": "MSK",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
                 "final_score": 0.24182728005527826,
                 "source_message": "VESPRO_NLP",
                 "source_key": "IMONumber",
                 "source_value": "9813888",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
-            },
-            "key2": {
-                "final_score": 0.20032865840249758,
-                "source_message": "VESDEP_NLP",
-                "source_key": "BerthNumber",
-                "source_value": "EQ9",
-                "source_file": "VESDEP_NLP.xlsx",
-                "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
-            },
-            "key3": {
-                "final_score": 0.19831360211225973,
-                "source_message": "VESPRO_NLP",
-                "source_key": "CallSign",
-                "source_value": "9M2379",
-                "source_file": "VESPRO_NLP.xlsx",
-                "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "vesselLineCode": {
@@ -285,34 +1652,34 @@
             "target_value": "",
             "target_m_n": "N",
             "key1": {
+                "final_score": 0.7246489093576414,
+                "source_message": "COARRI_NLP",
+                "source_key": "VesselAgentCode",
+                "source_value": "MSK",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
                 "final_score": 0.6177733290330478,
                 "source_message": "VESPRO_NLP",
                 "source_key": "VesselType",
                 "source_value": "1511",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
-            "key2": {
+            "key3": {
                 "final_score": 0.5743676560546052,
                 "source_message": "VESPRO_NLP",
                 "source_key": "VesselGear_RecordNumber",
                 "source_value": "1",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
-            },
-            "key3": {
-                "final_score": 0.5703677051058273,
-                "source_message": "VESDEP_NLP",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "VESDEP_NLP.xlsx",
-                "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "teuCapacity": {
@@ -326,8 +1693,8 @@
                 "source_value": "1162",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
                 "final_score": 0.29388852556892126,
@@ -336,18 +1703,18 @@
                 "source_value": "1511",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key3": {
-                "final_score": 0.2832519023568377,
-                "source_message": "VESPRO_NLP",
-                "source_key": "ClassificationSociety",
-                "source_value": "Ship Classification Society of Mala",
-                "source_file": "VESPRO_NLP.xlsx",
+                "final_score": 0.2842242357910821,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "estimatedTimeOfArrival": {
@@ -355,34 +1722,34 @@
             "target_value": "17042025:12:56",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.7207701112209239,
+                "final_score": 0.721460141870438,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ArrivalDateTime",
+                "source_value": "08082025:03:03",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.6950855348054461,
                 "source_message": "VESDEP_NLP",
                 "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
                 "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
-            },
-            "key2": {
-                "final_score": 0.46032212753545126,
-                "source_message": "VESDEP_NLP",
-                "source_key": "IssuedDateTime",
-                "source_value": "21042025110504",
-                "source_file": "VESDEP_NLP.xlsx",
-                "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key3": {
-                "final_score": 0.4470388030302701,
-                "source_message": "VESPRO_NLP",
-                "source_key": "IssuedDateTime",
-                "source_value": "21052025135340",
-                "source_file": "VESPRO_NLP.xlsx",
+                "final_score": 0.44735956745855165,
+                "source_message": "COARRI_NLP",
+                "source_key": "BerthingDateTime",
+                "source_value": "08082025:02:45",
+                "source_file": "COARRI_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "vesselCallSign": {
@@ -390,34 +1757,34 @@
             "target_value": "EPDF6",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.8205371899203793,
-                "source_message": "VESDEP_NLP",
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (biased on past mapping)",
                 "source_key": "CallSign",
-                "source_value": "587104",
-                "source_file": "VESDEP_NLP.xlsx",
+                "source_value": "EPDF6",
+                "source_file": "COARRI_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
-                "final_score": 0.7482654677394804,
-                "source_message": "VESPRO_NLP",
+                "final_score": 1.0,
+                "source_message": "VESPRO_NLP (biased on past mapping)",
                 "source_key": "CallSign",
                 "source_value": "9M2379",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key3": {
-                "final_score": 0.5669727494309763,
-                "source_message": "VESPRO_NLP",
-                "source_key": "VesselName",
-                "source_value": "MTT SEMPORNA",
-                "source_file": "VESPRO_NLP.xlsx",
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "EPDF6",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "nationality": {
@@ -425,34 +1792,34 @@
             "target_value": "IN",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.38029140624102836,
-                "source_message": "VESDEP_NLP",
-                "source_key": "CountryOfVessel",
-                "source_value": "IN",
-                "source_file": "VESDEP_NLP.xlsx",
+                "final_score": 0.7034784073083148,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "VesselFlag",
+                "source_value": "IR",
+                "source_file": "COARRI_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
-                "final_score": 0.3763820060278107,
-                "source_message": "VESDEP_NLP",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "VESDEP_NLP.xlsx",
-                "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
-            },
-            "key3": {
-                "final_score": 0.3763820060278107,
-                "source_message": "VESPRO_NLP",
-                "source_key": "VesselName",
-                "source_value": "MTT SEMPORNA",
+                "final_score": 0.7034784073083148,
+                "source_message": "VESPRO_NLP (biased on past mapping)",
+                "source_key": "VesselFlag",
+                "source_value": "MY",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.38504889900495964,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "VesselCountry",
+                "source_value": "IR",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "vesselAgentCode": {
@@ -460,34 +1827,34 @@
             "target_value": "nan",
             "target_m_n": "N",
             "key1": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "VesselAgentCode",
+                "source_value": "MSK",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.6660935775899356,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ShippingAgentCode",
+                "source_value": "MSK",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
                 "final_score": 0.6065690581496207,
                 "source_message": "VESPRO_NLP",
                 "source_key": "VesselType",
                 "source_value": "1511",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
-            },
-            "key2": {
-                "final_score": 0.5736528551466911,
-                "source_message": "VESPRO_NLP",
-                "source_key": "VesselGear_RecordNumber",
-                "source_value": "1",
-                "source_file": "VESPRO_NLP.xlsx",
-                "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
-            },
-            "key3": {
-                "final_score": 0.5599605881836438,
-                "source_message": "VESDEP_NLP",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "VESDEP_NLP.xlsx",
-                "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "portArrivalDate": {
@@ -495,34 +1862,34 @@
             "target_value": "29-08-2025 06:00",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.685259184549156,
+                "final_score": 0.6896131760556363,
                 "source_message": "VESDEP_NLP",
                 "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
                 "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
-                "final_score": 0.6474367878165133,
+                "final_score": 0.6662179232506061,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ArrivalDateTime",
+                "source_value": "08082025:03:03",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.6462901510641218,
                 "source_message": "VESDEP_NLP",
                 "source_key": "SailingDateTimeOfPort",
                 "source_value": "21042025:10:19",
                 "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
-            },
-            "key3": {
-                "final_score": 0.49312436448538977,
-                "source_message": "VESDEP_NLP",
-                "source_key": "PortClearanceNumber",
-                "source_value": "546465",
-                "source_file": "VESDEP_NLP.xlsx",
-                "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "countryCode": {
@@ -530,34 +1897,34 @@
             "target_value": "IN",
             "target_m_n": "N",
             "key1": {
+                "final_score": 0.9165599437185362,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "VesselCountry",
+                "source_value": "IR",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
                 "final_score": 0.7057829232294756,
                 "source_message": "VESDEP_NLP",
                 "source_key": "CountryOfVessel",
                 "source_value": "IN",
                 "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
-            },
-            "key2": {
-                "final_score": 0.503461615632838,
-                "source_message": "VESPRO_NLP",
-                "source_key": "AgencyCode",
-                "source_value": "AAHCM8479K",
-                "source_file": "VESPRO_NLP.xlsx",
-                "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key3": {
-                "final_score": 0.43587187949014183,
-                "source_message": "VESDEP_NLP",
-                "source_key": "SACode",
-                "source_value": "ZUARI",
-                "source_file": "VESDEP_NLP.xlsx",
+                "final_score": 0.5187048431141003,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "CACode",
+                "source_value": "MSK",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "maximumDraft": {
@@ -571,28 +1938,28 @@
                 "source_value": "7.7",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
-                "final_score": 0.3041270563027106,
-                "source_message": "VESPRO_NLP",
-                "source_key": "DWT",
-                "source_value": "15380",
-                "source_file": "VESPRO_NLP.xlsx",
+                "final_score": 0.6417851836760071,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftAft",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key3": {
-                "final_score": 0.29911187640077,
-                "source_message": "VESPRO_NLP",
-                "source_key": "IMONumber",
-                "source_value": "9813888",
-                "source_file": "VESPRO_NLP.xlsx",
+                "final_score": 0.5906601802020176,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftFwd",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "grt1": {
@@ -606,8 +1973,8 @@
                 "source_value": "13059",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
                 "final_score": 0.4892088381585819,
@@ -616,8 +1983,8 @@
                 "source_value": "5040",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key3": {
                 "final_score": 0.4122823698688465,
@@ -626,8 +1993,8 @@
                 "source_value": "15380",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "grt2": {
@@ -641,8 +2008,8 @@
                 "source_value": "13059",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
                 "final_score": 0.4944795487460798,
@@ -651,8 +2018,8 @@
                 "source_value": "5040",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key3": {
                 "final_score": 0.41679752601870546,
@@ -661,8 +2028,8 @@
                 "source_value": "15380",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "sailDate": {
@@ -676,28 +2043,28 @@
                 "source_value": "21042025:10:19",
                 "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
+                "final_score": 0.5832161518915358,
+                "source_message": "COARRI_NLP",
+                "source_key": "BerthingDateTime",
+                "source_value": "08082025:02:45",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
                 "final_score": 0.49738425299868044,
                 "source_message": "VESDEP_NLP",
                 "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
                 "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
-            },
-            "key3": {
-                "final_score": 0.4556138864134222,
-                "source_message": "VESPRO_NLP",
-                "source_key": "IssuedDateTime",
-                "source_value": "21052025135340",
-                "source_file": "VESPRO_NLP.xlsx",
-                "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         },
         "vesselName": {
@@ -706,13 +2073,13 @@
             "target_m_n": "N",
             "key1": {
                 "final_score": 0.9999997636364756,
-                "source_message": "VESDEP_NLP",
+                "source_message": "ETAETD_NLP",
                 "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "VESDEP_NLP.xlsx",
+                "source_value": "BULK CARGO",
+                "source_file": "ETAETD_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key2": {
                 "final_score": 0.9999997636364756,
@@ -721,18 +2088,930 @@
                 "source_value": "MTT SEMPORNA",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             },
             "key3": {
-                "final_score": 0.710263409276808,
+                "final_score": 0.8994268682287988,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        }
+    },
+    "CODECO_DT": {
+        "containerNumber": {
+            "target_key": "containerNumber",
+            "target_value": "TGBU3081444",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.727122526265106,
+                "source_message": "COARRI_NLP",
+                "source_key": "ShipperContainerSealNumber",
+                "source_value": "dadasd",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "loadPort": {
+            "target_key": "loadPort",
+            "target_value": "INNSA",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "LoadingPort",
+                "source_value": "INNSA1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5863437014372588,
+                "source_message": "COARRI_NLP",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5306803677551257,
+                "source_message": "VESDEP_NLP",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "dischargePort": {
+            "target_key": "dischargePort",
+            "target_value": "AEJEA",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "FinalPortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5751963575590291,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "LoadingPort",
+                "source_value": "INNSA1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "destinationPort": {
+            "target_key": "destinationPort",
+            "target_value": "AEJEA",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "DestPort",
+                "source_value": "AEJEA",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.9600981909096268,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.572014900076349,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "FinalPortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "lineCode": {
+            "target_key": "lineCode",
+            "target_value": "WHD",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.577026335048204,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ShippingAgentCode",
+                "source_value": "MSK",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5527434485883873,
+                "source_message": "VESDEP_NLP",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.511109093098222,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "CACode",
+                "source_value": "MSK",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "terminalId": {
+            "target_key": "terminalId",
+            "target_value": "T2",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.4920547577261352,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "Channel_ID",
+                "source_value": "IndianPCS",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.46080214740886316,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "SenderID",
+                "source_value": "INNSA1NSG1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.44167277407024064,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "Service_ID",
+                "source_value": "1170",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "isoCode": {
+            "target_key": "isoCode",
+            "target_value": "2200",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "ContISOCode",
+                "source_value": "42G1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "ContISOCode",
+                "source_value": "42G1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5091837481572973,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContClasssificationCode",
+                "source_value": "FCL",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerCategory": {
+            "target_key": "containerCategory",
+            "target_value": "L",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6772072145467828,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "CargoType",
+                "source_value": "12",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5490040751759896,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5479335235488669,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerCategoryStatus": {
+            "target_key": "containerCategoryStatus",
+            "target_value": "I",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5043896585496741,
+                "source_message": "COARRI_NLP",
+                "source_key": "SealStatus",
+                "source_value": "1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5018695845398471,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.49031693680661803,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ConSealStatus",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerMoveDate": {
+            "target_key": "containerMoveDate",
+            "target_value": "05-08-2025 09:07",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.8213029758027552,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "BerthingDateTime",
+                "source_value": "08082025:02:45",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.7735787944922613,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "ArrivalDateTime",
+                "source_value": "08082025:03:03",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.4760883734637785,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerIMCO1": {
+            "target_key": "containerIMCO1",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5670715702422946,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5357185155279559,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.4917237031145969,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerUNNO1": {
+            "target_key": "containerUNNO1",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6349951504998572,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.6230395052232758,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5908798948631246,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerIMCO2": {
+            "target_key": "containerIMCO2",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5648353172020326,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5280901961690099,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.49491386140503485,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerUNNO2": {
+            "target_key": "containerUNNO2",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.629983204625598,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.6004736309537106,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5863217519320951,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerIMCO3": {
+            "target_key": "containerIMCO3",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.5676568259248638,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5257747451822736,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.4943603763267491,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerUNNO3": {
+            "target_key": "containerUNNO3",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.6260712417185421,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5956224251189262,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5851249921910473,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerIMCO4": {
+            "target_key": "containerIMCO4",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.5691430156578667,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5291430953264202,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.49753232101456696,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerUNNO4": {
+            "target_key": "containerUNNO4",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6290282270857352,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.6010304797091512,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5894877590657324,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerIMCO5": {
+            "target_key": "containerIMCO5",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5766576143545576,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5394542347328084,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5010915554839629,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerUNNO5": {
+            "target_key": "containerUNNO5",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6268861837944576,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.6019559535779971,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5859166944159647,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerIMCO6": {
+            "target_key": "containerIMCO6",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5735606675214802,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.5366890724436651,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.49995704091616705,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "containerUNNO6": {
+            "target_key": "containerUNNO6",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.6257802117127058,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.6010670560994165,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.5876971160004804,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "vesselName": {
+            "target_key": "vesselName",
+            "target_value": "WAN HAI 501",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.9999997636364756,
+                "source_message": "ETAETD_NLP",
+                "source_key": "VesselName",
+                "source_value": "BULK CARGO",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.9999997636364756,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.9999997636364756,
                 "source_message": "VESPRO_NLP",
-                "source_key": "VesselOwner",
-                "source_value": "MTT SHIPPING",
+                "source_key": "VesselName",
+                "source_value": "MTT SEMPORNA",
                 "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
-                "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "voyageNumber": {
+            "target_key": "voyageNumber",
+            "target_value": "W258",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.9999998053597269,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.516618652119323,
+                "source_message": "VESDEP_NLP",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.4829187417526758,
+                "source_message": "VESPRO_NLP",
+                "source_key": "IMONumber",
+                "source_value": "9813888",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "callSign": {
+            "target_key": "callSign",
+            "target_value": "S6AS7",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (biased on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "EPDF6",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (biased on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "EPDF6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 1.0,
+                "source_message": "ETAETD_NLP (biased on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "K5432",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            }
+        },
+        "rotationNumebr": {
+            "target_key": "rotationNumebr",
+            "target_value": "941413",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.3221026146778042,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "GateNumber",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key2": {
+                "final_score": 0.3127381736307454,
+                "source_message": "VESPRO_NLP",
+                "source_key": "IMONumber",
+                "source_value": "9813888",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
+            },
+            "key3": {
+                "final_score": 0.3037648051150253,
+                "source_message": "VESDEP_NLP",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Rail",
+                "source_system": "Abu Dhabi Central"
             }
         }
     }

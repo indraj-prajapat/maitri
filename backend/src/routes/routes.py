@@ -9,9 +9,10 @@ import pandas as pd
 from src.DataBase.databse import *
 import multiprocessing
 from sqlalchemy import tuple_
-from src.Transformation import SemanticTransformationEngine
+# from backend.src.Transformation.Transformation import SemanticTransformationEngine
 from src.input.inputData import FileToJson
-engine = SemanticTransformationEngine()
+from src.transformation.data_analyzer import DataFieldAnalyzer
+# engine = SemanticTransformationEngine()
 app_bp = Blueprint('api', __name__)
 
 
@@ -296,13 +297,15 @@ def transform():
         src_value = row["sourceValue"]
         tgt_field = row["targetKey"] or "unknown"
         tgt_value = row["targetValue"]
-
-        res = engine.execute_transformation(
-            source_field=src_field,
-            source_value=src_value,
-            target_field=tgt_field,
-            target_value=tgt_value,
-        )
+  
+        analyzer = DataFieldAnalyzer(row)
+        res = analyzer.analyze_row()
+        # res = engine.execute_transformation(
+        #     source_field=src_field,
+        #     source_value=src_value,
+        #     target_field=tgt_field,
+        #     target_value=tgt_value,
+        # )
 
         results.append(res)
 
