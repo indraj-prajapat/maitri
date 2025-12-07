@@ -102,7 +102,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
       if (newSourceKey === "key1" || (newSourceKey === null && defaultKey === null)) {
         delete copy[targetFullKey];
       } else {
-        /* store the real source key name */
+        /* store the real Origin Key name */
         const keyInfo = newSourceKey
           ? mappings?.[newSourceKey as keyof typeof mappings]
           : null;
@@ -209,7 +209,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
           ? keys[selectedKeyNum as keyof typeof keys]
           : null;
 
-        // skip rows whose source key is "None mapped"
+        // skip rows whose Origin Key is "None mapped"
         if (!selectedKeyInfo) return;
 
         previewTData.push({
@@ -282,7 +282,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
               <div className="space-y-2 text-xs">
                 <div className="font-bold text-primary border-b border-primary/20 pb-1">Selected Mapping</div>
                 <p><strong>Score:</strong> <span className={getScoreColor(keyInfo.final_score)}>{keyInfo.final_score.toFixed(3)}</span></p>
-                <p><strong>Source Key:</strong> {keyInfo.source_key}</p>
+                <p><strong>Origin Key:</strong> {keyInfo.source_key}</p>
                 <p><strong>Message:</strong> {keyInfo.source_message}</p>
                 <p><strong>File:</strong> {keyInfo.source_file}</p>
                 <p><strong>Country:</strong> {keyInfo.source_country}</p>
@@ -339,7 +339,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
               <div className="space-y-2 text-xs">
                 <div className="font-bold text-primary border-b border-primary/20 pb-1">Mapping Details</div>
                 <p><strong>Score:</strong> <span className={getScoreColor(keyInfo.final_score)}>{keyInfo.final_score.toFixed(3)}</span></p>
-                <p><strong>Source Key:</strong> {keyInfo.source_key}</p>
+                <p><strong>Origin Key:</strong> {keyInfo.source_key}</p>
                 <p><strong>Message:</strong> {keyInfo.source_message}</p>
                 <p><strong>File:</strong> {keyInfo.source_file}</p>
                 <p><strong>Country:</strong> {keyInfo.source_country}</p>
@@ -356,7 +356,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
   const downloadFile = (format: 'csv' | 'xlsx' | 'xml' | 'json') => {
     /* 1. build 4-column array */
     const rows: string[][] = [
-      ['Target Message', 'Target Key', 'Source Message', 'Source Key'],
+      ['Destination Message', 'Destination Key', 'Origin Message', 'Origin Key'],
     ];
 
     Object.entries(results).forEach(([targetMessage, mappings]) => {
@@ -559,7 +559,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
             Mapping Preview
           </DialogTitle>
 
-          <div className="flex flex-col h-full ">   {/* parent must already be h-full or fixed height */}
+          <div className="flex flex-col h-[79vh] ">   {/* parent must already be h-full or fixed height */}
 
           {/* ---- header (always visible) ---- */}
           <div className="shrink-0 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20">
@@ -605,7 +605,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
                               <div className="space-y-2 text-xs">
                                 <div className="font-bold text-primary border-b border-primary/20 pb-1">Mapping Details</div>
                                 <p><strong>Score:</strong> <span className={getScoreColor(mapping.info.final_score)}>{mapping.info.final_score.toFixed(3)}</span></p>
-                                <p><strong>Source Key:</strong> {mapping.info.source_key}</p>
+                                <p><strong>Origin Key:</strong> {mapping.info.source_key}</p>
                                 <p><strong>Message:</strong> {mapping.info.source_message}</p>
                                 <p><strong>File:</strong> {mapping.info.source_file}</p>
                                 <p><strong>Country:</strong> {mapping.info.source_country}</p>
@@ -627,7 +627,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
             </table>
           </ScrollArea>
         </div>
-          <div className="flex justify-center gap-4 pt-4 border-t">
+          <div className="flex justify-center gap-4 pt-2 border-t">
             <Button
               size="lg"
               variant="outline"
@@ -661,16 +661,27 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
 
     Object.entries(results).forEach(([targetMessage, mappings]) => {
       Object.entries(mappings).forEach(([targetKey, keys]) => {
+
         const key = `${targetMessage}::${targetKey}`;
         const selectedKeyNum = selectedKeys[key];
+
         const selectedKeyInfo = selectedKeyNum
           ? keys[selectedKeyNum as keyof typeof keys]
           : null;
 
+        // 🧹 CLEAN SOURCE MESSAGE
+        const cleanSourceMessage = selectedKeyInfo
+          ? selectedKeyInfo.source_message
+              .replace(" (biased on past mapping)", "")
+              .trim()
+          : null;
+
         approvedData.push({
           targetKey: `${targetMessage}::${targetKey}`,
+
+          // use cleaned source message
           sourceKey: selectedKeyInfo
-            ? `${selectedKeyInfo.source_message}::${selectedKeyInfo.source_key}`
+            ? `${cleanSourceMessage}::${selectedKeyInfo.source_key}`
             : 'None mapped',
         });
       });
@@ -683,19 +694,28 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
           <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Approved Mapping
           </DialogTitle>
-
-          <ScrollArea className="flex-1 mt-4 pr-4 overflow-scroll">
+          <div className="shrink-0 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20">
+            <div className="grid grid-cols-2">
+              <div className="px-6 py-4 font-bold border-r-2 border-border text-primary flex justify-center">
+                Destination Key
+              </div>
+              <div className="px-6 py-4 font-bold text-accent flex justify-center">
+                Mapped Origin Key
+              </div>
+            </div>
+          </div>
+          <ScrollArea className="flex-1 pr-4 overflow-y-auto">
             <table className="w-full border-collapse border-2 border-border rounded-lg overflow-hidden shadow-lg">
-              <thead>
+              {/* <thead>
                 <tr className="bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20">
                   <th className="px-6 py-4 text-left font-bold border-r-2 border-border w-1/2 text-primary">
-                    Target Key
+                    Destination Key
                   </th>
                   <th className="px-6 py-4 text-left font-bold w-1/2 text-accent">
-                    Source Key
+                    Origin Key
                   </th>
                 </tr>
-              </thead>
+              </thead> */}
               <tbody>
                 {approvedData.map((mapping, index) => (
                   <tr key={index} className={cn(

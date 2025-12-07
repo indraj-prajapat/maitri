@@ -158,8 +158,8 @@ const LoadingAnimation = ({ leftFiles = [], rightFiles = [] }) => {
       </div>
       <div className="relative w-full max-w-6xl h-[600px] px-8">
         
-        {/* Source File - Left */}
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-64">
+        {/* Source File - Right */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-64">
           <div className="relative">
             <div className="absolute inset-0 bg-blue-400/40 blur-3xl rounded-full"></div>
             <div className="relative bg-white backdrop-blur-sm border-2 border-blue-400 rounded-2xl p-6 shadow-2xl">
@@ -195,8 +195,8 @@ const LoadingAnimation = ({ leftFiles = [], rightFiles = [] }) => {
           </div>
         </div>
 
-        {/* Target File - Right */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-64">
+        {/* Target File - Left */}
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-64">
           <div className="relative">
             <div className="absolute inset-0 bg-purple-400/40 blur-3xl rounded-full"></div>
             <div className="relative bg-white backdrop-blur-sm border-2 border-purple-600 rounded-2xl p-6 shadow-2xl">
