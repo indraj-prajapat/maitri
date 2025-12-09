@@ -721,7 +721,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
             <div className="grid grid-cols-2">
               <div className="px-6 py-4 font-bold border-r-2 border-border text-primary flex justify-center">
                 Destination Key
-              </div>
+              </div>    
               <div className="px-6 py-4 font-bold text-accent flex justify-center">
                 Mapped Origin Key
               </div>

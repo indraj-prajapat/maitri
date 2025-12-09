@@ -1,38 +1,1405 @@
 {
-    "Vesdep": {
+    "COARRI_DT": {
+        "rotationNo": {
+            "target_key": "rotationNo",
+            "target_value": "940965",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.45209974089147154,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.4486911735032912,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NoOfEngines",
+                "source_value": "1",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.4266247267154798,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "VehicleNo",
+                "source_value": "MH46H5586",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "voyageNo": {
+            "target_key": "voyageNo",
+            "target_value": "2531E",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.8427560793645372,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.485114972801033,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NoOfEngines",
+                "source_value": "1",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.4697817712480713,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "vesselName": {
+            "target_key": "vesselName",
+            "target_value": "SAFEEN POWER",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.9999997636364756,
+                "source_message": "ETAETD_NLP",
+                "source_key": "VesselName",
+                "source_value": "BULK CARGO",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.9999997636364756,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselName",
+                "source_value": "MTT SEMPORNA",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.9999997636364756,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "vesselCallSign": {
+            "target_key": "vesselCallSign",
+            "target_value": "V7A5686",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "ETAETD_NLP (based on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "K5432",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "VESPRO_NLP (based on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "9M2379",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "EPDF6",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerNumber": {
+            "target_key": "containerNumber",
+            "target_value": "WHLU0246504",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.7686695826269967,
+                "source_message": "COARRI_NLP",
+                "source_key": "ShipperContainerSealNumber",
+                "source_value": "dadasd",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "loadPort": {
+            "target_key": "loadPort",
+            "target_value": "AEJEA",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "LoadingPort",
+                "source_value": "INNSA1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5863437014372588,
+                "source_message": "COARRI_NLP",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5358401431472444,
+                "source_message": "VESDEP_NLP",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "dischargePort": {
+            "target_key": "dischargePort",
+            "target_value": "INNSA",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "FinalPortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5210100790985575,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "LoadingPort",
+                "source_value": "INNSA1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "destinationPort": {
+            "target_key": "destinationPort",
+            "target_value": "INNSA",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "DestPort",
+                "source_value": "AEJEA",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.9600981909096268,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.572014900076349,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "FinalPortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "lineCode": {
+            "target_key": "lineCode",
+            "target_value": "46862L",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.577026335048204,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ShippingAgentCode",
+                "source_value": "MSK",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5527434485883873,
+                "source_message": "VESDEP_NLP",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.511109093098222,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "CACode",
+                "source_value": "MSK",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "terminalId": {
+            "target_key": "terminalId",
+            "target_value": "T2",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.4920547577261352,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "Channel_ID",
+                "source_value": "IndianPCS",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.46080214740886316,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "SenderID",
+                "source_value": "INNSA1NSG1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.4356576283766441,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "Service_ID",
+                "source_value": "1170",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "isoCode": {
+            "target_key": "isoCode",
+            "target_value": "2200",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "ContISOCode",
+                "source_value": "42G1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "ContISOCode",
+                "source_value": "42G1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.4799970679542881,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContClasssificationCode",
+                "source_value": "FCL",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containeCategory": {
+            "target_key": "containeCategory",
+            "target_value": "F",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.7365263285394763,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "ContClasssificationCode",
+                "source_value": "FCL",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.34998257540606736,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.3468589105768319,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerCategoryStatus": {
+            "target_key": "containerCategoryStatus",
+            "target_value": "E",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5187847574404497,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5043896585496741,
+                "source_message": "COARRI_NLP",
+                "source_key": "SealStatus",
+                "source_value": "1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.49031693680661803,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ConSealStatus",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "listCode": {
+            "target_key": "listCode",
+            "target_value": "L",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.505752404612203,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContClasssificationCode",
+                "source_value": "FCL",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.4807316281616476,
+                "source_message": "ETAETD_NLP",
+                "source_key": "ReceivingPartyList",
+                "source_value": "rites001|vpt001",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.4807316281616476,
+                "source_message": "VESPRO_NLP",
+                "source_key": "ReceivingPartyList",
+                "source_value": "bhpet020|bliarpo001|bmctl001|chharapo01|chpt001|citer001|cochi001|cust001|dbgtl001|dgll001|ecterl001|ennor001|gatew001|haldia001|hazira001|imac002|katup001|kelshipo001|kndlpt001|kollampo01|kopt001|krpct001|krptm001|mgd001|mgpt001|mictp001|mictp002|mrccr001|mundr001|mundrapo001|nhava003|nmgpt001|pipav001|prdpt001|psast010|ptuser10|ptuser11|rites001|spuser01|tutpt001|vpt001",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerMoveDate": {
+            "target_key": "containerMoveDate",
+            "target_value": "04-08-2025 17:07",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.8213029758027552,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "BerthingDateTime",
+                "source_value": "08082025:02:45",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.7735787944922613,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "ArrivalDateTime",
+                "source_value": "08082025:03:03",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5130658935441789,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerWeight": {
+            "target_key": "containerWeight",
+            "target_value": "7.7",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.5130390603063926,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5096836264999771,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5023385464320327,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "vgmWeight": {
+            "target_key": "vgmWeight",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.27182065290210927,
+                "source_message": "VESPRO_NLP",
+                "source_key": "GRT",
+                "source_value": "13059",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.23160257969049583,
+                "source_message": "VESPRO_NLP",
+                "source_key": "DWT",
+                "source_value": "15380",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.2054351620937756,
+                "source_message": "VESPRO_NLP",
+                "source_key": "MTMV",
+                "source_value": "MV",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "sealNumber": {
+            "target_key": "sealNumber",
+            "target_value": "12190",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "ShipperContainerSealNumber",
+                "source_value": "dadasd",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.7716649697130649,
+                "source_message": "COARRI_NLP",
+                "source_key": "CustomsContSealNumber",
+                "source_value": "dadasd",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.6752976451473955,
+                "source_message": "COARRI_NLP",
+                "source_key": "SealStatus",
+                "source_value": "1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "oogTop": {
+            "target_key": "oogTop",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.23714129146209173,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.22535251880417762,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NoOfHatchesorTanks",
+                "source_value": "7",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.22472062505065568,
+                "source_message": "VESPRO_NLP",
+                "source_key": "HatchCoverType",
+                "source_value": "P",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "oogBottom": {
+            "target_key": "oogBottom",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.24975578593376663,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.20007053155147392,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NoOfHatchesorTanks",
+                "source_value": "7",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.19950725108794065,
+                "source_message": "VESPRO_NLP",
+                "source_key": "Beam",
+                "source_value": "24.61",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "oogRight": {
+            "target_key": "oogRight",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.24333142942195934,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.2414222993216626,
+                "source_message": "VESPRO_NLP",
+                "source_key": "Beam",
+                "source_value": "24.61",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.18445026283181604,
+                "source_message": "VESPRO_NLP",
+                "source_key": "RegPort",
+                "source_value": "MYPKG1",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "oogLeft": {
+            "target_key": "oogLeft",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.2603689537897706,
+                "source_message": "VESPRO_NLP",
+                "source_key": "Beam",
+                "source_value": "24.61",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.2595483099670157,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.2116198579814398,
+                "source_message": "VESPRO_NLP",
+                "source_key": "MaxDraft",
+                "source_value": "7.7",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "oogFront": {
+            "target_key": "oogFront",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.2572782536471218,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.2131416522259238,
+                "source_message": "VESPRO_NLP",
+                "source_key": "RegPort",
+                "source_value": "MYPKG1",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.2050498879127634,
+                "source_message": "VESPRO_NLP",
+                "source_key": "MaxDraft",
+                "source_value": "7.7",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "oogBack": {
+            "target_key": "oogBack",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.22675645773906916,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.21016746039405435,
+                "source_message": "VESPRO_NLP",
+                "source_key": "HatchCoverType",
+                "source_value": "P",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.20449558893750136,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NoOfHatchesorTanks",
+                "source_value": "7",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "reeferTemperature": {
+            "target_key": "reeferTemperature",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.3098429683829396,
+                "source_message": "COARRI_NLP",
+                "source_key": "SealStatus",
+                "source_value": "1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.28446331121303825,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ConSealStatus",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.2558447973612393,
+                "source_message": "COARRI_NLP",
+                "source_key": "ICDIndicator",
+                "source_value": "N",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "reeferTemperatureUnit": {
+            "target_key": "reeferTemperatureUnit",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.22912932313197412,
+                "source_message": "COARRI_NLP",
+                "source_key": "ShipperContainerSealNumber",
+                "source_value": "dadasd",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.21218642446671998,
+                "source_message": "VESPRO_NLP",
+                "source_key": "ShipRegCertNumber",
+                "source_value": "337628",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.2119155847874092,
+                "source_message": "COARRI_NLP",
+                "source_key": "SealStatus",
+                "source_value": "1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "stowageLocation": {
+            "target_key": "stowageLocation",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.2768116949064493,
+                "source_message": "COARRI_NLP",
+                "source_key": "SealStatus",
+                "source_value": "1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.2743700198500026,
+                "source_message": "COARRI_NLP",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.2713712925626543,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "CargoType",
+                "source_value": "12",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerIMCO1": {
+            "target_key": "containerIMCO1",
+            "target_value": "150504",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.558985718482673,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.48964038663904574,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.4836955837613168,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerUNNO1": {
+            "target_key": "containerUNNO1",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6555196804083375,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5607285653471108,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.558201960348847,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerIMCO2": {
+            "target_key": "containerIMCO2",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5494754007116962,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.4880318207576508,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.4793245683529833,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerUNNO2": {
+            "target_key": "containerUNNO2",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.6401827778697456,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5590449025899134,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerIMCO3": {
+            "target_key": "containerIMCO3",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.5521773011029177,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.4854923479688069,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.4794527543200778,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerUNNO3": {
+            "target_key": "containerUNNO3",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.6475698426528709,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5575128359866017,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5392882874844114,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerIMCO4": {
+            "target_key": "containerIMCO4",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.5530892623593257,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.48877164414632085,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.48209586047857156,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerUNNO4": {
+            "target_key": "containerUNNO4",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.6543539392554352,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5641366688681617,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.546030213558439,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerIMCO5": {
+            "target_key": "containerIMCO5",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5617000891301609,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.4960166495529137,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.4953723443735804,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerUNNO5": {
+            "target_key": "containerUNNO5",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6521857312028616,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5699233860701554,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5558667308328178,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerIMCO6": {
+            "target_key": "containerIMCO6",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5533335582373682,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.4950100449908932,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.48634769865525523,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerUNNO6": {
+            "target_key": "containerUNNO6",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6428359539510506,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5623822420709996,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.557079162323239,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        }
+    },
+    "VESDEP_DT": {
         "voyageNo": {
             "target_key": "voyageNo",
             "target_value": "2862507512",
             "target_m_n": "M",
             "key1": {
-                "final_score": 0.8773832603492169,
-                "source_message": "vesdep",
+                "final_score": 0.8023202414996615,
+                "source_message": "VESDEP_NLP",
                 "source_key": "VoyageNumber",
                 "source_value": "2862507512",
-                "source_file": "vesdep.xml",
+                "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.3929072562444571,
-                "source_message": "vesdep",
-                "source_key": "BerthNumber",
-                "source_value": "EQ9",
-                "source_file": "vesdep.xml",
+                "final_score": 0.485114972801033,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NoOfEngines",
+                "source_value": "1",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.3896904009084501,
-                "source_message": "vesdep",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "vesdep.xml",
+                "final_score": 0.4697817712480713,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "portOfRegistration": {
@@ -40,34 +1407,34 @@
             "target_value": "MYPKG1",
             "target_m_n": "M",
             "key1": {
-                "final_score": 0.5355711508668917,
-                "source_message": "vesdep",
-                "source_key": "NextPortOfCall",
-                "source_value": "SGSIN1",
-                "source_file": "vesdep.xml",
+                "final_score": 0.636499357279952,
+                "source_message": "VESPRO_NLP",
+                "source_key": "RegPort",
+                "source_value": "MYPKG1",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.49935884492028376,
-                "source_message": "vesdep",
-                "source_key": "PortClearanceNumber",
-                "source_value": "546465",
-                "source_file": "vesdep.xml",
+                "final_score": 0.6296273899474751,
+                "source_message": "VESPRO_NLP",
+                "source_key": "PortOfApproval",
+                "source_value": "INCCU1",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.4565124122882324,
-                "source_message": "vesdep",
-                "source_key": "SailingDateTimeOfPort",
-                "source_value": "21042025:10:19",
-                "source_file": "vesdep.xml",
+                "final_score": 0.5985777926874689,
+                "source_message": "COARRI_NLP",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "beam": {
@@ -75,34 +1442,34 @@
             "target_value": "24.61",
             "target_m_n": "M",
             "key1": {
-                "final_score": 0.36595656183298386,
-                "source_message": "vesdep",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "vesdep.xml",
+                "final_score": 1.0,
+                "source_message": "VESPRO_NLP (based on past mapping)",
+                "source_key": "Beam",
+                "source_value": "24.61",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.27188106748751384,
-                "source_message": "vesdep",
-                "source_key": "VoyageNumber",
-                "source_value": "2862507512",
-                "source_file": "vesdep.xml",
+                "final_score": 0.3763504727054742,
+                "source_message": "VESPRO_NLP",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.2434464835771242,
-                "source_message": "vesdep",
-                "source_key": "BerthNumber",
-                "source_value": "EQ9",
-                "source_file": "vesdep.xml",
+                "final_score": 0.3659565596289841,
+                "source_message": "ETAETD_NLP",
+                "source_key": "VesselName",
+                "source_value": "BULK CARGO",
+                "source_file": "ETAETD_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "vesselLOA": {
@@ -110,34 +1477,34 @@
             "target_value": "159.98",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.6173527442592772,
-                "source_message": "vesdep",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "vesdep.xml",
+                "final_score": 1.0,
+                "source_message": "VESPRO_NLP (based on past mapping)",
+                "source_key": "LOA",
+                "source_value": "159.98",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.5111570867172457,
-                "source_message": "vesdep",
-                "source_key": "CountryOfVessel",
-                "source_value": "IN",
-                "source_file": "vesdep.xml",
+                "final_score": 0.6173527442592772,
+                "source_message": "ETAETD_NLP",
+                "source_key": "VesselName",
+                "source_value": "BULK CARGO",
+                "source_file": "ETAETD_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.48958720729826866,
-                "source_message": "vesdep",
-                "source_key": "DateTimeArrivalVessel",
-                "source_value": "17042025:12:56",
-                "source_file": "vesdep.xml",
+                "final_score": 0.6173527442592772,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselName",
+                "source_value": "MTT SEMPORNA",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "vesselOwner": {
@@ -145,34 +1512,34 @@
             "target_value": "MTT SHIPPING",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.642081643393513,
-                "source_message": "vesdep",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "vesdep.xml",
+                "final_score": 0.999999791348918,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselOwner",
+                "source_value": "MTT SHIPPING",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.5570780505441564,
-                "source_message": "vesdep",
-                "source_key": "CountryOfVessel",
-                "source_value": "IN",
-                "source_file": "vesdep.xml",
+                "final_score": 0.642081643393513,
+                "source_message": "ETAETD_NLP",
+                "source_key": "VesselName",
+                "source_value": "BULK CARGO",
+                "source_file": "ETAETD_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.4730110463654346,
-                "source_message": "vesdep",
-                "source_key": "DateTimeArrivalVessel",
-                "source_value": "17042025:12:56",
-                "source_file": "vesdep.xml",
+                "final_score": 0.642081643393513,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselName",
+                "source_value": "MTT SEMPORNA",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "nextPortCall": {
@@ -180,34 +1547,34 @@
             "target_value": "SGSIN1",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.9910537292949644,
-                "source_message": "vesdep",
+                "final_score": 0.9605364853043847,
+                "source_message": "VESDEP_NLP",
                 "source_key": "NextPortOfCall",
                 "source_value": "SGSIN1",
-                "source_file": "vesdep.xml",
+                "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.4556228680014146,
-                "source_message": "vesdep",
-                "source_key": "SailingDateTimeOfPort",
-                "source_value": "21042025:10:19",
-                "source_file": "vesdep.xml",
+                "final_score": 0.5489309536441674,
+                "source_message": "VESPRO_NLP",
+                "source_key": "RegPort",
+                "source_value": "MYPKG1",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.44449977714101674,
-                "source_message": "vesdep",
+                "final_score": 0.49547569466809394,
+                "source_message": "VESPRO_NLP",
                 "source_key": "CallSign",
-                "source_value": "587104",
-                "source_file": "vesdep.xml",
+                "source_value": "9M2379",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "rotationNo": {
@@ -215,69 +1582,69 @@
             "target_value": "123456",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.38192806720412315,
-                "source_message": "vesdep",
-                "source_key": "VoyageNumber",
-                "source_value": "2862507512",
-                "source_file": "vesdep.xml",
+                "final_score": 0.45209974089147154,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.3475299396318451,
-                "source_message": "vesdep",
-                "source_key": "IMONumber",
-                "source_value": "1598677890",
-                "source_file": "vesdep.xml",
+                "final_score": 0.4486911735032912,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NoOfEngines",
+                "source_value": "1",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.3325584283914467,
-                "source_message": "vesdep",
-                "source_key": "BerthNumber",
-                "source_value": "EQ9",
-                "source_file": "vesdep.xml",
+                "final_score": 0.44458181214333425,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "VehicleNo",
+                "source_value": "MH46H5586",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "cell": {
             "target_key": "cell",
-            "target_value": "",
+            "target_value": "nan",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.2774209964095218,
-                "source_message": "vesdep",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "vesdep.xml",
+                "final_score": 0.25142165005264894,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContClasssificationCode",
+                "source_value": "FCL",
+                "source_file": "COARRI_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.2390652911709351,
-                "source_message": "vesdep",
-                "source_key": "CallSign",
-                "source_value": "587104",
-                "source_file": "vesdep.xml",
+                "final_score": 0.24605410302942407,
+                "source_message": "COARRI_NLP",
+                "source_key": "SealStatus",
+                "source_value": "1",
+                "source_file": "COARRI_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.23573698992757405,
-                "source_message": "vesdep",
-                "source_key": "NextPortOfCall",
-                "source_value": "SGSIN1",
-                "source_file": "vesdep.xml",
+                "final_score": 0.24419146010253462,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContISOCode",
+                "source_value": "42G1",
+                "source_file": "COARRI_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "vesselLineCode": {
@@ -285,34 +1652,34 @@
             "target_value": "",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.5703677051058273,
-                "source_message": "vesdep",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "vesdep.xml",
+                "final_score": 0.7246489093576414,
+                "source_message": "COARRI_NLP",
+                "source_key": "VesselAgentCode",
+                "source_value": "MSK",
+                "source_file": "COARRI_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.4641872805743646,
-                "source_message": "vesdep",
-                "source_key": "CountryOfVessel",
-                "source_value": "IN",
-                "source_file": "vesdep.xml",
+                "final_score": 0.5743676560546052,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselGear_RecordNumber",
+                "source_value": "1",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.4540381790225019,
-                "source_message": "vesdep",
-                "source_key": "DateTimeArrivalVessel",
-                "source_value": "17042025:12:56",
-                "source_file": "vesdep.xml",
+                "final_score": 0.5703677051058273,
+                "source_message": "ETAETD_NLP",
+                "source_key": "VesselName",
+                "source_value": "BULK CARGO",
+                "source_file": "ETAETD_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "teuCapacity": {
@@ -320,34 +1687,34 @@
             "target_value": "1162",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.15922358985055157,
-                "source_message": "vesdep",
-                "source_key": "VCN",
-                "source_value": "INVTZ120240997",
-                "source_file": "vesdep.xml",
+                "final_score": 0.5351022233233831,
+                "source_message": "VESPRO_NLP",
+                "source_key": "TEU",
+                "source_value": "1162",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.1540109207263285,
-                "source_message": "vesdep",
-                "source_key": "TOOrDOckCode",
-                "source_value": "INVTZ1",
-                "source_file": "vesdep.xml",
+                "final_score": 0.29621768783003377,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselType",
+                "source_value": "1511",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.1535150497848059,
-                "source_message": "vesdep",
-                "source_key": "NextPortOfCall",
-                "source_value": "SGSIN1",
-                "source_file": "vesdep.xml",
+                "final_score": 0.2842242357910821,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "estimatedTimeOfArrival": {
@@ -355,34 +1722,34 @@
             "target_value": "17042025:12:56",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.7175270691114743,
-                "source_message": "vesdep",
-                "source_key": "DateTimeArrivalVessel",
-                "source_value": "17042025:12:56",
-                "source_file": "vesdep.xml",
+                "final_score": 0.721460141870438,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ArrivalDateTime",
+                "source_value": "08082025:03:03",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.47634570799609655,
-                "source_message": "vesdep",
-                "source_key": "IssuedDateTime",
-                "source_value": "2.1042E+13",
-                "source_file": "vesdep.xml",
+                "final_score": 0.6950855348054461,
+                "source_message": "VESDEP_NLP",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.44118580030179066,
-                "source_message": "vesdep",
-                "source_key": "SailingDateTimeOfPort",
-                "source_value": "21042025:10:19",
-                "source_file": "vesdep.xml",
+                "final_score": 0.44735956745855165,
+                "source_message": "COARRI_NLP",
+                "source_key": "BerthingDateTime",
+                "source_value": "08082025:02:45",
+                "source_file": "COARRI_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "vesselCallSign": {
@@ -390,34 +1757,34 @@
             "target_value": "EPDF6",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.8205371899203793,
-                "source_message": "vesdep",
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (based on past mapping)",
                 "source_key": "CallSign",
-                "source_value": "587104",
-                "source_file": "vesdep.xml",
+                "source_value": "EPDF6",
+                "source_file": "COARRI_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.5349161071861517,
-                "source_message": "vesdep",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "vesdep.xml",
+                "final_score": 1.0,
+                "source_message": "VESPRO_NLP (based on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "9M2379",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.46711627301049163,
-                "source_message": "vesdep",
-                "source_key": "NextPortOfCall",
-                "source_value": "SGSIN1",
-                "source_file": "vesdep.xml",
+                "final_score": 1.0,
+                "source_message": "VESDEP_NLP (based on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "nationality": {
@@ -425,69 +1792,69 @@
             "target_value": "IN",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.38029140624102836,
-                "source_message": "vesdep",
-                "source_key": "CountryOfVessel",
-                "source_value": "IN",
-                "source_file": "vesdep.xml",
+                "final_score": 0.7034784073083148,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "VesselFlag",
+                "source_value": "IR",
+                "source_file": "COARRI_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.3763820060278107,
-                "source_message": "vesdep",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "vesdep.xml",
+                "final_score": 0.7034784073083148,
+                "source_message": "VESPRO_NLP (based on past mapping)",
+                "source_key": "VesselFlag",
+                "source_value": "MY",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.3050243178428195,
-                "source_message": "vesdep",
-                "source_key": "VoyageNumber",
-                "source_value": "2862507512",
-                "source_file": "vesdep.xml",
+                "final_score": 0.38504889900495964,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "VesselCountry",
+                "source_value": "IR",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "vesselAgentCode": {
             "target_key": "vesselAgentCode",
-            "target_value": "",
+            "target_value": "nan",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.5536352987122537,
-                "source_message": "vesdep",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "vesdep.xml",
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "VesselAgentCode",
+                "source_value": "MSK",
+                "source_file": "COARRI_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.47146280418372566,
-                "source_message": "vesdep",
-                "source_key": "CountryOfVessel",
-                "source_value": "IN",
-                "source_file": "vesdep.xml",
+                "final_score": 0.6660935775899356,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ShippingAgentCode",
+                "source_value": "MSK",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.4695097676945373,
-                "source_message": "vesdep",
-                "source_key": "SACode",
-                "source_value": "ZUARI",
-                "source_file": "vesdep.xml",
+                "final_score": 0.5736528551466911,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselGear_RecordNumber",
+                "source_value": "1",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "portArrivalDate": {
@@ -495,34 +1862,34 @@
             "target_value": "29-08-2025 06:00",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.6829692270415667,
-                "source_message": "vesdep",
+                "final_score": 0.685259184549156,
+                "source_message": "VESDEP_NLP",
                 "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
-                "source_file": "vesdep.xml",
+                "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.6474367878165133,
-                "source_message": "vesdep",
-                "source_key": "SailingDateTimeOfPort",
-                "source_value": "21042025:10:19",
-                "source_file": "vesdep.xml",
+                "final_score": 0.6662179232506061,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ArrivalDateTime",
+                "source_value": "08082025:03:03",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.47371236459228894,
-                "source_message": "vesdep",
-                "source_key": "PortClearanceNumber",
-                "source_value": "546465",
-                "source_file": "vesdep.xml",
+                "final_score": 0.6474367878165133,
+                "source_message": "VESDEP_NLP",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "countryCode": {
@@ -530,34 +1897,34 @@
             "target_value": "IN",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.584288136978377,
-                "source_message": "vesdep",
-                "source_key": "CountryOfVessel",
-                "source_value": "IN",
-                "source_file": "vesdep.xml",
+                "final_score": 0.9165599437185362,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "VesselCountry",
+                "source_value": "IR",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.4034693710460646,
-                "source_message": "vesdep",
-                "source_key": "SACode",
-                "source_value": "ZUARI",
-                "source_file": "vesdep.xml",
+                "final_score": 0.7057829232294756,
+                "source_message": "VESDEP_NLP",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.3823276228445521,
-                "source_message": "vesdep",
-                "source_key": "TOOrDOckCode",
-                "source_value": "INVTZ1",
-                "source_file": "vesdep.xml",
+                "final_score": 0.5187048431141003,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "CACode",
+                "source_value": "MSK",
+                "source_file": "CODECO_CCSDPW.csv",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "maximumDraft": {
@@ -565,34 +1932,34 @@
             "target_value": "7.7",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.2969746386435831,
-                "source_message": "vesdep",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "vesdep.xml",
+                "final_score": 0.8005833141372356,
+                "source_message": "VESPRO_NLP",
+                "source_key": "MaxDraft",
+                "source_value": "7.7",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.24802125198547567,
-                "source_message": "vesdep",
-                "source_key": "VoyageNumber",
-                "source_value": "2862507512",
-                "source_file": "vesdep.xml",
+                "final_score": 0.5285620847347644,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftAft",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.23881404351481378,
-                "source_message": "vesdep",
-                "source_key": "DateTimeArrivalVessel",
-                "source_value": "17042025:12:56",
-                "source_file": "vesdep.xml",
+                "final_score": 0.45885896392064024,
+                "source_message": "ETAETD_NLP",
+                "source_key": "DraftFwd",
+                "source_value": "21",
+                "source_file": "ETAETD_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "grt1": {
@@ -600,34 +1967,34 @@
             "target_value": "13059",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.2854228672241967,
-                "source_message": "vesdep",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "vesdep.xml",
+                "final_score": 0.648745315726767,
+                "source_message": "VESPRO_NLP",
+                "source_key": "GRT",
+                "source_value": "13059",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.24378873343424304,
-                "source_message": "vesdep",
-                "source_key": "VoyageNumber",
-                "source_value": "2862507512",
-                "source_file": "vesdep.xml",
+                "final_score": 0.4892088381585819,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NRT",
+                "source_value": "5040",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.2426517208735912,
-                "source_message": "vesdep",
-                "source_key": "VCN",
-                "source_value": "INVTZ120240997",
-                "source_file": "vesdep.xml",
+                "final_score": 0.4122823698688465,
+                "source_message": "VESPRO_NLP",
+                "source_key": "DWT",
+                "source_value": "15380",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "grt2": {
@@ -635,34 +2002,34 @@
             "target_value": "13059",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.2764354248125476,
-                "source_message": "vesdep",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "vesdep.xml",
+                "final_score": 0.646254944261084,
+                "source_message": "VESPRO_NLP",
+                "source_key": "GRT",
+                "source_value": "13059",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.23607162886071706,
-                "source_message": "vesdep",
-                "source_key": "VCN",
-                "source_value": "INVTZ120240997",
-                "source_file": "vesdep.xml",
+                "final_score": 0.4944795487460798,
+                "source_message": "VESPRO_NLP",
+                "source_key": "NRT",
+                "source_value": "5040",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.23243530006035107,
-                "source_message": "vesdep",
-                "source_key": "VoyageNumber",
-                "source_value": "2862507512",
-                "source_file": "vesdep.xml",
+                "final_score": 0.41679752601870546,
+                "source_message": "VESPRO_NLP",
+                "source_key": "DWT",
+                "source_value": "15380",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "sailDate": {
@@ -670,34 +2037,34 @@
             "target_value": "29-08-2025 06:00",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.5929567620793521,
-                "source_message": "vesdep",
+                "final_score": 0.6161898976099479,
+                "source_message": "VESDEP_NLP",
                 "source_key": "SailingDateTimeOfPort",
                 "source_value": "21042025:10:19",
-                "source_file": "vesdep.xml",
+                "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.52706804474977,
-                "source_message": "vesdep",
-                "source_key": "DateTimeArrivalVessel",
-                "source_value": "17042025:12:56",
-                "source_file": "vesdep.xml",
+                "final_score": 0.5832161518915358,
+                "source_message": "COARRI_NLP",
+                "source_key": "BerthingDateTime",
+                "source_value": "08082025:02:45",
+                "source_file": "COARRI_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.44698785564088483,
-                "source_message": "vesdep",
-                "source_key": "IssuedDateTime",
-                "source_value": "2.1042E+13",
-                "source_file": "vesdep.xml",
+                "final_score": 0.49738425299868044,
+                "source_message": "VESDEP_NLP",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             }
         },
         "vesselName": {
@@ -706,33 +2073,945 @@
             "target_m_n": "N",
             "key1": {
                 "final_score": 0.9999997636364756,
-                "source_message": "vesdep",
+                "source_message": "ETAETD_NLP",
                 "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "vesdep.xml",
+                "source_value": "BULK CARGO",
+                "source_file": "ETAETD_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key2": {
-                "final_score": 0.6317862061776568,
-                "source_message": "vesdep",
-                "source_key": "CountryOfVessel",
-                "source_value": "IN",
-                "source_file": "vesdep.xml",
+                "final_score": 0.9999997636364756,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselName",
+                "source_value": "MTT SEMPORNA",
+                "source_file": "VESPRO_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
             },
             "key3": {
-                "final_score": 0.5888236281697967,
-                "source_message": "vesdep",
-                "source_key": "DateTimeArrivalVessel",
-                "source_value": "17042025:12:56",
-                "source_file": "vesdep.xml",
+                "final_score": 0.9999997636364756,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "VESDEP_NLP.xlsx",
                 "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Jebel Ali"
+                "source_system": "Customs - Abu Dhabi"
+            }
+        }
+    },
+    "CODECO_DT": {
+        "containerNumber": {
+            "target_key": "containerNumber",
+            "target_value": "TGBU3081444",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.7708818764613043,
+                "source_message": "COARRI_NLP",
+                "source_key": "ShipperContainerSealNumber",
+                "source_value": "dadasd",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "loadPort": {
+            "target_key": "loadPort",
+            "target_value": "INNSA",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "LoadingPort",
+                "source_value": "INNSA1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5863437014372588,
+                "source_message": "COARRI_NLP",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5306803677551257,
+                "source_message": "VESDEP_NLP",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "dischargePort": {
+            "target_key": "dischargePort",
+            "target_value": "AEJEA",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "FinalPortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5751963575590291,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "LoadingPort",
+                "source_value": "INNSA1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "destinationPort": {
+            "target_key": "destinationPort",
+            "target_value": "AEJEA",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "DestPort",
+                "source_value": "AEJEA",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.9600981909096268,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "PortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.572014900076349,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "FinalPortOfDischarge",
+                "source_value": "AEJEA",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "lineCode": {
+            "target_key": "lineCode",
+            "target_value": "WHD",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.577026335048204,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ShippingAgentCode",
+                "source_value": "MSK",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5527434485883873,
+                "source_message": "VESDEP_NLP",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.511109093098222,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "CACode",
+                "source_value": "MSK",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "terminalId": {
+            "target_key": "terminalId",
+            "target_value": "T2",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.4920547577261352,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "Channel_ID",
+                "source_value": "IndianPCS",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.46080214740886316,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "SenderID",
+                "source_value": "INNSA1NSG1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.44167277407024064,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "Service_ID",
+                "source_value": "1170",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "isoCode": {
+            "target_key": "isoCode",
+            "target_value": "2200",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "ContISOCode",
+                "source_value": "42G1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "ContISOCode",
+                "source_value": "42G1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.47640029193228306,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "CACode",
+                "source_value": "MSK",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerCategory": {
+            "target_key": "containerCategory",
+            "target_value": "L",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6897158206679204,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "CargoType",
+                "source_value": "12",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5490040751759896,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5280434042444475,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerCategoryStatus": {
+            "target_key": "containerCategoryStatus",
+            "target_value": "I",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5043896585496741,
+                "source_message": "COARRI_NLP",
+                "source_key": "SealStatus",
+                "source_value": "1",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5018695845398471,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.49031693680661803,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ConSealStatus",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerMoveDate": {
+            "target_key": "containerMoveDate",
+            "target_value": "05-08-2025 09:07",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.8213029758027552,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "BerthingDateTime",
+                "source_value": "08082025:02:45",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.7735787944922613,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "ArrivalDateTime",
+                "source_value": "08082025:03:03",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.4760883734637785,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerIMCO1": {
+            "target_key": "containerIMCO1",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5695020480213642,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5342889311997255,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5104197381272662,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerUNNO1": {
+            "target_key": "containerUNNO1",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6362326236098742,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5689300428396675,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5534925439551064,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerIMCO2": {
+            "target_key": "containerIMCO2",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5583785338288347,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5268936153379032,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5122273130379585,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerUNNO2": {
+            "target_key": "containerUNNO2",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.6248188706658365,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5685353276723242,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerIMCO3": {
+            "target_key": "containerIMCO3",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.5586594094692762,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.528779393267812,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5151277934447689,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerUNNO3": {
+            "target_key": "containerUNNO3",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.6198052678919517,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5621082980353567,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5372683687567,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerIMCO4": {
+            "target_key": "containerIMCO4",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.5588352596322336,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5306735566338902,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5152297308679725,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerUNNO4": {
+            "target_key": "containerUNNO4",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6222949737057315,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5626113002694277,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5421027544029382,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerIMCO5": {
+            "target_key": "containerIMCO5",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5702477696391204,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5416296123362835,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5194534811306919,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerUNNO5": {
+            "target_key": "containerUNNO5",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.6200422386286414,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5626986510135026,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5519862719967554,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerIMCO6": {
+            "target_key": "containerIMCO6",
+            "target_value": "nan",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.5600969856259053,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5435981823898604,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.5192374309255174,
+                "source_message": "COARRI_NLP",
+                "source_key": "NoOfContainer",
+                "source_value": "6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "containerUNNO6": {
+            "target_key": "containerUNNO6",
+            "target_value": "nan",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.6156743010336603,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "ContainerNO",
+                "source_value": "MSKU1155883",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.5575676297665366,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "TotNoContainer",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.552714171369333,
+                "source_message": "COARRI_NLP",
+                "source_key": "ContainerNumber",
+                "source_value": "MSKU1155883",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "vesselName": {
+            "target_key": "vesselName",
+            "target_value": "WAN HAI 501",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.9999997636364756,
+                "source_message": "ETAETD_NLP",
+                "source_key": "VesselName",
+                "source_value": "BULK CARGO",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.9999997636364756,
+                "source_message": "VESPRO_NLP",
+                "source_key": "VesselName",
+                "source_value": "MTT SEMPORNA",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.9999997636364756,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "voyageNumber": {
+            "target_key": "voyageNumber",
+            "target_value": "W258",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.9999998053597269,
+                "source_message": "VESDEP_NLP",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.516618652119323,
+                "source_message": "VESDEP_NLP",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "VESDEP_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.49351210281487773,
+                "source_message": "COARRI_NLP",
+                "source_key": "ShipperContainerSealNumber",
+                "source_value": "dadasd",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "callSign": {
+            "target_key": "callSign",
+            "target_value": "S6AS7",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 1.0,
+                "source_message": "CODECO_CCSDPW (based on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "EPDF6",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 1.0,
+                "source_message": "COARRI_NLP (based on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "EPDF6",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 1.0,
+                "source_message": "ETAETD_NLP (based on past mapping)",
+                "source_key": "CallSign",
+                "source_value": "K5432",
+                "source_file": "ETAETD_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            }
+        },
+        "rotationNumebr": {
+            "target_key": "rotationNumebr",
+            "target_value": "941413",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.321154206246784,
+                "source_message": "CODECO_CCSDPW",
+                "source_key": "GateNumber",
+                "source_value": "1",
+                "source_file": "CODECO_CCSDPW.csv",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key2": {
+                "final_score": 0.3156051949433966,
+                "source_message": "COARRI_NLP",
+                "source_key": "ShipperContainerSealNumber",
+                "source_value": "dadasd",
+                "source_file": "COARRI_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
+            },
+            "key3": {
+                "final_score": 0.3127381736307454,
+                "source_message": "VESPRO_NLP",
+                "source_key": "IMONumber",
+                "source_value": "9813888",
+                "source_file": "VESPRO_NLP.xlsx",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Abu Dhabi"
             }
         }
     }
