@@ -1,4 +1,4 @@
-import { SavedMapping } from '@/components/PastMappingsView';
+import { SavedMapping } from '@/components/PastMappings';
 
 const API_BASE_URL = 'http://localhost:5000/api';
 
@@ -30,6 +30,7 @@ export const getMappingsFromBackend = async (): Promise<SavedMapping[]> => {
     }
 
     const data = await response.json();
+    // console.log('Fetched mappings:', data);
     return data;
   } catch (error) {
     console.error('Failed to load mappings:', error);
@@ -41,6 +42,7 @@ export const updateMappingInBackend = async (
   id: string,
   updatedMapping: SavedMapping
 ): Promise<void> => {
+  console.log('Updating mapping with ID:', id, 'Updated Data:', updatedMapping);
   try {
     const response = await fetch(`${API_BASE_URL}/mappings/${id}`, {
       method: 'PUT',

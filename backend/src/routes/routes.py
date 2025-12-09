@@ -154,7 +154,7 @@ def map_files():
                             d["final_score"] = 1.0
                         else:
                             d["final_score"] = min(d["final_score"] + 0.2 * n, 1.0)
-                        d["source_message"] += " (biased on past mapping)"
+                        d["source_message"] += " (based on past mapping)"
 
                     # re-sort by updated score
                     scored.sort(key=lambda x: x["final_score"], reverse=True)
@@ -218,46 +218,88 @@ def create_mapping():
 
         # 2. mapping rows
         for pair in payload["approvedMappings"]:
+            analyzer = DataFieldAnalyzer(pair)
+            res = analyzer.analyze_row()
             db.add(Mapping(
                 metadata_id=meta.id,
+                source_massage=pair["sourceMassage"],
                 source_key=pair["sourceKey"],
+                source_value=pair["sourceValue"],
                 target_key=pair["targetKey"],
+                target_massage=pair["targetMassage"],
+                target_value=pair["targetValue"],
+                transformation_needed=res.get("transformation_needed"),
+                transformation_comments=res.get("transformation_type")+ '::' +res.get("transformation_reason"),
             ))
 
         return jsonify(row_to_json(meta)), 201
 
-
 # ----------  PUT /api/mappings/<id>  ----------
 @app_bp.route("/mappings/<mapping_id>", methods=["PUT"])
 def update_mapping(mapping_id):
+    from uuid import UUID                       # 1.  UUID constructor
+    from sqlalchemy.exc import SQLAlchemyError
+
     payload = request.get_json(silent=True)
     if not payload:
         return jsonify({"error": "No data provided"}), 400
 
-    with SessionLocal.begin() as db:
-        meta = db.get(Metadata, mapping_id)
-        if not meta:
+    # Optional: allow client to omit id in body and use the URL segment
+    if "id" not in payload:
+        payload["id"] = mapping_id
+
+    try:
+        payload_id = UUID(payload["id"])        # 2.  str -> UUID
+    except ValueError:
+        return jsonify({"error": "Invalid UUID format"}), 400
+
+    with SessionLocal() as db:
+        # 3.  Fetch with proper UUID object
+        mapping = db.query(Mapping).filter(Mapping.id == payload_id).first()
+        if not mapping:
             return jsonify({"error": "Mapping not found"}), 404
 
-        # update scalar fields
-        for col in ("sourceCountry", "sourceDomain", "sourceSystem",
-                    "targetCountry", "targetDomain", "targetSystem",
-                    "mappingCount"):
-            if col in payload:
-                setattr(meta, col.lower().replace("country", "_country")
-                        .replace("domain", "_domain")
-                        .replace("system", "_system")
-                        .replace("mappingcount", "mapping_count"), payload[col])
+        # -------------------------
+        #  RUN ANALYZER
+        # -------------------------
+        analyzer = DataFieldAnalyzer(payload)
+        res = analyzer.analyze_row()
 
-        # replace approvedMappings completely
-        meta.mappings = [
-            Mapping(source_key=p["sourceKey"], target_key=p["targetKey"])
-            for p in payload.get("approvedMappings", [])
-        ]
-        meta.mapping_count = len(meta.mappings)
+        transformation_needed = res.get("transformation_needed")
+        transformation_comments = (
+            f"{res.get('transformation_type')}::{res.get('transformation_reason')}"
+        )
 
-        return jsonify(row_to_json(meta)), 200
+        # -------------------------
+        #  UPDATE FIELDS
+        # -------------------------
+        fields = {
+            "source_key": "sourceKey",
+            "source_massage": "sourceMassage",
+            "source_value": "sourceValue",
+            "target_key": "targetKey",
+            "target_massage": "targetMassage",
+            "target_value": "targetValue",
+        }
 
+        for model_field, json_field in fields.items():
+            if json_field in payload:
+                setattr(mapping, model_field, payload[json_field])
+
+        # -------------------------
+        #  UPDATE TRANSFORMATION FIELDS
+        # -------------------------
+        mapping.transformation_needed = transformation_needed
+        mapping.transformation_comments = transformation_comments
+
+        try:
+            db.commit()
+            db.refresh(mapping)
+        except SQLAlchemyError as e:
+            db.rollback()
+            return jsonify({"error": "Database update failed", "details": str(e)}), 500
+
+        return ('save successfully'), 200
 
 # ----------  DELETE /api/mappings/<id>  ----------
 @app_bp.route("/mappings/<mapping_id>", methods=["DELETE"])

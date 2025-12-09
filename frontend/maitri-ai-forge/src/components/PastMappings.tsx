@@ -29,12 +29,13 @@ interface PastMappingsViewProps {
 type ViewMode = 'grid' | 'table';
 type FilterType = 'all' | 'origin' | 'destination';
 
-export const PastMappingsView = ({ mappings, onViewMapping, onDeleteMapping, onEditMapping,refresh }: PastMappingsViewProps) => {
+export const PastMappings = ({ mappings, onViewMapping, onDeleteMapping, onEditMapping,refresh }: PastMappingsViewProps) => {
   const [viewMode, setViewMode] = useState<ViewMode>('table');
   const [filterType, setFilterType] = useState<FilterType>('all');
   const [countryFilter, setCountryFilter] = useState<string>('all');
   const [domainFilter, setDomainFilter] = useState<string>('all');
   const [systemFilter, setSystemFilter] = useState<string>('all');
+  // console.log('PastMappings rendered with mappings:', mappings);
   useEffect(() => {
     refresh();
   });
@@ -111,7 +112,7 @@ export const PastMappingsView = ({ mappings, onViewMapping, onDeleteMapping, onE
             <h3 className="font-semibold">Filters</h3>
           </div>
           <div className="flex gap-2">
-            <Button
+            {/* <Button
               variant={viewMode === 'grid' ? 'default' : 'outline'}
               size="sm"
               onClick={() => setViewMode('grid')}
@@ -126,7 +127,7 @@ export const PastMappingsView = ({ mappings, onViewMapping, onDeleteMapping, onE
             >
               <List className="w-4 h-4 mr-2" />
               Table
-            </Button>
+            </Button> */}
           </div>
         </div>
 

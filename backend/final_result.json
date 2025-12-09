@@ -1,1263 +1,738 @@
 {
-    "CODECO_CCSDPW": {
-        "Channel_ID": {
-            "target_key": "Channel_ID",
-            "target_value": "IndianPCS",
-            "target_m_n": "N",
+    "Vesdep": {
+        "voyageNo": {
+            "target_key": "voyageNo",
+            "target_value": "2862507512",
+            "target_m_n": "M",
             "key1": {
-                "final_score": 0.2901501130241952,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.288573111916294,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.28420747547555447,
-                "source_message": "VESDEP_DT",
-                "source_key": "countryCode",
-                "source_value": "IN",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "Service_ID": {
-            "target_key": "Service_ID",
-            "target_value": "1170",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.3048293974741397,
-                "source_message": "VESDEP_DT",
-                "source_key": "voyageNo",
+                "final_score": 0.8773832603492169,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
                 "source_value": "2862507512",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.29421529805198443,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.3929072562444571,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.28402718612679145,
-                "source_message": "VESDEP_DT",
-                "source_key": "countryCode",
-                "source_value": "IN",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.3896904009084501,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "Request_ID": {
-            "target_key": "Request_ID",
-            "target_value": "8.08E+12",
-            "target_m_n": "N",
+        "portOfRegistration": {
+            "target_key": "portOfRegistration",
+            "target_value": "MYPKG1",
+            "target_m_n": "M",
             "key1": {
-                "final_score": 0.29789315306462405,
-                "source_message": "VESDEP_DT",
-                "source_key": "voyageNo",
+                "final_score": 0.5355711508668917,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.49935884492028376,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.4565124122882324,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "beam": {
+            "target_key": "beam",
+            "target_value": "24.61",
+            "target_m_n": "M",
+            "key1": {
+                "final_score": 0.36595656183298386,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.27188106748751384,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
                 "source_value": "2862507512",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.2757815838440681,
-                "source_message": "VESDEP_DT",
-                "source_key": "countryCode",
-                "source_value": "IN",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.25692563377827293,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.2434464835771242,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "Request_Date": {
-            "target_key": "Request_Date",
-            "target_value": "20250808",
+        "vesselLOA": {
+            "target_key": "vesselLOA",
+            "target_value": "159.98",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.41221129982945626,
-                "source_message": "VESDEP_DT",
-                "source_key": "portArrivalDate",
-                "source_value": "29-08-2025 06:00",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.6173527442592772,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.38907520902388226,
-                "source_message": "VESDEP_DT",
-                "source_key": "sailDate",
-                "source_value": "29-08-2025 06:00",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.5111570867172457,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.24875884574107285,
-                "source_message": "VESDEP_DT",
-                "source_key": "estimatedTimeOfArrival",
+                "final_score": 0.48958720729826866,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "DocumentType": {
-            "target_key": "DocumentType",
-            "target_value": "CODECO",
+        "vesselOwner": {
+            "target_key": "vesselOwner",
+            "target_value": "MTT SHIPPING",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.23004933200833164,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselName",
-                "source_value": "Test Sample",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.642081643393513,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.22168640055328367,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.21382688679676748,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "DocumentName": {
-            "target_key": "DocumentName",
-            "target_value": "Cont/CargoGate-in Gate-Out Report",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.47880678132722343,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselName",
-                "source_value": "Test Sample",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.2593702587429872,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselOwner",
-                "source_value": "MTT SHIPPING",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.23206450323894823,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselCallSign",
-                "source_value": "EPDF6",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "DocumentNumber": {
-            "target_key": "DocumentNumber",
-            "target_value": "8.08E+12",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.34235754395765583,
-                "source_message": "VESDEP_DT",
-                "source_key": "voyageNo",
-                "source_value": "2862507512",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.3230380030198624,
-                "source_message": "VESDEP_DT",
-                "source_key": "countryCode",
+                "final_score": 0.5570780505441564,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
                 "source_value": "IN",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.2986233308765311,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.4730110463654346,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "CommonRefNumber": {
-            "target_key": "CommonRefNumber",
-            "target_value": "8.08E+12",
+        "nextPortCall": {
+            "target_key": "nextPortCall",
+            "target_value": "SGSIN1",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.2717069634150061,
-                "source_message": "VESDEP_DT",
-                "source_key": "rotationNo",
-                "source_value": "123456",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.9910537292949644,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.27141740931193653,
-                "source_message": "VESDEP_DT",
-                "source_key": "countryCode",
-                "source_value": "IN",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.4556228680014146,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.24977428956126768,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.44449977714101674,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "MessageType": {
-            "target_key": "MessageType",
-            "target_value": "9",
+        "rotationNo": {
+            "target_key": "rotationNo",
+            "target_value": "123456",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.2356452483657889,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.23268030697886866,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselCallSign",
-                "source_value": "EPDF6",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.22146833414540912,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "SenderID": {
-            "target_key": "SenderID",
-            "target_value": "INNSA1NSG1",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.33487807597224795,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.3231437523568052,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.31301221254497524,
-                "source_message": "VESDEP_DT",
-                "source_key": "voyageNo",
+                "final_score": 0.38192806720412315,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
                 "source_value": "2862507512",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.3475299396318451,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.3325584283914467,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "ReceivingParty": {
-            "target_key": "ReceivingParty",
-            "target_value": "INNSA1",
+        "cell": {
+            "target_key": "cell",
+            "target_value": "",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.23186928856380645,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.2774209964095218,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.23163223316382583,
-                "source_message": "VESDEP_DT",
-                "source_key": "portOfRegistration",
-                "source_value": "MYPKG1",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.2390652911709351,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.20589931381583249,
-                "source_message": "VESDEP_DT",
-                "source_key": "portArrivalDate",
-                "source_value": "29-08-2025 06:00",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.23573698992757405,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "VCN": {
-            "target_key": "VCN",
-            "target_value": "INNSA1NG0R0286",
-            "target_m_n": "M",
+        "vesselLineCode": {
+            "target_key": "vesselLineCode",
+            "target_value": "",
+            "target_m_n": "N",
             "key1": {
-                "final_score": 0.29966712647777105,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.5703677051058273,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.29496553186387414,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselName",
-                "source_value": "Test Sample",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.4641872805743646,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.2880405612338105,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselOwner",
-                "source_value": "MTT SHIPPING",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.4540381790225019,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "IMONumber": {
-            "target_key": "IMONumber",
-            "target_value": "9270696",
-            "target_m_n": "M",
+        "teuCapacity": {
+            "target_key": "teuCapacity",
+            "target_value": "1162",
+            "target_m_n": "N",
             "key1": {
-                "final_score": 0.4410608257450952,
-                "source_message": "VESDEP_DT",
-                "source_key": "rotationNo",
-                "source_value": "123456",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.15922358985055157,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.40826991633766796,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.1540109207263285,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.3857801842059479,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.1535150497848059,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "CallSign": {
-            "target_key": "CallSign",
+        "estimatedTimeOfArrival": {
+            "target_key": "estimatedTimeOfArrival",
+            "target_value": "17042025:12:56",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.7175270691114743,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.47634570799609655,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.44118580030179066,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "vesselCallSign": {
+            "target_key": "vesselCallSign",
             "target_value": "EPDF6",
-            "target_m_n": "M",
+            "target_m_n": "N",
             "key1": {
-                "final_score": 1.0,
-                "source_message": "VESDEP_DT (biased on past mapping)",
-                "source_key": "vesselCallSign",
-                "source_value": "EPDF6",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.8205371899203793,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.4535270117149706,
-                "source_message": "VESDEP_DT",
-                "source_key": "nextPortCall",
+                "final_score": 0.5349161071861517,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.46711627301049163,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
                 "source_value": "SGSIN1",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.35053567626743365,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "StuffDestuffFlag": {
-            "target_key": "StuffDestuffFlag",
-            "target_value": "E",
-            "target_m_n": "M",
+        "nationality": {
+            "target_key": "nationality",
+            "target_value": "IN",
+            "target_m_n": "N",
             "key1": {
-                "final_score": 0.16802639975300834,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselCallSign",
-                "source_value": "EPDF6",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.15497865308673067,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.14575190778322192,
-                "source_message": "VESDEP_DT",
-                "source_key": "portOfRegistration",
-                "source_value": "MYPKG1",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "ShippingAgentCode": {
-            "target_key": "ShippingAgentCode",
-            "target_value": "MSK",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.6755815087481672,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.4247856195825443,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.401640652057484,
-                "source_message": "VESDEP_DT",
-                "source_key": "countryCode",
+                "final_score": 0.38029140624102836,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
                 "source_value": "IN",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "VesselCountry": {
-            "target_key": "VesselCountry",
-            "target_value": "IR",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 1.0,
-                "source_message": "VESDEP_DT (biased on past mapping)",
-                "source_key": "countryCode",
-                "source_value": "IN",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.6112959834608942,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.3763820060278107,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.608564235049535,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselOwner",
-                "source_value": "MTT SHIPPING",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "TotNoContainer": {
-            "target_key": "TotNoContainer",
-            "target_value": "1",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.31905878928692133,
-                "source_message": "VESDEP_DT",
-                "source_key": "voyageNo",
+                "final_score": 0.3050243178428195,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
                 "source_value": "2862507512",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.30483669814994674,
-                "source_message": "VESDEP_DT",
-                "source_key": "rotationNo",
-                "source_value": "123456",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.2887243137931009,
-                "source_message": "VESDEP_DT",
-                "source_key": "cell",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "LoadingPort": {
-            "target_key": "LoadingPort",
-            "target_value": "INNSA1",
+        "vesselAgentCode": {
+            "target_key": "vesselAgentCode",
+            "target_value": "",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.532930591682354,
-                "source_message": "VESDEP_DT",
-                "source_key": "nextPortCall",
-                "source_value": "SGSIN1",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.5536352987122537,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.4376729909112616,
-                "source_message": "VESDEP_DT",
-                "source_key": "portArrivalDate",
-                "source_value": "29-08-2025 06:00",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.47146280418372566,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.42421154277867207,
-                "source_message": "VESDEP_DT",
-                "source_key": "portOfRegistration",
-                "source_value": "MYPKG1",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.4695097676945373,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "DestPort": {
-            "target_key": "DestPort",
-            "target_value": "AEJEA",
+        "portArrivalDate": {
+            "target_key": "portArrivalDate",
+            "target_value": "29-08-2025 06:00",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.567180746879063,
-                "source_message": "VESDEP_DT",
-                "source_key": "nextPortCall",
-                "source_value": "SGSIN1",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.49719882038963165,
-                "source_message": "VESDEP_DT",
-                "source_key": "portArrivalDate",
-                "source_value": "29-08-2025 06:00",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.4614768295755412,
-                "source_message": "VESDEP_DT",
-                "source_key": "portOfRegistration",
-                "source_value": "MYPKG1",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "FinalPortOfDischarge": {
-            "target_key": "FinalPortOfDischarge",
-            "target_value": "AEJEA",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.44005736835849685,
-                "source_message": "VESDEP_DT",
-                "source_key": "nextPortCall",
-                "source_value": "SGSIN1",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.4078385639226803,
-                "source_message": "VESDEP_DT",
-                "source_key": "portArrivalDate",
-                "source_value": "29-08-2025 06:00",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.3447153347454662,
-                "source_message": "VESDEP_DT",
-                "source_key": "portOfRegistration",
-                "source_value": "MYPKG1",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "ArrivalDateTime": {
-            "target_key": "ArrivalDateTime",
-            "target_value": "08082025:03:03",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 1.0,
-                "source_message": "VESDEP_DT (biased on past mapping)",
-                "source_key": "portArrivalDate",
-                "source_value": "29-08-2025 06:00",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.7617038134922658,
-                "source_message": "VESDEP_DT",
-                "source_key": "estimatedTimeOfArrival",
+                "final_score": 0.6829692270415667,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.46576382008069106,
-                "source_message": "VESDEP_DT",
-                "source_key": "sailDate",
-                "source_value": "29-08-2025 06:00",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "EquipmentStatusCode": {
-            "target_key": "EquipmentStatusCode",
-            "target_value": "FCL",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.36421018865913196,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.35956882655829303,
-                "source_message": "VESDEP_DT",
-                "source_key": "countryCode",
+                "final_score": 0.6474367878165133,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.47371236459228894,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "countryCode": {
+            "target_key": "countryCode",
+            "target_value": "IN",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.584288136978377,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
                 "source_value": "IN",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.3507719539912896,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "ReceiptDate": {
-            "target_key": "ReceiptDate",
-            "target_value": "8082025",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.4108993938654571,
-                "source_message": "VESDEP_DT",
-                "source_key": "portArrivalDate",
-                "source_value": "29-08-2025 06:00",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.39527725730583185,
-                "source_message": "VESDEP_DT",
-                "source_key": "sailDate",
-                "source_value": "29-08-2025 06:00",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.4034693710460646,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.2597408799692807,
-                "source_message": "VESDEP_DT",
-                "source_key": "estimatedTimeOfArrival",
+                "final_score": 0.3823276228445521,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            }
+        },
+        "maximumDraft": {
+            "target_key": "maximumDraft",
+            "target_value": "7.7",
+            "target_m_n": "N",
+            "key1": {
+                "final_score": 0.2969746386435831,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.24802125198547567,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.23881404351481378,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "CargoType": {
-            "target_key": "CargoType",
-            "target_value": "12",
-            "target_m_n": "M",
+        "grt1": {
+            "target_key": "grt1",
+            "target_value": "13059",
+            "target_m_n": "N",
             "key1": {
-                "final_score": 0.2599391795854592,
-                "source_message": "VESDEP_DT",
-                "source_key": "voyageNo",
+                "final_score": 0.2854228672241967,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.24378873343424304,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
                 "source_value": "2862507512",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.2571859802292692,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselName",
-                "source_value": "Test Sample",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.2527913246740928,
-                "source_message": "VESDEP_DT",
-                "source_key": "grt1",
-                "source_value": "13059",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.2426517208735912,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "ContainerNO": {
-            "target_key": "ContainerNO",
-            "target_value": "MSKU1155883",
-            "target_m_n": "M",
+        "grt2": {
+            "target_key": "grt2",
+            "target_value": "13059",
+            "target_m_n": "N",
             "key1": {
-                "final_score": 0.4997736369480127,
-                "source_message": "VESDEP_DT",
-                "source_key": "voyageNo",
+                "final_score": 0.2764354248125476,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key2": {
+                "final_score": 0.23607162886071706,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
+                "source_domain": "Custom",
+                "source_system": "Customs - Jebel Ali"
+            },
+            "key3": {
+                "final_score": 0.23243530006035107,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
                 "source_value": "2862507512",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.3551420459519733,
-                "source_message": "VESDEP_DT",
-                "source_key": "rotationNo",
-                "source_value": "123456",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.2996018144126841,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "CACode": {
-            "target_key": "CACode",
-            "target_value": "MSK",
+        "sailDate": {
+            "target_key": "sailDate",
+            "target_value": "29-08-2025 06:00",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.4675389119877835,
-                "source_message": "VESDEP_DT",
-                "source_key": "countryCode",
-                "source_value": "IN",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.5929567620793521,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.4424460298412831,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.43837576491842917,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "ConSealStatus": {
-            "target_key": "ConSealStatus",
-            "target_value": "1",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.2401049248927854,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselCallSign",
-                "source_value": "EPDF6",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.23956699363852024,
-                "source_message": "VESDEP_DT",
-                "source_key": "cell",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.23523166995709968,
-                "source_message": "VESDEP_DT",
-                "source_key": "teuCapacity",
-                "source_value": "1162",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "ContTypeClassificationCode": {
-            "target_key": "ContTypeClassificationCode",
-            "target_value": "FCL",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.3319151041293442,
-                "source_message": "VESDEP_DT",
-                "source_key": "countryCode",
-                "source_value": "IN",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.3285020591437278,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.31744576721906886,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "ContISOCode": {
-            "target_key": "ContISOCode",
-            "target_value": "42G1",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.3796484271303648,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.36950192853374686,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.3397053500801911,
-                "source_message": "VESDEP_DT",
-                "source_key": "countryCode",
-                "source_value": "IN",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "DeliveryMode": {
-            "target_key": "DeliveryMode",
-            "target_value": "G",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.2504610613021033,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselAgentCode",
-                "source_value": "nan",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.24829972522046243,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.22388313250657738,
-                "source_message": "VESDEP_DT",
-                "source_key": "countryCode",
-                "source_value": "IN",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "GatePassNo": {
-            "target_key": "GatePassNo",
-            "target_value": "4153382",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.41692755320286934,
-                "source_message": "VESDEP_DT",
-                "source_key": "voyageNo",
-                "source_value": "2862507512",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.29008216440983847,
-                "source_message": "VESDEP_DT",
-                "source_key": "rotationNo",
-                "source_value": "123456",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.28002367236817705,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "GatePassDateTime": {
-            "target_key": "GatePassDateTime",
-            "target_value": "08082025:02:56",
-            "target_m_n": "M",
-            "key1": {
-                "final_score": 0.38639661188017516,
-                "source_message": "VESDEP_DT",
-                "source_key": "estimatedTimeOfArrival",
+                "final_score": 0.52706804474977,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.3653007562901671,
-                "source_message": "VESDEP_DT",
-                "source_key": "sailDate",
-                "source_value": "29-08-2025 06:00",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.3581298075576026,
-                "source_message": "VESDEP_DT",
-                "source_key": "portArrivalDate",
-                "source_value": "29-08-2025 06:00",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.44698785564088483,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         },
-        "VehicleNo": {
-            "target_key": "VehicleNo",
-            "target_value": "MH46H5586",
+        "vesselName": {
+            "target_key": "vesselName",
+            "target_value": "Test Sample",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.4438654332682406,
-                "source_message": "VESDEP_DT",
-                "source_key": "rotationNo",
-                "source_value": "123456",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "final_score": 0.9999997636364756,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key2": {
-                "final_score": 0.4290887285503966,
-                "source_message": "VESDEP_DT",
-                "source_key": "voyageNo",
-                "source_value": "2862507512",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.34017115550945565,
-                "source_message": "VESDEP_DT",
-                "source_key": "countryCode",
+                "final_score": 0.6317862061776568,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
                 "source_value": "IN",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "GateNumber": {
-            "target_key": "GateNumber",
-            "target_value": "1",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.2806822565258378,
-                "source_message": "VESDEP_DT",
-                "source_key": "rotationNo",
-                "source_value": "123456",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.27860214779337283,
-                "source_message": "VESDEP_DT",
-                "source_key": "voyageNo",
-                "source_value": "2862507512",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             },
             "key3": {
-                "final_score": 0.2785709006762035,
-                "source_message": "VESDEP_DT",
-                "source_key": "vesselLineCode",
-                "source_value": "",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            }
-        },
-        "IssuedDateTime": {
-            "target_key": "IssuedDateTime",
-            "target_value": "8.08E+12",
-            "target_m_n": "N",
-            "key1": {
-                "final_score": 0.4949745325167766,
-                "source_message": "VESDEP_DT",
-                "source_key": "estimatedTimeOfArrival",
+                "final_score": 0.5888236281697967,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
+                "source_file": "vesdep.xml",
+                "source_country": "UAE",
                 "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key2": {
-                "final_score": 0.4336128119875694,
-                "source_message": "VESDEP_DT",
-                "source_key": "portArrivalDate",
-                "source_value": "29-08-2025 06:00",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
-            },
-            "key3": {
-                "final_score": 0.41468946143985785,
-                "source_message": "VESDEP_DT",
-                "source_key": "sailDate",
-                "source_value": "29-08-2025 06:00",
-                "source_file": "VESDEP_DT.csv",
-                "source_country": "Australia",
-                "source_domain": "Custom",
-                "source_system": "Customs - Sydney"
+                "source_system": "Customs - Jebel Ali"
             }
         }
     }

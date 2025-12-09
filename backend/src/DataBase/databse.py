@@ -40,9 +40,14 @@ class Mapping(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     metadata_id = Column(String, ForeignKey("metadata.id", ondelete="CASCADE"),
                          nullable=False)
-    source_key = Column(String, nullable=False)
+    source_key = Column(String, nullable=True)
+    source_massage = Column(String, nullable=True)
+    source_value = Column(String, nullable=True)
+    target_massage = Column(String, nullable=False)
     target_key = Column(String, nullable=False)
-
+    target_value = Column(String, nullable=True)
+    transformation_needed = Column(String, nullable=True)
+    transformation_comments = Column(String, nullable=True)
     meta = relationship("Metadata", back_populates="mappings")
 
 
@@ -73,7 +78,14 @@ def row_to_json(meta: Metadata) -> Dict[str, Any]:
         "targetSystem":  meta.target_system,
         "mappingCount":  meta.mapping_count,
         "approvedMappings": [
-            {"sourceKey": m.source_key, "targetKey": m.target_key}
+            {"sourceKey": m.source_key, "targetKey": m.target_key, 
+             'id':m.id,
+             "sourceMassage": m.source_massage,
+             "targetMassage": m.target_massage,
+             "transformationNeeded": m.transformation_needed,
+             "transformationComments": m.transformation_comments,
+             "targetValue": m.target_value,
+             "sourceValue": m.source_value}
             for m in meta.mappings
         ]
     }

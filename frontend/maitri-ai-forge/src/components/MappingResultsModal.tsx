@@ -162,7 +162,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
   };
 
   const handleApprove = async() => {
-    const approvedMappings: Array<{ targetKey: string; sourceKey: string }> = [];
+    const approvedMappings: Array<{ targetKey: string; sourceKey: string ;targetMassage:string; sourceMassage:string ; targetValue:string; sourceValue:string}> = [];
 
     Object.entries(results).forEach(([targetMessage, mappings]) => {
       Object.entries(mappings).forEach(([targetKey, keys]) => {
@@ -172,15 +172,28 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
 
         if (selectedKeyNum !== undefined && selectedKeyNum !== null) {
           const selectedKeyInfo = keys[selectedKeyNum as keyof typeof keys];
+          const cleanSourceMessage = selectedKeyInfo
+            ? selectedKeyInfo.source_message
+                .replace(" (based on past mapping)", "")
+                .trim()
+            : null;
 
           if (selectedKeyInfo) {
             approvedMappings.push({
-              targetKey: targetFullKey,
-              sourceKey: `${selectedKeyInfo.source_message}::${selectedKeyInfo.source_key}`
+              targetKey: targetKey,
+              targetMassage: targetMessage,
+              targetValue: keys['target_value'],
+              sourceMassage: cleanSourceMessage,
+              sourceValue: selectedKeyInfo.source_value,
+              sourceKey: selectedKeyInfo.source_key
             });
           } else {
             approvedMappings.push({
-              targetKey: targetFullKey,
+              targetKey: targetKey,
+              targetMassage: targetMessage,
+              targetValue: keys['target_value'],
+              sourceMassage: "NONE",
+              sourceValue: "NONE",
               sourceKey: "NONE"
             });
           }
@@ -188,7 +201,11 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
         } else {
           // No key selected → add NONE as mapping
           approvedMappings.push({
-            targetKey: targetFullKey,
+            targetKey: targetKey,
+            targetMassage: targetMessage,
+            targetValue: keys['target_value'],
+            sourceMassage: "NONE",
+            sourceValue: "NONE",
             sourceKey: "NONE"
           });
         }
@@ -232,7 +249,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
         console.error("editedMapping call failed", e);
       }
     }
-    console.log('editedMap',editedMap);
+ 
     setTransData(previewTData);
     setIsPreviewMode(false);
     setIsApproved(true);
@@ -536,17 +553,21 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
         const selectedKeyInfo = selectedKeyNum
           ? keys[selectedKeyNum as keyof typeof keys]
           : null;
-
+        const cleanSourceMessage = selectedKeyInfo
+          ? selectedKeyInfo.source_message
+              .replace(" (based on past mapping)", "")
+              .trim()
+          : null;
         previewData.push({
           targetKey: `${targetMessage}::${targetKey}::${keys.target_value ?? ''}`,
           sourceKey: selectedKeyInfo
-            ? `${selectedKeyInfo.source_message}::${selectedKeyInfo.source_key}::${selectedKeyInfo.source_value ?? ''}`
+            ? `${cleanSourceMessage}::${selectedKeyInfo.source_key}::${selectedKeyInfo.source_value ?? ''}`
             : 'None mapped',
           target_madetory: keys.target_m_n,
             
           info: selectedKeyInfo ?? null,
         });
-        console.log('preview data',previewData);
+      
       });
     });
     
@@ -657,14 +678,14 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
   // Approved Mode Component
   if (isApproved) {
     // NEW: keep every target, even when nothing is selected
-    const approvedData: Array<{ targetKey: string; sourceKey: string }> = [];
+    const approvedData: Array<{ targetKey: string; targetValue: string;  sourceKey: string; sourceValue:string}> = [];
 
     Object.entries(results).forEach(([targetMessage, mappings]) => {
       Object.entries(mappings).forEach(([targetKey, keys]) => {
 
         const key = `${targetMessage}::${targetKey}`;
         const selectedKeyNum = selectedKeys[key];
-
+       
         const selectedKeyInfo = selectedKeyNum
           ? keys[selectedKeyNum as keyof typeof keys]
           : null;
@@ -672,17 +693,19 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
         // 🧹 CLEAN SOURCE MESSAGE
         const cleanSourceMessage = selectedKeyInfo
           ? selectedKeyInfo.source_message
-              .replace(" (biased on past mapping)", "")
+              .replace(" (based on past mapping)", "")
               .trim()
           : null;
 
         approvedData.push({
           targetKey: `${targetMessage}::${targetKey}`,
-
+          targetValue: keys['target_value'],
           // use cleaned source message
           sourceKey: selectedKeyInfo
             ? `${cleanSourceMessage}::${selectedKeyInfo.source_key}`
             : 'None mapped',
+          sourceValue: selectedKeyInfo
+          ? selectedKeyInfo.source_value : 'None mapped',
         });
       });
     });
@@ -766,7 +789,7 @@ export const MappingResultsModal = ({ isOpen, onClose, results, onApprove, score
       <Dialog open ={transView} onOpenChange={setTransView}>
         <DialogContent className="max-w-[95vw] h-[90vh] flex flex-col ">
           <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-center text-transparent">
-            Transforamtion View
+            Transformation View
           </DialogTitle>
           <TransformationResults transData={transData}/>
         </DialogContent>

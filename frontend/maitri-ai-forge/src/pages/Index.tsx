@@ -3,8 +3,8 @@ import { UploadSection, UploadSectionData } from '@/components/UploadSection';
 import { MappingResultsModal } from '@/components/MappingResultsModal';
 // import { MappingResultsModal } from '@/components/mapping-results';
 import LoadingAnimation  from '@/components/LoadingAnimation';
-import { PastMappingsView, SavedMapping } from '@/components/PastMappingsView';
-import { ApprovedMappingView } from '@/components/ApprovedMappingView';
+import { PastMappings, SavedMapping } from '@/components/PastMappings';
+import { PastMappingView } from '@/components/PastMappingView';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
@@ -89,6 +89,7 @@ const Index = () => {
   };
 
   const handleViewPastMapping = (mapping: SavedMapping) => {
+    console.log('Viewing past mapping:', mapping);
     loadMappings();
     setSelectedPastMapping(mapping);
     setIsViewingPastMapping(true);
@@ -97,14 +98,11 @@ const Index = () => {
 
 
 
-  const handleSavePastMappingEdit = (mappings: Array<{ targetKey: string; sourceKey: string }>) => {
+  const handleSavePastMappingEdit = (mappings) => {
     if (selectedPastMapping) {
-      const updated = {
-        ...selectedPastMapping,
-        approvedMappings: mappings,
-      };
-      updateMappingInBackend(selectedPastMapping.id, updated);
-      setSelectedPastMapping(updated);
+   
+      updateMappingInBackend(selectedPastMapping.id, mappings);
+   
       loadMappings();
       toast.success('Mapping updated!');
     }
@@ -180,7 +178,6 @@ const Index = () => {
 
       const results = await response.json();
       setMappingResults(results);
-      console.log('Mapping results:', results);
       setIsResultsModalOpen(true);
       toast.success('Mapping completed successfully!');
     } catch (error) {
@@ -295,7 +292,7 @@ const Index = () => {
           </TabsContent>
 
           <TabsContent value="history" onClick={()=>loadMappings()}>
-            <PastMappingsView
+            <PastMappings
               mappings={pastMappings}
               onViewMapping={handleViewPastMapping}
               onDeleteMapping={deleteMappingFromBackend}
@@ -323,7 +320,7 @@ const Index = () => {
 
       {/* Past Mapping View Modal */}
       {selectedPastMapping && (
-        <ApprovedMappingView
+        <PastMappingView
           isOpen={isViewingPastMapping}
           onClose={() => setIsViewingPastMapping(false)}
           mappings={selectedPastMapping.approvedMappings}
@@ -379,7 +376,7 @@ const Index = () => {
       </Dialog>
     )}
     {duplicateMapping && (
-      <ApprovedMappingView
+      <PastMappingView
         isOpen={isViewingDuplicateMapping}
         onClose={() => setIsViewingDuplicateMapping(false)}
         mappings={duplicateMapping.approvedMappings}
