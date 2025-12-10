@@ -16,6 +16,7 @@ import {
   updateMappingInBackend,
   deleteMappingFromBackend,
 } from '@/lib/mappingStorage';
+import { get } from 'http';
 
 const Index = () => {
   /* ---------- state we really need ---------- */
@@ -70,7 +71,7 @@ const Index = () => {
     try {
       const mappings = await getMappingsFromBackend();
       setPastMappings(mappings);
-      console.log('Loaded past mappings');
+     
     } catch {
       toast.error('Could not load past mappings');
     }
@@ -103,7 +104,11 @@ const Index = () => {
     loadMappings();
     toast.success('Mapping saved successfully!');
   };
-
+  const getMappingsById =(mappingsg, id) =>{
+    const entry = mappingsg.find(item => item.id === id);
+    console.log('getMappingsById entry:', entry.approvedMappings);
+    return entry.approvedMappings;
+  }
   const handleViewPastMapping = (mapping: SavedMapping) => {
     setSelectedPastMapping(mapping);
     setIsViewingPastMapping(true);
@@ -114,7 +119,11 @@ const Index = () => {
     updateMappingInBackend(selectedPastMapping.id, mappings);
     console.log('Saved edited mappings');
     loadMappings();
+
+    // setSelectedPastMapping(mapping);
     toast.success('Mapping updated!');
+ 
+    
   };
 
   const handleAIAnalysis = async (force = false) => {
@@ -171,6 +180,8 @@ const Index = () => {
         method: 'POST',
         body: formData,
       });
+
+      
 
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));

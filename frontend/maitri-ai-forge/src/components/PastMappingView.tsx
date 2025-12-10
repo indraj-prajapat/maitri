@@ -11,40 +11,25 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-/* ----------  TYPES  ---------- */
-interface ApprovedMapping {
-  id?: string; // <-- stable unique id
-  sourceKey: string;
-  sourceMassage: string;
-  sourceValue: string;
-  targetMassage: string;
-  targetKey: string;
-  targetValue: string;
-  transformationNeeded: string;
-  transformationComments: string;
-}
-
 interface ApprovedMappingViewProps {
-  isOpen: boolean;
+  isOpen;
   onClose: () => void;
-  mappings: ApprovedMapping[];
-  onSave?: (row: ApprovedMapping) => void;
+  mappings;
+  onSave;
 }
 
 /* ----------  COMPONENT  ---------- */
 export const PastMappingView = ({
   isOpen,
   onClose,
-  mappings: initialMappings,
+  mappings,
   onSave,
 }: ApprovedMappingViewProps) => {
   /* stable state with unique id */
-  const [mappings, setMappings] = useState<ApprovedMapping[]>(() =>
-    initialMappings.map((m) => ({ ...m, id: m.id ?? crypto.randomUUID() }))
-  );
-
+  
+  console.log('Rendering PastMappingView with mappings:', mappings);
   const [editingId, setEditingId] = useState<string | null>(null);
-  const [editValue, setEditValue] = useState<ApprovedMapping>({
+  const [editValue, setEditValue] = useState({
     sourceKey: '',
     sourceMassage: '',
     sourceValue: '',
@@ -71,6 +56,8 @@ export const PastMappingView = ({
     console.log('Edited mapping id', editingId)
     onSave(editValue);
     setEditingId(null);
+    /* ---- blink the dialog ---- */
+    
   };
 
   const handleCancelEdit = () => {
