@@ -1,5 +1,7 @@
 import { SavedMapping } from '@/components/PastMappings';
 
+import { save2, update2, delete2 } from './save2';
+
 const API_BASE_URL = 'http://localhost:5000/api';
 
 export const saveMappingToBackend = async (mapping: SavedMapping): Promise<void> => {
@@ -11,7 +13,7 @@ export const saveMappingToBackend = async (mapping: SavedMapping): Promise<void>
       },
       body: JSON.stringify(mapping),
     });
-
+    save2(mapping);
     if (!response.ok) {
       throw new Error('Failed to save mapping');
     }
@@ -51,7 +53,7 @@ export const updateMappingInBackend = async (
       },
       body: JSON.stringify(updatedMapping),
     });
-
+    update2(id, updatedMapping);
     if (!response.ok) {
       throw new Error('Failed to update mapping');
     }
@@ -68,7 +70,8 @@ export const deleteMappingFromBackend = async (id: string): Promise<void> => {
   if (!confirmed) {
     return; // User cancelled
   }
-  
+  delete2(id);
+
   try {
     const response = await fetch(`${API_BASE_URL}/mappings/${id}`, {
       method: 'DELETE',
@@ -82,3 +85,4 @@ export const deleteMappingFromBackend = async (id: string): Promise<void> => {
     throw error;
   }
 };
+

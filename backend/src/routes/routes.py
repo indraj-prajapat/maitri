@@ -159,8 +159,8 @@ def map_files():
                     # re-sort by updated score
                     scored.sort(key=lambda x: x["final_score"], reverse=True)
 
-                # store top-3
-                for idx, d in enumerate(scored[:3], start=1):
+                # store all
+                for idx, d in enumerate(scored, start=1):
                     entry[f"key{idx}"] = d
 
                 final_result[tgt_msg_name][tgt_key] = entry
@@ -359,6 +359,7 @@ def transform():
 def save_edited_mappings():
 
     data = request.get_json(silent=True) or {}
+    print('edited mapping data',data)
     if not data:
         return jsonify({"error": "Empty payload"}), 400
 

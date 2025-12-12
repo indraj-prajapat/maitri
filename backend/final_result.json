@@ -5,34 +5,174 @@
             "target_value": "2862507512",
             "target_m_n": "M",
             "key1": {
-                "final_score": 0.8148404768654962,
+                "final_score": 0.866406749780014,
                 "source_message": "vesdep",
                 "source_key": "VoyageNumber",
                 "source_value": "2862507512",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
-                "final_score": 0.3691444523201203,
-                "source_message": "vesdep",
-                "source_key": "VesselName",
-                "source_value": "MV ECO VESSEL",
-                "source_file": "vesdep.xml",
-                "source_country": "UAE",
-                "source_domain": "Marine",
-                "source_system": "Port Rashid"
-            },
-            "key3": {
-                "final_score": 0.35082284067649927,
+                "final_score": 0.3717093571721407,
                 "source_message": "vesdep",
                 "source_key": "BerthNumber",
                 "source_value": "EQ9",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key3": {
+                "final_score": 0.3443918089471629,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.3378390532413823,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.313083721502744,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.29031791358004244,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.28239352427535247,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.2695477328366609,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.2677813708050294,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.2629326214723768,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.25872810782128,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.23023677825839992,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.22978528500820808,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.18237094821144773,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.15407658659861256,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.15150240584994334,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.1167335916827193,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "portOfRegistration": {
@@ -45,9 +185,9 @@
                 "source_key": "NextPortOfCall",
                 "source_value": "SGSIN1",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
                 "final_score": 0.49935884492028376,
@@ -55,9 +195,9 @@
                 "source_key": "PortClearanceNumber",
                 "source_value": "546465",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key3": {
                 "final_score": 0.4565124122882324,
@@ -65,9 +205,149 @@
                 "source_key": "SailingDateTimeOfPort",
                 "source_value": "21042025:10:19",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.34590095025068557,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.3059748116943206,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.2504034110064486,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.24883180905770036,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.23324943199303205,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.23083062277817723,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.22667833816455252,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.20745638547799183,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.17921145316820514,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.17444625900838612,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.16598086700038808,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.15587640261578228,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.11981884698113299,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.11872111498179388,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "beam": {
@@ -75,34 +355,174 @@
             "target_value": "24.61",
             "target_m_n": "M",
             "key1": {
-                "final_score": 0.3659565596289841,
+                "final_score": 0.36595656183298386,
                 "source_message": "vesdep",
                 "source_key": "VesselName",
                 "source_value": "MV ECO VESSEL",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
-                "final_score": 0.27188106748751384,
-                "source_message": "vesdep",
-                "source_key": "VoyageNumber",
-                "source_value": "2862507512",
-                "source_file": "vesdep.xml",
-                "source_country": "UAE",
-                "source_domain": "Marine",
-                "source_system": "Port Rashid"
-            },
-            "key3": {
                 "final_score": 0.2434464835771242,
                 "source_message": "vesdep",
                 "source_key": "BerthNumber",
                 "source_value": "EQ9",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key3": {
+                "final_score": 0.2404040401365694,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.22833012568427516,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.2257459503067152,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.2252766438616362,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.22031505520939237,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.21188300266983573,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.19275035475846566,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.17210229619257528,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.16883520221462933,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.16491060697843382,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.15158688790133115,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.13605236936380768,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.13345819719153879,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.1322609890395943,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.12730022849309622,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "vesselLOA": {
@@ -115,9 +535,9 @@
                 "source_key": "VesselName",
                 "source_value": "MV ECO VESSEL",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
                 "final_score": 0.5111570867172457,
@@ -125,9 +545,9 @@
                 "source_key": "CountryOfVessel",
                 "source_value": "IN",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key3": {
                 "final_score": 0.49840578807800434,
@@ -135,9 +555,149 @@
                 "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.2864999624272111,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.2790630643394596,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.24955015692542326,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.24504764931899242,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.24176625537808927,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.21757815433321132,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.19016587037244714,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.18993307467983908,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.18171761735756875,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.17510590872229703,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.16815676668114143,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.14893637212859057,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.13855108219180096,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.12533516370190892,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "vesselOwner": {
@@ -150,9 +710,9 @@
                 "source_key": "VesselName",
                 "source_value": "MV ECO VESSEL",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
                 "final_score": 0.5570780505441564,
@@ -160,9 +720,9 @@
                 "source_key": "CountryOfVessel",
                 "source_value": "IN",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key3": {
                 "final_score": 0.4762396243639861,
@@ -170,9 +730,149 @@
                 "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.32486298278301895,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.2857453115153925,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.27119264447303904,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.26524503640740527,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.25509968404548033,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.2343546190730083,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.23317993038716628,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.22820753943288763,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.20908572818382248,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.1863915378884939,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.16695196736370066,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.155062840981842,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.12924609750349314,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.1255435604187528,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "nextPortCall": {
@@ -180,34 +880,174 @@
             "target_value": "SGSIN1",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.9334862300189933,
+                "final_score": 0.9910537292949644,
                 "source_message": "vesdep",
                 "source_key": "NextPortOfCall",
                 "source_value": "SGSIN1",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
-                "final_score": 0.49547569466809394,
-                "source_message": "vesdep",
-                "source_key": "CallSign",
-                "source_value": "587104",
-                "source_file": "vesdep.xml",
-                "source_country": "UAE",
-                "source_domain": "Marine",
-                "source_system": "Port Rashid"
-            },
-            "key3": {
-                "final_score": 0.4492833782335997,
+                "final_score": 0.4556228680014146,
                 "source_message": "vesdep",
                 "source_key": "SailingDateTimeOfPort",
                 "source_value": "21042025:10:19",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key3": {
+                "final_score": 0.44449977714101674,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.4246560002374272,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.30837276236645755,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.2696557156742053,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.2579056649745143,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.25576235543931874,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.25399976407135944,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.24008975018782924,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.23738394376230124,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.2200919961559752,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.2057279875550255,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.16979199450784735,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.16334120630489996,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.12556105398178055,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.12233160076394535,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "rotationNo": {
@@ -215,14 +1055,14 @@
             "target_value": "123456",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.38192806720412315,
+                "final_score": 0.35080262643595544,
                 "source_message": "vesdep",
                 "source_key": "VoyageNumber",
                 "source_value": "2862507512",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
                 "final_score": 0.3475299396318451,
@@ -230,9 +1070,9 @@
                 "source_key": "IMONumber",
                 "source_value": "1598677890",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key3": {
                 "final_score": 0.3325584283914467,
@@ -240,9 +1080,149 @@
                 "source_key": "BerthNumber",
                 "source_value": "EQ9",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.323258214201086,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.2947070126228453,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.26897666416302735,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.2601628676924145,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.252512672493305,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.24853944093113822,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.24813617021139886,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.2399740386082104,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.23735888904706484,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.19436470451508334,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.16419952141611938,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.1392970142529788,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.13496850132966437,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.0987919263965952,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "cell": {
@@ -250,34 +1230,174 @@
             "target_value": "",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.20032865840249758,
-                "source_message": "vesdep",
-                "source_key": "BerthNumber",
-                "source_value": "EQ9",
-                "source_file": "vesdep.xml",
-                "source_country": "UAE",
-                "source_domain": "Marine",
-                "source_system": "Port Rashid"
-            },
-            "key2": {
-                "final_score": 0.19731977946006996,
+                "final_score": 0.19831359001635937,
                 "source_message": "vesdep",
                 "source_key": "CallSign",
                 "source_value": "587104",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
-            "key3": {
-                "final_score": 0.19621661469381424,
+            "key2": {
+                "final_score": 0.19024739237809407,
                 "source_message": "vesdep",
                 "source_key": "RecordType",
                 "source_value": "N",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key3": {
+                "final_score": 0.18542649120441712,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.16902124445780087,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.1687631461051926,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.16277650797360366,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.15312568185250724,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.14846195326769698,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.13736562232358593,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.12353647426730281,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.11857988290111504,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.11537152911869705,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.11045876569562586,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.10081879508037903,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.10074319788803937,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.09468136868157227,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.09272085212165024,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "vesselLineCode": {
@@ -290,9 +1410,9 @@
                 "source_key": "VesselName",
                 "source_value": "MV ECO VESSEL",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
                 "final_score": 0.4652053498597194,
@@ -300,9 +1420,9 @@
                 "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key3": {
                 "final_score": 0.4641872805743646,
@@ -310,9 +1430,149 @@
                 "source_key": "CountryOfVessel",
                 "source_value": "IN",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.4064174379650307,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.3739051854846268,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.3563189409449107,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.3516294902466425,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.3206775728821319,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.3179458403720013,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.3126460524171798,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.30332994037503735,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.2930878829896129,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.2849111114903878,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.19751834571488422,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.18423028551865966,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.176082138247997,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.14532133870626074,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "teuCapacity": {
@@ -325,29 +1585,169 @@
                 "source_key": "VCN",
                 "source_value": "INVTZ120240997",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
+                "final_score": 0.1540109207263285,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key3": {
                 "final_score": 0.1535150497848059,
                 "source_message": "vesdep",
                 "source_key": "NextPortOfCall",
                 "source_value": "SGSIN1",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
-            "key3": {
+            "key4": {
                 "final_score": 0.14407402049465212,
                 "source_message": "vesdep",
                 "source_key": "BerthNumber",
                 "source_value": "EQ9",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.14161930263272993,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.12660622522654127,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.1256680584948795,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.12178734064386196,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.11846278809470401,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.11792605995092323,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.11773571005235625,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.11675316911132534,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.11189667977608375,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.1099950897265074,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.1063603056678854,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.10480305872905547,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.10239428470043846,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "estimatedTimeOfArrival": {
@@ -355,34 +1755,174 @@
             "target_value": "17042025:12:56",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.6950855348054461,
+                "final_score": 0.7207701112209239,
                 "source_message": "vesdep",
                 "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
-                "final_score": 0.43600673870643014,
+                "final_score": 0.48463252564826054,
                 "source_message": "vesdep",
                 "source_key": "IssuedDateTime",
                 "source_value": "2.1042E+13",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key3": {
-                "final_score": 0.4204370435467695,
+                "final_score": 0.44118580030179066,
                 "source_message": "vesdep",
                 "source_key": "SailingDateTimeOfPort",
                 "source_value": "21042025:10:19",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.3911859207880961,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.19138728726579918,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.18364592317105166,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.18292492604052782,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.1792783565314915,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.16826074260926535,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.16655345258980886,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.16367248921258323,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.15328570672417435,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.14741071551564103,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.1385188084683331,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.13018451021155605,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.11159801145255972,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.08775230603520107,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "vesselCallSign": {
@@ -395,29 +1935,169 @@
                 "source_key": "CallSign",
                 "source_value": "587104",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
-                "final_score": 0.5669727494309763,
+                "final_score": 0.5349161071861517,
                 "source_message": "vesdep",
                 "source_key": "VesselName",
                 "source_value": "MV ECO VESSEL",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key3": {
-                "final_score": 0.4629661993507719,
+                "final_score": 0.46711627301049163,
                 "source_message": "vesdep",
                 "source_key": "NextPortOfCall",
                 "source_value": "SGSIN1",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.44026486621530714,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.43024220384283784,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.28240839244372457,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.27719935353821334,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.26637996063685676,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.2465647508480332,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.23885628943784848,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.22416461249310676,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.2232762395011857,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.1853659155746987,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.1681556610253223,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.16284199618420225,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.1547293580978122,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.14707178765648465,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "nationality": {
@@ -430,9 +2110,9 @@
                 "source_key": "CountryOfVessel",
                 "source_value": "IN",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
                 "final_score": 0.3763820060278107,
@@ -440,19 +2120,159 @@
                 "source_key": "VesselName",
                 "source_value": "MV ECO VESSEL",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key3": {
-                "final_score": 0.3050243178428195,
+                "final_score": 0.2871630677440068,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.2699209729508506,
                 "source_message": "vesdep",
                 "source_key": "VoyageNumber",
                 "source_value": "2862507512",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.2599163224012732,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.24930212328239157,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.2480085112451014,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.24794284816804518,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.2399289845660864,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.20113119122630624,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.18078119248260535,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.1661316616751352,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.16315838024059026,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.16119607780078224,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.1438006665224812,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.13245176205392784,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.11479692327912093,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "vesselAgentCode": {
@@ -465,9 +2285,9 @@
                 "source_key": "VesselName",
                 "source_value": "MV ECO VESSEL",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
                 "final_score": 0.4706868937526273,
@@ -475,9 +2295,9 @@
                 "source_key": "CountryOfVessel",
                 "source_value": "IN",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key3": {
                 "final_score": 0.46006880526988797,
@@ -485,9 +2305,149 @@
                 "source_key": "SACode",
                 "source_value": "ZUARI",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.45411380450285554,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.362436670712862,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.33402376738715506,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.3294251024305762,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.3119900049284714,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.3096195394250613,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.28081337055992805,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.27328178587111585,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.2667522311280211,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.25109811904815815,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.18426925613635609,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.17551308070216878,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.17132740228956922,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.14904298262424992,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "portArrivalDate": {
@@ -495,34 +2455,174 @@
             "target_value": "29-08-2025 06:00",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.6896131760556363,
+                "final_score": 0.685259184549156,
                 "source_message": "vesdep",
                 "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
-                "final_score": 0.6462901510641218,
+                "final_score": 0.6474367878165133,
                 "source_message": "vesdep",
                 "source_key": "SailingDateTimeOfPort",
                 "source_value": "21042025:10:19",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key3": {
-                "final_score": 0.491275013197899,
+                "final_score": 0.47371236459228894,
                 "source_message": "vesdep",
                 "source_key": "PortClearanceNumber",
                 "source_value": "546465",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.4557517825603191,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.4280400533776481,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.33632048600515924,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.25487023269642467,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.23523593989313202,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.23346339337290306,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.2256606550871238,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.2066980787482518,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.205793066902904,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.20521739607656866,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.19671697626724716,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.1771518011179905,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.15346516819688133,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.1421120850659481,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "countryCode": {
@@ -530,34 +2630,174 @@
             "target_value": "IN",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.5975614224155146,
+                "final_score": 0.7057829232294756,
                 "source_message": "vesdep",
                 "source_key": "CountryOfVessel",
                 "source_value": "IN",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
-                "final_score": 0.4188782045136567,
+                "final_score": 0.43587187949014183,
                 "source_message": "vesdep",
                 "source_key": "SACode",
                 "source_value": "ZUARI",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key3": {
-                "final_score": 0.3850869087454281,
+                "final_score": 0.37907156961677624,
                 "source_message": "vesdep",
                 "source_key": "TOOrDOckCode",
                 "source_value": "INVTZ1",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.3599810569387244,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.34867297512125706,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.3383429391765373,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.31154554011387237,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.30690802319209587,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.2845655641554823,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.27018143340912315,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.268730701796133,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.25072265998657195,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.24102601502190346,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.2099042988282586,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.20437310780957552,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.17259195255542886,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.1578908943940935,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "maximumDraft": {
@@ -570,29 +2810,169 @@
                 "source_key": "VesselName",
                 "source_value": "MV ECO VESSEL",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
-                "final_score": 0.24802125198547567,
-                "source_message": "vesdep",
-                "source_key": "VoyageNumber",
-                "source_value": "2862507512",
-                "source_file": "vesdep.xml",
-                "source_country": "UAE",
-                "source_domain": "Marine",
-                "source_system": "Port Rashid"
-            },
-            "key3": {
                 "final_score": 0.2461133679003214,
                 "source_message": "vesdep",
                 "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key3": {
+                "final_score": 0.23275216283817454,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.21317291665327168,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.21237134641602365,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.207354387980965,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.1962962237192545,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.19164941214368467,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.18613639826312164,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.18326511556229572,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.15824522598364604,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.1507105699062349,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.14343136602202683,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.13807105198451153,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.1295037950478358,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.12012625881705236,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.10910044103531694,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "grt1": {
@@ -605,29 +2985,169 @@
                 "source_key": "VesselName",
                 "source_value": "MV ECO VESSEL",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
-                "final_score": 0.24378873343424304,
-                "source_message": "vesdep",
-                "source_key": "VoyageNumber",
-                "source_value": "2862507512",
-                "source_file": "vesdep.xml",
-                "source_country": "UAE",
-                "source_domain": "Marine",
-                "source_system": "Port Rashid"
-            },
-            "key3": {
                 "final_score": 0.2426517208735912,
                 "source_message": "vesdep",
                 "source_key": "VCN",
                 "source_value": "INVTZ120240997",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key3": {
+                "final_score": 0.22983198818730036,
+                "source_message": "vesdep",
+                "source_key": "DateTimeArrivalVessel",
+                "source_value": "17042025:12:56",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.21077266016683824,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.2065683553277036,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.20468536419115693,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.20437621830551062,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.19734129551816665,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.1928969914942667,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.18731682037006825,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.17814098780606716,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.16775109574154753,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.16165295518105616,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.15821096570313664,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.14108877900272118,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.13011658763116188,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.11001405489406774,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "grt2": {
@@ -635,34 +3155,174 @@
             "target_value": "13059",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.18959523695051667,
+                "final_score": 0.2764354248125476,
                 "source_message": "vesdep",
-                "source_key": "EDTA",
-                "source_value": "16042025:13:29",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
-                "final_score": 0.17842261387673958,
+                "final_score": 0.23607162886071706,
                 "source_message": "vesdep",
                 "source_key": "VCN",
                 "source_value": "INVTZ120240997",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key3": {
-                "final_score": 0.17231588192763655,
+                "final_score": 0.22949003966550022,
                 "source_message": "vesdep",
                 "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.21146409869120758,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.19939838654638484,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.1979335732567818,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.19460270625604625,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.19372436689287292,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.18724202771674942,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.18106916605117818,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.1713782584085508,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.1676641438601005,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.15275378824348726,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.1483233840508255,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.13711737397509827,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.1281316844193602,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.11240810720406433,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "sailDate": {
@@ -670,34 +3330,174 @@
             "target_value": "29-08-2025 06:00",
             "target_m_n": "N",
             "key1": {
-                "final_score": 0.5929567620793521,
+                "final_score": 0.6161898976099479,
                 "source_message": "vesdep",
                 "source_key": "SailingDateTimeOfPort",
                 "source_value": "21042025:10:19",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
-                "final_score": 0.5248614109504519,
+                "final_score": 0.49738425299868044,
                 "source_message": "vesdep",
                 "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key3": {
-                "final_score": 0.44698785564088483,
+                "final_score": 0.4211477959665212,
                 "source_message": "vesdep",
                 "source_key": "IssuedDateTime",
                 "source_value": "2.1042E+13",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.32336513632223174,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.3010469598227609,
+                "source_message": "vesdep",
+                "source_key": "VesselName",
+                "source_value": "MV ECO VESSEL",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.2440468095555296,
+                "source_message": "vesdep",
+                "source_key": "CountryOfVessel",
+                "source_value": "IN",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.23138075541618724,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.23135439901591998,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.22865818094948953,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.21636520428056982,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.20616900537235,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.19322000513678683,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.1666992271710938,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.15587476245173565,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.15497800923921612,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.14860157634237808,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.13611645066397354,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         },
         "vesselName": {
@@ -710,9 +3510,9 @@
                 "source_key": "VesselName",
                 "source_value": "MV ECO VESSEL",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key2": {
                 "final_score": 0.6317862061776568,
@@ -720,9 +3520,9 @@
                 "source_key": "CountryOfVessel",
                 "source_value": "IN",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
             },
             "key3": {
                 "final_score": 0.5943262864205168,
@@ -730,9 +3530,149 @@
                 "source_key": "DateTimeArrivalVessel",
                 "source_value": "17042025:12:56",
                 "source_file": "vesdep.xml",
-                "source_country": "UAE",
+                "source_country": "India",
                 "source_domain": "Marine",
-                "source_system": "Port Rashid"
+                "source_system": "Visakhapatnam Port"
+            },
+            "key4": {
+                "final_score": 0.3627005275609628,
+                "source_message": "vesdep",
+                "source_key": "VoyageNumber",
+                "source_value": "2862507512",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key5": {
+                "final_score": 0.3278898294062807,
+                "source_message": "vesdep",
+                "source_key": "BerthNumber",
+                "source_value": "EQ9",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key6": {
+                "final_score": 0.3078180214714407,
+                "source_message": "vesdep",
+                "source_key": "CallSign",
+                "source_value": "587104",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key7": {
+                "final_score": 0.3073775125730072,
+                "source_message": "vesdep",
+                "source_key": "NextPortOfCall",
+                "source_value": "SGSIN1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key8": {
+                "final_score": 0.29009614749561347,
+                "source_message": "vesdep",
+                "source_key": "VCN",
+                "source_value": "INVTZ120240997",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key9": {
+                "final_score": 0.28483221863278185,
+                "source_message": "vesdep",
+                "source_key": "SailingDateTimeOfPort",
+                "source_value": "21042025:10:19",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key10": {
+                "final_score": 0.26573791004236536,
+                "source_message": "vesdep",
+                "source_key": "IMONumber",
+                "source_value": "1598677890",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key11": {
+                "final_score": 0.22725991436735565,
+                "source_message": "vesdep",
+                "source_key": "PortClearanceNumber",
+                "source_value": "546465",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key12": {
+                "final_score": 0.22121695480468237,
+                "source_message": "vesdep",
+                "source_key": "SACode",
+                "source_value": "ZUARI",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key13": {
+                "final_score": 0.21455493908973003,
+                "source_message": "vesdep",
+                "source_key": "IssuedDateTime",
+                "source_value": "2.1042E+13",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key14": {
+                "final_score": 0.20182127489193202,
+                "source_message": "vesdep",
+                "source_key": "RecordType",
+                "source_value": "N",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key15": {
+                "final_score": 0.16620409055723562,
+                "source_message": "vesdep",
+                "source_key": "EDTA",
+                "source_value": "16042025:13:29",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key16": {
+                "final_score": 0.1631592015102844,
+                "source_message": "vesdep",
+                "source_key": "ReceivingPartyList",
+                "source_value": "actin050",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
+            },
+            "key17": {
+                "final_score": 0.15318500128609966,
+                "source_message": "vesdep",
+                "source_key": "TOOrDOckCode",
+                "source_value": "INVTZ1",
+                "source_file": "vesdep.xml",
+                "source_country": "India",
+                "source_domain": "Marine",
+                "source_system": "Visakhapatnam Port"
             }
         }
     }

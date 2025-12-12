@@ -189,6 +189,7 @@ const Index = () => {
       }
 
       const json = await res.json();
+      console.log('Mapping results:', json);
       setMappingResults(json);
       setIsResultsModalOpen(true);
       toast.success('Mapping completed successfully!');
