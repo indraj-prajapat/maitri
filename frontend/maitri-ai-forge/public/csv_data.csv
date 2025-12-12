@@ -1,0 +1,11 @@
+Field_Name,Data,Datatype,M_N,Other
+Field_1,Value_1,integer,N,Other_1
+Field_2,Value_2,string,N,Other_2
+Field_3,Value_3,integer,M,Other_3
+Field_4,Value_4,string,N,Other_4
+Field_5,Value_5,integer,N,Other_5
+Field_6,Value_6,string,M,Other_6
+Field_7,Value_7,integer,N,Other_7
+Field_8,Value_8,string,N,Other_8
+Field_9,Value_9,integer,M,Other_9
+Field_10,Value_10,string,N,Other_10

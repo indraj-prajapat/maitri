@@ -10,6 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Sparkles, History, Upload } from 'lucide-react';
 import { toast } from 'sonner';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import {
   saveMappingToBackend,
   getMappingsFromBackend,
@@ -17,7 +18,15 @@ import {
   deleteMappingFromBackend,
 } from '@/lib/mappingStorage';
 import { get } from 'http';
-
+import { Download } from 'lucide-react';
+function downloadPublicFile(fileName: string, mime: string) {
+  const link = document.createElement('a');
+  link.href = `/${fileName}`;          // public folder root
+  link.download = fileName;            // keeps original name
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 const Index = () => {
   /* ---------- state we really need ---------- */
   const [leftData, setLeftData] = useState<UploadSectionData>({
@@ -206,14 +215,41 @@ const Index = () => {
       {/* header */}
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center gap-3">
-            <img src="/logo.jpg" alt="Logo" className="h-12 w-12" />
-            <div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                MAITRI AI
-              </h1>
-              <p className="text-sm text-muted-foreground">Bridging Borders with Seamless Trade</p>
+          <div className="flex items-center justify-between">
+            {/* LEFT: logo + title */}
+            <div className="flex items-center gap-3">
+              <img src="/logo.jpg" alt="Logo" className="h-12 w-12" />
+              <div>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                  MAITRI AI
+                </h1>
+                <p className="text-sm text-muted-foreground">Bridging Borders with Seamless Trade</p>
+              </div>
             </div>
+
+            {/* RIGHT: download dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Input Formats
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => downloadPublicFile('csv_data.csv', 'text/csv')}>
+                  CSV
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => downloadPublicFile('xlsx_data.xlsx', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')}>
+                  XLSX
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => downloadPublicFile('xml_data.xml', 'application/xml')}>
+                  XML
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => downloadPublicFile('json_data.json', 'application/json')}>
+                  JSON
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       </header>
