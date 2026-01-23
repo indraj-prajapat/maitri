@@ -15,6 +15,23 @@ from src.transformation.data_analyzer import DataFieldAnalyzer
 # engine = SemanticTransformationEngine()
 app_bp = Blueprint('api', __name__)
 
+def normalize_mapping(pair, analysis=None):
+    return {
+        "source_massage": pair["sourceMassage"],
+        "source_key": pair["sourceKey"],
+        "source_value": pair["sourceValue"],
+        "target_key": pair["targetKey"],
+        "target_massage": pair["targetMassage"],
+        "target_value": pair["targetValue"],
+        "transformation_needed": analysis.get("transformation_needed") if analysis else None,
+        "transformation_comments": (
+            analysis.get("transformation_type") + "::" + analysis.get("transformation_reason")
+            if analysis else None
+        )
+    }
+def mappings_are_identical(existing, incoming):
+    return sorted(existing, key=lambda x: sorted(x.items())) == \
+           sorted(incoming, key=lambda x: sorted(x.items()))
 
 
 
@@ -28,10 +45,14 @@ def get_mapping_progress():
         progress_key = f'mapping_progress_{i}'
         final_progres += get_progress(progress_key)
         print('progress_key',progress_key,get_progress(progress_key))
-    final_progres = final_progres / n + get_progress("result")
+    try: 
+        final_progres = final_progres / n + get_progress("result")
+    except:
+        final_progres = 0
     print('result progress',get_progress("result"))
     return {"progress":final_progres}
-
+from src.utils.mapping_methods import *
+from src.utils.catogry import CatogryScore
 @app_bp.route('/map_files', methods=['POST'])
 def map_files():
     try:
@@ -70,6 +91,34 @@ def map_files():
             target_mn[tgt.filename] = {rec["field_name"]: rec["m/n"] for rec in c.to_meta()}
         set_progress("result", 4.5)
 
+        # --- Collect unique field names ---
+
+        # For sources
+        source_field_names = set()
+        for file_data in source_data.values():
+            source_field_names.update(file_data.keys())
+
+        source_field_names = sorted(source_field_names)
+
+        # For targets
+        target_field_names = set()
+        for file_data in target_data.values():
+            target_field_names.update(file_data.keys())
+
+        target_field_names = sorted(target_field_names)
+        target_category = find_categories(target_field_names)
+        
+        source_category = find_categories(source_field_names)
+
+
+
+
+    
+        catScore = CatogryScore(target_category,source_category)
+ 
+      
+
+
         # --- parallel mapping ---
         pairs = list(product(source_data.items(), target_data.items()))
         set_progress("total_tasks", len(pairs))
@@ -82,7 +131,7 @@ def map_files():
             for (src_file, src_json), (tgt_file, tgt_json) in pairs:
                 progress_key = f'mapping_progress_{comp}'
                 future = executor.submit(
-                    process_source_target_pair,
+                    process_source_target_pair,catScore,target_category,source_category,
                     src_file, src_json, tgt_file, tgt_json, metadata, progress_key
                 )
                 futures.append(future)
@@ -188,23 +237,71 @@ def get_mappings():
 
 
 # ----------  POST /api/mappings  ----------
+
 @app_bp.route("/mappings", methods=["POST"])
 def create_mapping():
     payload = request.get_json(silent=True)
     if not payload:
         return jsonify({"error": "No data provided"}), 400
 
-    # basic validation
-    required = {"sourceCountry", "sourceDomain", "sourceSystem",
-                "targetCountry", "targetDomain", "targetSystem",
-                "mappingCount", "approvedMappings"}
+    required = {
+        "sourceCountry", "sourceDomain", "sourceSystem",
+        "targetCountry", "targetDomain", "targetSystem",
+        "mappingCount", "approvedMappings"
+    }
     if not required.issubset(payload):
         return jsonify({"error": f"Missing one of {required}"}), 400
 
+    meta_id = payload.get("id")
+
     with SessionLocal.begin() as db:
-        # 1. metadata row
+
+        # 🔍 1. Check if metadata already exists
+        existing_meta = None
+        if meta_id:
+            existing_meta = db.query(Metadata).filter_by(id=meta_id).first()
+
+        # 🔁 2. If metadata exists → compare mappings
+        if existing_meta:
+            existing_mappings = db.query(Mapping)\
+                .filter_by(metadata_id=existing_meta.id)\
+                .all()
+
+            # normalize existing
+            existing_normalized = [
+                {
+                    "source_massage": m.source_massage,
+                    "source_key": m.source_key,
+                    "source_value": m.source_value,
+                    "target_key": m.target_key,
+                    "target_massage": m.target_massage,
+                    "target_value": m.target_value,
+                    "transformation_needed": m.transformation_needed,
+                    "transformation_comments": m.transformation_comments,
+                }
+                for m in existing_mappings
+            ]
+
+            # normalize incoming
+            incoming_normalized = []
+            for pair in payload["approvedMappings"]:
+                analyzer = DataFieldAnalyzer(pair)
+                res = analyzer.analyze_row()
+                incoming_normalized.append(
+                    normalize_mapping(pair, res)
+                )
+
+            # ✅ If EXACT match → update timestamp only
+            if mappings_are_identical(existing_normalized, incoming_normalized):
+                existing_meta.created_at = datetime.utcnow()
+                return jsonify({
+                    "message": "Mappings already exist. Timestamp updated.",
+                    "id": existing_meta.id
+                }), 200
+
+        # 🆕 3. Else → create new metadata + mappings
         meta = Metadata(
-            id=payload.get("id") or str(int(datetime.utcnow().timestamp() * 1000)),
+            id=meta_id or str(int(datetime.utcnow().timestamp() * 1000)),
             source_country=payload["sourceCountry"],
             source_domain=payload["sourceDomain"],
             source_system=payload["sourceSystem"],
@@ -216,10 +313,10 @@ def create_mapping():
         )
         db.add(meta)
 
-        # 2. mapping rows
         for pair in payload["approvedMappings"]:
             analyzer = DataFieldAnalyzer(pair)
             res = analyzer.analyze_row()
+
             db.add(Mapping(
                 metadata_id=meta.id,
                 source_massage=pair["sourceMassage"],
@@ -229,7 +326,8 @@ def create_mapping():
                 target_massage=pair["targetMassage"],
                 target_value=pair["targetValue"],
                 transformation_needed=res.get("transformation_needed"),
-                transformation_comments=res.get("transformation_type")+ '::' +res.get("transformation_reason"),
+                transformation_comments=res.get("transformation_type") + "::" +
+                                         res.get("transformation_reason"),
             ))
 
         return jsonify(row_to_json(meta)), 201

@@ -95,10 +95,10 @@ const API_BASE_URL = 'http://localhost:5000/api';
 /* ------------------------------------------------------------------ */
 export const MappingResultsModal = ({
   isOpen,
-  onClose,
+  onClose, 
   results,
   onApprove,
-  scoreThreshold = 0.5,
+  scoreThreshold = 0.45,
 }: MappingResultsModalProps) => {
   /* -------------------------------------------------------------- */
   /* State                                                          */
@@ -346,7 +346,7 @@ export const MappingResultsModal = ({
     const list: {
       targetKey: string;
       sourceKey: string;
-      info: KeyInfo | null;
+      info: KeyInfo | null; 
       mandatory: boolean;
     }[] = [];
 
@@ -407,7 +407,7 @@ export const MappingResultsModal = ({
                         <div className='flex items-center justify-center'>
                         {m.info ? (
                           <TooltipProvider>
-                            <Tooltip>
+                            <Tooltip> 
                               <TooltipTrigger>
                                 <div className="flex items-center gap-2 cursor-help justify-center">
                                   <span>{formatKey(m.sourceKey)}</span>

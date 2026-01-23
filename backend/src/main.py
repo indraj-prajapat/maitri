@@ -1,32 +1,150 @@
 
-
 import concurrent.futures
 import csv
 import sys, os 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from src.utils.helper import *
+
+from src.transformation.valTag import SimpleFieldSimilarityScorer
+scorer = SimpleFieldSimilarityScorer()
 from src.utils.mapping_methods import *
+from src.transformation.data_analyzer import DataFieldAnalyzer
+from src.utils.catogry import CatogryScore
 # def tarnsform_data(source_dict, target_list, data_mapping):
 import time
 
 from src.utils.redisSave import set_progress
 
-def get_data_mapping(source_dict, target_dict,progress_key, full_mapping=True, save_csv=True):
+def get_data_mapping(catScore,target_category,source_category,source_dict, target_dict,progress_key, full_mapping=True, save_csv=True):
 
     keys = {**source_dict, **target_dict}
     descriptions, format_info = generate_description_format(keys)
 
-    # print(descriptions)
+
     if descriptions == None:
         return format_info
     else:
         result = {}
 
+       
+        
+
         with concurrent.futures.ThreadPoolExecutor() as executor:
             futures = []
-            for tgt_key in target_dict.keys():   # 🔄 Outer loop on target
-                for src_key in source_dict.keys():
-                    futures.append((tgt_key, executor.submit(compute_score, tgt_key, src_key, emb, groq)))
+            
+
+            for tgt_key, tgt_val in target_dict.items(): 
+                target_found = match_any_category(target_category,tgt_key) 
+                if target_found[0]:
+                
+                    scores_dict = catScore[target_found[1]]   # dict: {source_cat: score}
+                    # Get only the scores
+                    scores = list(scores_dict.values())
+                    if len(scores) < 2:
+                        highest = scores[0] if scores else None
+                        second_highest = None
+                        diff = None
+                        diffY = True
+                    else:
+                        # Sort descending
+                        scores_sorted = sorted(scores, reverse=True)
+                        highest = scores_sorted[0]
+                        second_highest = scores_sorted[1]
+                        diff = highest - second_highest # key + value
+                        diffY = diff > 0.2
+              
+                    
+                for src_key, src_val in source_dict.items():
+                    bothCatogry = False
+                    source_found =  match_any_category(source_category,src_key)
+                 
+                    
+                        
+                    if source_found[0] and target_found[0]:
+                        
+                        catS = catScore[target_found[1]][source_found[1]]
+
+
+                    if source_found[0] and target_found[0] and catS == highest and catS > 0.5 and diffY:
+                        bothCatogry = True
+                      
+                        future = executor.submit(
+                            compute_score,
+                            
+                            source_found[2],
+                            target_found[2],
+                            emb,
+                            groq
+                        )
+                    # elif source_found[0] and target_found[0]:
+
+                    #     future = executor.submit(
+                    #         compute_score,
+                    #         target_found[2],
+                    #         source_found[2],
+                    #         emb,
+                    #         groq
+                    #     )
+                    # elif source_found[0] and not target_found[0]:
+                    #     catDa = executor.submit(
+                    #         compute_score,
+                    #         tgt_key,
+                    #         source_found[1],
+                    #         emb,
+                    #         groq
+                    #     )
+                    #     _ , fuzzy, semantic, synonym = catDa.result()
+                    #     llm_score = llm_descriptions_similarity(tgt_key, src_key, descriptions, emb)
+                    #     catS = (
+                    #             0.10 * semantic +
+                    #             0.10 * fuzzy +
+                    #             0.30 * synonym +
+                    #             0.50 * llm_score
+                    #         )
+                    #     future = executor.submit(
+                    #         compute_score,
+                    #         tgt_key,
+                    #         source_found[2],
+                    #         emb,
+                    #         groq
+                    #     )
+                    # elif not source_found[0] and target_found[0]:
+                    #     catDa = executor.submit(
+                    #         compute_score,
+                    #         target_found[1],
+                    #         src_key,
+                    #         emb,
+                    #         groq
+                    #     )
+                    #     _ , fuzzy, semantic, synonym = catDa.result()
+                    #     llm_score = llm_descriptions_similarity(tgt_key, src_key, descriptions, emb)
+                    #     catS = (
+                    #             0.10 * semantic +
+                    #             0.10 * fuzzy +
+                    #             0.30 * synonym +
+                    #             0.50 * llm_score
+                    #         )
+                     
+                    #     future = executor.submit(
+                    #         compute_score,
+                    #         target_found[2],
+                    #         src_key,
+                    #         emb,
+                    #         groq
+                    #     )
+                    
+                    else:
+                        catS = 0
+                        future = executor.submit(
+                            compute_score,
+                            
+                            src_key,
+                            tgt_key,
+                            emb,
+                            groq
+                            
+                        )
+                    futures.append((tgt_key, tgt_val, src_key, src_val, future,catS,bothCatogry))
             
             # Collect results
             import threading
@@ -51,9 +169,21 @@ def get_data_mapping(source_dict, target_dict,progress_key, full_mapping=True, s
 
             progress_thread = threading.Thread(target=write_progress, daemon=True)
             progress_thread.start()
-            for tgt_key, future in futures:
-             
-                src_key, fuzzy, semantic, synonym = future.result()
+            for tgt_key, tgt_val, src_key, src_val, future, catS,bothCatogry in futures:
+              
+                
+                row = {
+                        "sourceKey": src_key,
+                        "sourceValue": src_val,
+                        "targetKey": tgt_key,
+                        "targetValue": tgt_val
+                    }
+                analyser = DataFieldAnalyzer(row)
+                data = analyser.analyze_row()
+           
+                valScore = scorer.calculate_similarity(data['source_value_tag'], data['target_value_tag'])
+            
+                _ , fuzzy, semantic, synonym = future.result()
                 
                 llm_score = llm_descriptions_similarity(tgt_key, src_key, descriptions, emb)
                 with lock:
@@ -61,76 +191,51 @@ def get_data_mapping(source_dict, target_dict,progress_key, full_mapping=True, s
                 if tgt_key not in result:
                     result[tgt_key] = []
                 
-                final_score = (
-                    0.10 * semantic +
-                    0.10 * fuzzy +
-                    0.30 * synonym +
-                    0.50 * llm_score
-                )
+                
 
+                if catS > 0 :
+                    if bothCatogry:
+                        final_score = (
+                            0.10 * semantic +
+                            0.10 * fuzzy +
+                            0.30 * synonym +
+                            0.50 * llm_score
+                        )*valScore['similarity_score']/100*0.8 + catS*0.2
+                    # else :
+                    #     final_score = (
+                    #         0.10 * semantic +
+                    #         0.10 * fuzzy +
+                    #         0.30 * synonym +
+                    #         0.50 * llm_score
+                    #     )*valScore['similarity_score']/100*0.3 + catS*0.7
+                else :
+                    final_score = (
+                        0.10 * semantic +
+                        0.10 * fuzzy +
+                        0.30 * synonym +
+                        0.50 * llm_score
+                    )*valScore['similarity_score']/100 
+              
                 result[tgt_key].append({
                     "source_key": src_key,     # 🔄 replaced
                     "fuzzy": fuzzy,
                     "semantic": semantic,
                     "synonym": synonym,
                     "llm_score": llm_score,
+                    'Value_Score':valScore['similarity_score']/100,
                     "final_score": final_score
                 })
         
-        
-        # with open("full_mapping.json", "w") as f:
-        #     json.dump(result, f, indent=4)
-
-        # filtered_result = {}
-        # for tgt_key, matches in result.items():
-        #     if not matches:
-        #         continue
-        #     # pick the one with max final_score
-        #     best_match = max(matches, key=lambda x: x["final_score"])
-        #     filtered_result[tgt_key] = best_match
-        
-        # with open("_mapping.json", "w") as f:
-        #     json.dump(filtered_result, f, indent=4)
-        
-        # data_mapping = {}
-        # for key, values in filtered_result.items():
-        #     data_mapping[key] = {"source": values["source_key"], "target_format": format_info[key]['format'], "source_format": format_info[values["source_key"]]['format']}
-        # # print(filtered_result)
-
-        # with open("data_mapping.json", "w") as f:
-        #     json.dump(data_mapping, f, indent=4)
-        
-        # # ✅ Save results into CSV
-        # if save_csv:
-        #     with open("mapping_results.csv", mode="w", newline="", encoding="utf-8") as file:
-        #         writer = csv.writer(file)
-
-        #         # Write header
-        #         writer.writerow(["Target Key", "Source Key", "Fuzzy", "Semantic", "Synonym", "LLM Score", "Final Score"])
-
-        #         # Write each row
-        #         for tgt_key, mappings in result.items():
-        #             for m in mappings:
-        #                 writer.writerow([
-        #                     tgt_key,
-        #                     m["source_key"],   # 🔄 replaced
-        #                     round(m["fuzzy"], 4),
-        #                     round(m["semantic"], 4),
-        #                     round(m["synonym"], 4),
-        #                     round(m["llm_score"], 4),
-        #                     round(m["final_score"], 4)
-        #                 ])
-
-        # return result if full_mapping else data_mapping
+       
         return result
 
 
 
 # Define this function at MODULE LEVEL (outside the route)
-def process_source_target_pair(src_file, src_json, tgt_file, tgt_json, metadata,progress_key ):
+def process_source_target_pair(catScore,target_category,source_category,src_file, src_json, tgt_file, tgt_json, metadata,progress_key ):
     """Process a single source-target pair"""
     src_meta = metadata[src_file]
-    mapping_result = get_data_mapping(src_json, tgt_json,progress_key)
+    mapping_result = get_data_mapping(catScore,target_category,source_category,src_json, tgt_json,progress_key)
     
     # Enrich mappings with source metadata
     enriched_results = {}
