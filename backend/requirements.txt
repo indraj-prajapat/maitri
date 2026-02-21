@@ -1,0 +1,15 @@
+Flask==3.1.2
+flask-cors==6.0.1
+SQLAlchemy==2.0.43
+psycopg2-binary
+python-dotenv==1.2.1
+numpy==2.2.6
+scikit-learn==1.7.2
+sentence-transformers==5.1.2
+torch==2.9.0
+groq==0.33.0
+pandas==2.3.3
+redis
+xmltodict
+openpyxl
+spacy
