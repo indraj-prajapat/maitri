@@ -1,6 +1,7 @@
 
 import os
 import re
+from pathlib import Path
 
 from dotenv import load_dotenv
 import json
@@ -12,6 +13,34 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import sys, os 
 load_dotenv()
+
+backend_dir = Path(__file__).resolve().parents[2]
+asset_root_env = os.environ.get("BACKEND_ASSET_ROOT")
+asset_root = Path(asset_root_env) if asset_root_env else backend_dir / "offline_assets"
+if asset_root.exists():
+    os.environ.setdefault("BACKEND_ASSET_ROOT", str(asset_root))
+    os.environ.setdefault("HF_HOME", str(asset_root / "hf_home"))
+    os.environ.setdefault("HUGGINGFACE_HUB_CACHE", str(asset_root / "hf_home" / "hub"))
+    os.environ.setdefault("SENTENCE_TRANSFORMERS_HOME", str(asset_root / "sentence_transformers"))
+    os.environ.setdefault("TORCH_HOME", str(asset_root / "torch_home"))
+    os.environ.setdefault("XDG_CACHE_HOME", str(asset_root / "xdg_cache"))
+    os.environ.setdefault("SPACY_DATA", str(asset_root / "spacy_data"))
+    st_dir = asset_root / "sentence_transformers"
+    hf_dir = asset_root / "hf_home"
+    has_cached_assets = False
+    if st_dir.exists():
+        try:
+            has_cached_assets = any(st_dir.iterdir())
+        except Exception:
+            has_cached_assets = False
+    if not has_cached_assets and hf_dir.exists():
+        try:
+            has_cached_assets = any(hf_dir.iterdir())
+        except Exception:
+            has_cached_assets = False
+    if has_cached_assets:
+        os.environ.setdefault("HF_HUB_OFFLINE", "1")
+        os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from src.config import *
