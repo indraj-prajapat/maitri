@@ -4,7 +4,7 @@ import os
 # This resolves .env relative to config.py's location
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # Go up to the project root (adjust levels as needed)
-load_dotenv(dotenv_path=os.path.join(BASE_DIR, '../../..', '.env'))
+load_dotenv()
 
 groq_api_key = os.getenv('groq_api_key')
 # print('geoq api key',groq_api_key)

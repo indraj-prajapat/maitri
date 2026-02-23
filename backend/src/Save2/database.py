@@ -8,10 +8,16 @@ from sqlalchemy import (
 from sqlalchemy.orm import declarative_base, relationship, sessionmaker
 # DATABASE_URL = "postgresql+psycopg2://indraj:indraj@10.11.87.8:5432/maitri_db2"
 import platform
-if platform.system() == "Windows":
-    DATABASE_URL = "sqlite:///data/save2.db"
-else:  # Linux / Docker / Azure
-    DATABASE_URL = "postgresql+psycopg2://indraj:indraj@10.11.87.8:5432/maitri_db2"
+import os
+from dotenv import load_dotenv
+load_dotenv()
+db_url = (os.getenv("DATABASE_URL_SAVE2") or "").strip()
+if not db_url:
+    if platform.system() == "Windows":
+        db_url = "sqlite:///data/save2.db"
+    else:
+        db_url = "postgresql+psycopg2://indraj:indraj@10.11.87.8:5432/maitri_db2"
+DATABASE_URL = db_url
 
 engine = create_engine(DATABASE_URL, pool_pre_ping=True, future=True)
 SessionLocal = sessionmaker(bind=engine, expire_on_commit=False)
