@@ -1,8 +1,7 @@
 import { SavedMapping } from '@/components/PastMappings';
 
 import { save2, update2, delete2 } from './save2';
-
-const API_BASE_URL = 'http://localhost:5000/api';
+import { API_BASE_URL } from './apiConfig';
 
 export const saveMappingToBackend = async (mapping: SavedMapping): Promise<void> => {
   try {

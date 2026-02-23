@@ -40,6 +40,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
 import TransformationResults from './Transformation';
+import { API_BASE_URL } from '@/lib/apiConfig';
 
 /* ------------------------------------------------------------------ */
 /* Types                                                              */
@@ -85,10 +86,16 @@ type ApprovedRow = {
   editType: 'manual' | 'ai';
 };
 
+type PreviewRow = {
+  targetKey: string;
+  targetValue: string;
+  sourceValue: string;
+  sourceKey: string;
+};
+
 /* ------------------------------------------------------------------ */
 /* Constants                                                          */
 /* ------------------------------------------------------------------ */
-const API_BASE_URL = 'http://localhost:5000/api';
 
 /* ------------------------------------------------------------------ */
 /* Component                                                          */
@@ -111,7 +118,7 @@ export const MappingResultsModal = ({
   const [currentThreshold, setCurrentThreshold] = useState(scoreThreshold);
   const [lowThreshold, setLowThreshold] = useState(0.4);
   const [highThreshold, setHighThreshold] = useState(0.8);
-  const [transData, setTransData] = useState<any>(null);
+  const [transData, setTransData] = useState<PreviewRow[] | null>(null);
   const [transView, setTransView] = useState(false);
   const [editedMap, setEditedMap] = useState<Record<string, string>>({});
 
@@ -195,7 +202,7 @@ export const MappingResultsModal = ({
   /* -------------------------------------------------------------- */
   const handleApprove = async () => {
     const approved: ApprovedRow[] = [];
-    const preview: any[] = [];
+    const preview: PreviewRow[] = [];
 
     Object.entries(results).forEach(([msg, maps]) => {
       Object.entries(maps).forEach(([k, obj]) => {

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { AlertCircle, CheckCircle2, Filter, Search, Zap } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
+import { API_ROOT } from "@/lib/apiConfig";
 
 export interface TransformationResult {
   source_key: string;
@@ -32,7 +33,7 @@ interface TransformationResultsProps {
 
 export default function TransformationResults({ 
   transData, 
-  apiUrl = "http://localhost:5000" 
+  apiUrl = API_ROOT 
 }: TransformationResultsProps) {
   const [results, setResults] = useState<TransformationResult[]>([]);
   const [loading, setLoading] = useState(false);

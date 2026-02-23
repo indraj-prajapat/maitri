@@ -29,5 +29,6 @@ __pycache__/
 *.pyo
 *.pyd
 backend/.env
+frontend/maitri-ai-forge/.env
 
 backend/offline_assets/

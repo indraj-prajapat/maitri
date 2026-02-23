@@ -17,6 +17,7 @@ import {
   updateMappingInBackend,
   deleteMappingFromBackend,
 } from '@/lib/mappingStorage';
+import { API_BASE_URL } from '@/lib/apiConfig';
 import { get } from 'http';
 import { Download } from 'lucide-react';
 function downloadPublicFile(fileName: string, mime: string) {
@@ -192,7 +193,7 @@ const Index = () => {
       });
       formData.append('metadata', JSON.stringify(metadata));
 
-      const res = await fetch('http://127.0.0.1:5000/api/map_files', {
+      const res = await fetch(`${API_BASE_URL}/map_files`, {
         method: 'POST',
         body: formData,
       });

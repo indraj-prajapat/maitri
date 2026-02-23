@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FileText, FileCheck, Brain, BrainCircuit } from 'lucide-react';
+import { API_BASE_URL } from '@/lib/apiConfig';
 
 const StatusMessages = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -55,7 +56,7 @@ const LoadingAnimation = ({ leftFiles = [], rightFiles = [] }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      fetch("http://127.0.0.1:5000/api/progress")
+      fetch(`${API_BASE_URL}/progress`)
         .then((res) => res.json())
         .then((data) => {
           setProgressm(data.progress);

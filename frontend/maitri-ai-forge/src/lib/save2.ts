@@ -1,9 +1,9 @@
 import { SavedMapping } from '@/components/PastMappings';
-const API_BASE_URL2 = 'http://localhost:5000/save2';
+import { SAVE2_BASE_URL } from './apiConfig';
 
 const save2 = async (mapping: SavedMapping): Promise<void> => {
   try {
-    const response = await fetch(`${API_BASE_URL2}/mappings2`, {
+    const response = await fetch(`${SAVE2_BASE_URL}/mappings2`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ const update2 = async (
 ): Promise<void> => {
   console.log('Updating mapping with ID:', id, 'Updated Data:', updatedMapping);
   try {
-    const response = await fetch(`${API_BASE_URL2}/update2/${id}`, {
+    const response = await fetch(`${SAVE2_BASE_URL}/update2/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const delete2 = async (id: string): Promise<void> => {
   // }
   
   try {
-    const response = await fetch(`${API_BASE_URL2}/mappings/${id}`, {
+    const response = await fetch(`${SAVE2_BASE_URL}/mappings/${id}`, {
       method: 'DELETE',
     });
 
