@@ -9,7 +9,7 @@ import {
   AtSignIcon,
   Info,
 } from 'lucide-react';
-import * as XLSX from 'xlsx';
+import ExcelJS from 'exceljs';
 
 import {
   Dialog,
@@ -256,7 +256,7 @@ export const MappingResultsModal = ({
   /* -------------------------------------------------------------- */
   /* Export                                                         */
   /* -------------------------------------------------------------- */
-  const downloadFile = (format: 'csv' | 'xlsx' | 'xml' | 'json') => {
+  const downloadFile = async (format: 'csv' | 'xlsx' | 'xml' | 'json') => {
     const rows: string[][] = [
       ['Destination Message', 'Destination Key', 'Origin Message', 'Origin Key', 'Edit Type'],
     ];
@@ -286,10 +286,21 @@ export const MappingResultsModal = ({
       blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
       fileName = 'approved_mapping.csv';
     } else if (format === 'xlsx') {
-      const ws = XLSX.utils.aoa_to_sheet(rows);
-      const wb = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(wb, ws, 'Mapping');
-      const buf = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+      const ExcelJS = (await import('exceljs')).default;
+      const workbook = new ExcelJS.Workbook();
+      const worksheet = workbook.addWorksheet('Mapping');
+
+      // Add header row with bold styling
+      const headerRow = worksheet.addRow(rows[0]);
+      headerRow.font = { bold: true };
+
+      // Add data rows
+      rows.slice(1).forEach(row => worksheet.addRow(row));
+
+      // Auto-fit columns
+      worksheet.columns.forEach(col => { col.width = 30; });
+
+      const buf = await workbook.xlsx.writeBuffer();
       blob = new Blob([buf], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
       fileName = 'approved_mapping.xlsx';
     } else if (format === 'xml') {
