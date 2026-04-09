@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# node_modules
 dist
 dist-ssr
 *.local
@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 backend/venv/
-frontend/maitri-ai-forge/node_modules/
+# frontend/maitri-ai-forge/node_modules/
 __pycache__/
 *.pyc
 *.pyo
